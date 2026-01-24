@@ -11,9 +11,11 @@
 ; BGM：快楽・中毒
 [playbgm storage="BGM_05_快楽.mp3" volume="60"]
 
-; Tasky表示（位置調整済み）
+; Tasky表示
 [chara_show name="tasky" face="default" time="1000" width="350" top="100"]
 
+; ★Taskyボイス
+[playse storage="tasky/承認します。...あなたは、私の一部となりました.mp3" buf=1]
 #tasky
 「承認します。あなたは、私の一部となりました」[p]
 
@@ -33,13 +35,10 @@ taskyが僕。僕がtasky。この達成感と数字こそが、僕の存在価�
 ; --- 終了処理 ---
 [cm]
 [mask effect="fadeIn" time="2000"]
-; 終了画面表示
 [bg storage="end.jpg" time="0"]
 [ptext layer="message0" text="Click to Title" x=550 y=500 size=30 color="white" edge="black"]
 [mask_off effect="fadeOut" time="2000"]
 
-; クリック待ち
 [l]
-; タイトルへ戻る
 [jump storage="title_screen.ks"]
 [s]

@@ -11,10 +11,12 @@
 ; BGM：悲哀・静寂
 [playbgm storage="BGM_06_悲哀.mp3" volume="50"]
 
-; Tasky表示（警告・エラー）
+; Tasky表示（警告）
 [chara_show name="tasky" face="warning" time="500" width="350" top="100"]
 [playse storage="SE03 警報音.mp3"]
 
+; ★Taskyボイス
+[playse storage="tasky/エラー……エラー……自己決定権の奪取を検知しました。...あなたは社会的敗北者となります.mp3" buf=1]
 #tasky
 「エラー……エラー……自己決定権の奪取を検知しました。[r]
 あなたは社会的敗北者となります」[p]

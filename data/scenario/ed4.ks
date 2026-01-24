@@ -17,9 +17,11 @@
 taskyは、もはや僕を支配する絶対者ではない。[r]
 僕が設定した、必要最低限のタスクしか提示しない。[p]
 
-; Tasky表示（通常顔・適度な距離感）
+; Tasky表示（位置調整済み）
 [chara_show name="tasky" face="default" time="1000" width="350" top="100"]
 
+; ★Taskyボイス
+[playse storage="tasky/今日のタスクは『十分な休息』です。...実行しますか？.mp3" buf=1]
 #tasky
 「今日のタスクは『十分な休息』です。報酬：『安定』。実行しますか？」[p]
 

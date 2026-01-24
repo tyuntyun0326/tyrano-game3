@@ -5,38 +5,32 @@
 [clearfix]
 [start_keyconfig]
 
-; ★重要：前の画面の残骸を消す
+; 前の画面の残骸を消す
 [freeimage layer=1]
 [layopt layer=1 visible=false]
 
-; ★重要：メニューボタンを表示（これでセーブ・ロードが可能になります）
+; メニューボタンを表示
 [showmenubutton]
 
 ;=========================================
-; キャラクター定義（サイズ・位置 完全調整版）
+; キャラクター定義
 ;=========================================
-; 全キャラ共通で width=400, top=100 に統一して見切れを防止
-
-; ■ 主人公
 [chara_new name="hero" storage="chara/1/hero_normal.png" jname="僕" width="400" top="100"]
 [chara_face name="hero" face="default" storage="chara/1/hero_normal.png"]
 [chara_face name="hero" face="smile" storage="chara/1/hero_smile.png"]
 [chara_face name="hero" face="tired" storage="chara/1/hero_tired.png"]
 
-; ■ ミナ
 [chara_new name="ミナ" storage="chara/2/mina_smile.png" jname="ミナ" width="400" top="100"]
 [chara_face name="ミナ" face="default" storage="chara/2/mina_smile.png"]
 [chara_face name="ミナ" face="trouble" storage="chara/2/mina_trouble.png"]
 [chara_face name="ミナ" face="fear" storage="chara/2/mina_fear.png"]
 
-; ■ カナエ
 [chara_new name="カナエ" storage="chara/3/kanae_normal.png" jname="カナエ" width="400" top="100"]
 [chara_face name="カナエ" face="default" storage="chara/3/kanae_normal.png"]
 [chara_face name="カナエ" face="angry" storage="chara/3/kanae_angry.png"]
 [chara_face name="カナエ" face="sad" storage="chara/3/kanae_sad.png"]
 [chara_face name="カナエ" face="smile" storage="chara/3/kanae_smile.png"]
 
-; ■ tasky (修正：サイズと位置を他キャラに合わせました)
 [chara_new name="tasky" storage="chara/4/tasky_normal.png" jname="tasky" width="400" top="100"]
 [chara_face name="tasky" face="default" storage="chara/4/tasky_normal.png"]
 [chara_face name="tasky" face="warning" storage="chara/4/tasky_warning.png"]
@@ -49,11 +43,8 @@
 ;-----------------------------------------
 ; シナリオ開始
 ;-----------------------------------------
-; 背景：自室(夜)
 [bg storage="myroom-night(kyuu).jpg" time="1000"]
-; BGM：導入
 [playbgm storage="BGM_01_導入.mp3" volume="50"]
-; SE：環境音
 [playse storage="SE11 環境音：都会の喧騒.mp3" volume="30" loop="true"]
 
 #モノローグ
@@ -77,9 +68,10 @@
 
 [stopse]
 [playse storage="SE08 スマホタップ音.mp3"]
-; 演出：スマホ画面を見る（背景切り替え）
 [bg storage="bg_smartphone_task_done.jpg" time="500" method="crossfade"]
 
+; ★Taskyボイス（広告）
+[playse storage="tasky/まだ、迷っているのですか？ あなたの内なる可能性を引き出し、埋もれた努力を数値で証明します。...あなたの人生を変える、最初で最後の一歩を.mp3" buf=1]
 #tasky (広告音声)
 『まだ、迷っているのですか？ あなたの内なる可能性を引き出し、埋もれた努力を数値で証明します。[r]
 自己管理AIアプリ『tasky』。[r]
@@ -96,13 +88,14 @@ SNSのタイムラインが、taskyの広告で埋め尽くされている。[r]
 僕はtaskyに、僕の人生の主導権を委ねてみようと決めた。[p]
 
 [playse storage="SE01インストール音_起動音.mp3"]
-; 演出：ホワイトフラッシュ
 [mask effect="fadeIn" color="0xffffff" time="200"]
 [bg storage="myroom-night(kyuu).jpg" time="0"]
 [mask_off effect="fadeOut" time="1000"]
 
 [chara_show name="tasky" time="1000"]
 
+; ★Taskyボイス（挨拶）
+[playse storage="tasky/ようこそ、ユーザーID：404。...完了してください。.mp3" buf=1]
 #tasky
 ようこそ、ユーザーID：404。[r]
 私はあなたの生産性を最大限に引き出し、理想の自己へと導くパートナーです。[p]
@@ -114,7 +107,6 @@ SNSのタイムラインが、taskyの広告で埋め尽くされている。[r]
 
 *approve
 [playse storage="SE08 スマホタップ音.mp3"]
-; 演出：承認時の衝撃（揺れ）
 [quake count=3 time=300 hmax=10]
 
 #モノローグ
@@ -124,6 +116,5 @@ SNSのタイムラインが、taskyの広告で埋め尽くされている。[r]
 まるで、生まれたての赤ちゃんのように、世界が輝いて見えた。[r]
 これで、僕もあの光を手に入れられる。さあ、始めよう。新しい僕を。[p]
 
-; 次の章へ行く前にキャラを消す
 [chara_hide_all time=500]
 [jump storage="chapter1.ks"]

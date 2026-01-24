@@ -6,7 +6,7 @@
 [start_keyconfig]
 
 ; 背景：自室（朝・整頓）
-[bg storage="room-mooning.jpg" time="2000" method="crossfade"]
+[bg storage="myroom-mooning(kyuu).jpg" time="2000" method="crossfade"]
 
 ; BGM：悲哀（少し淡々と）
 [playbgm storage="BGM_06_悲哀.mp3" volume="40"]
