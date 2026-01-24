@@ -15,11 +15,12 @@
 [chara_show name="tasky" face="warning" time="500" width="400" top="100"]
 [playse storage="SE03 警報音.mp3"]
 
-; Taskyボイス
+; ★Taskyボイス
 [playse storage="tasky/エラー……エラー……自己決定権の奪取を検知しました。...あなたは社会的敗北者となります.mp3" buf=1]
 #tasky
 「エラー……エラー……自己決定権の奪取を検知しました。[r]
 あなたは社会的敗北者となります」[p]
+[stopse buf=1]
 
 ; 演出：崩壊（揺れ）と消去
 [quake count=3 time=500 hmax=10]
@@ -33,8 +34,9 @@
 タスクも、報酬もない、ただの自分になれる。[p]
 長い悪夢は終わった。スコアは0になった。[r]
 けれど、この痛みこそが、僕が生きている証だ。[p]
+[stopse buf=1]
 
-; ★修正：シンプルに END と表示
+; END表示
 [layopt layer=1 visible=true]
 [ptext layer=1 text="END" x=580 y=300 size=80 color="blue" edge="black" shadow="black" bold="bold"]
 [l]

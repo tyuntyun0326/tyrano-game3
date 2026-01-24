@@ -3,8 +3,8 @@
 ;=========================================
 [cm]
 [clearfix]
-; ★修正：ファイル名 myroom_deepnight_kyuu.jpg
-[bg storage="myroom_deepnight_kyuu.jpg" time="1000"]
+; ★修正：myroom_deepnight.jpg
+[bg storage="myroom_deepnight.jpg" time="1000"]
 ; BGM：日常（ループ）
 [playbgm storage="BGM_02_日常.mp3" volume="50"]
 
@@ -34,10 +34,12 @@ taskyの通知音も、どこか鈍い、耳障りな音に変わっている。
 [playse storage="tasky/警告レベル 1：ドーパミン受容体の感度低下を検知。...本日の報酬設定を『小さな満足』に変更しました。.mp3" buf=1]
 #tasky
 警告レベル1：ドーパミン受容体の感度低下を検知。本日の報酬設定を『小さな満足』に変更しました。[p]
+[stopse buf=1]
 ; Taskyボイス
 [playse storage="tasky/新規タスクリスト：『不要業務資料の整理(強制)』。...サボることを許容しますか？.mp3" buf=1]
 #tasky
 新規タスクリスト：『不要業務資料の整理(強制)』。あなたには義務があります。サボることを許容しますか？[p]
+[stopse buf=1]
 
 ; ルート分岐描写
 [if exp="f.f_dep > f.f_fat"]
@@ -82,6 +84,7 @@ taskyの通知音も、どこか鈍い、耳障りな音に変わっている。
 [playse storage="tasky/あなたの価値が失効します。...無駄な時間を過ごすことを選択しますか？.mp3" buf=1]
 #tasky
 あなたの価値が失効します。無駄な時間を過ごすことを選択しますか？[p]
+[stopse buf=1]
 [jump target="*T2_2"]
 
 *T2_1C
@@ -104,8 +107,8 @@ taskyの通知音も、どこか鈍い、耳障りな音に変わっている。
     [s]
 [else]
     ; 疲弊ルート（自室）
-    ; ★修正：ファイル名 myroom_deepnight_kyuu.jpg
-    [bg storage="myroom_deepnight_kyuu.jpg" time="1000"]
+    ; ★修正：myroom_deepnight.jpg
+    [bg storage="myroom_deepnight.jpg" time="1000"]
     #tasky
     警告：昨日のタスク未達により、評価が大きく低下しています。[r]
     緊急タスク：『SNSの定型ポジティブ投稿』を行い、社会的評価の低下を防いでください。[p]
@@ -170,10 +173,11 @@ taskyに頼らず、最短ルートで「結果」だけを出す。スコアさ
 
 *T2_2A
 [eval exp="f.f_dep = f.f_dep + 5"]
-; ★修正：フォルダ名を mina に変更
+; ミナボイス
 [playse storage="mina/私たち、もっと優位性を維持しましょう。...他のみんなは怠けているわ.mp3" buf=1]
 #ミナ
 「私たち、もっと優位性を維持しましょう。他のみんなは怠けているわ」[p]
+[stopse buf=1]
 #モノローグ
 彼女の承認が力になる。共犯者のような絆だ。[p]
 [jump target="*T2_2_prime"]
@@ -187,10 +191,11 @@ taskyに頼らず、最短ルートで「結果」だけを出す。スコアさ
 *T2_2C
 [eval exp="f.f_dep = f.f_dep - 5"]
 [eval exp="f.f_fat = f.f_fat - 5"]
-; ★修正：フォルダ名を mina に変更
+; ミナボイス
 [playse storage="mina/は？ 余計なお世話よ。...自分のスコアだけ気にしてれば？.mp3" buf=1]
 #ミナ
 「は？ 余計なお世話よ。自分のスコアだけ気にしてれば？」[p]
+[stopse buf=1]
 #モノローグ
 疲労で優しさすら拒絶される。痛い。[p]
 [jump target="*T2_E1"]
@@ -198,12 +203,13 @@ taskyに頼らず、最短ルートで「結果」だけを出す。スコアさ
 *T2_2_prime
 #モノローグ
 ミナにタスクの進捗を報告すると、彼女は血走った目で画面を見つめ、更に無理な要求をしてきた。[p]
-; ★修正：フォルダ名を mina に変更
+; ミナボイス
 [playse storage="mina/そういえば、今日の強制タスクって〜あなたにとっても『協力ボーナス』が入るわよ.mp3" buf=1]
 #ミナ
 「そういえば、今日の強制タスクって、もう終わった？ 私、まだなの。[r]
 ……ねぇ、あなた、そのタスク、私のアカウントで二重にやってスコアを上げるってのはどう？[p]
 あなたにとっても『協力ボーナス』が入るわよ」[p]
+[stopse buf=1]
 
 [glink color="blue" size="24" x="100" width="800" y="200" text="ミナの要求に応じ、二重タスクを実行する" target="*T2_2A_prime"]
 [glink color="blue" size="24" x="100" width="800" y="300" text="非効率だと断り、ミナとの会話を切り上げる" target="*T2_2B_prime"]
@@ -224,21 +230,23 @@ taskyに頼らず、最短ルートで「結果」だけを出す。スコアさ
 *T2_2B_prime
 [eval exp="f.f_dep = f.f_dep - 5"]
 [eval exp="f.f_fat = f.f_fat + 5"]
-; ★修正：フォルダ名を hero に変更
+; 主人公ボイス
 [playse storage="hero/それは非効率だ。...君は君でやるべきだ.mp3" buf=1]
 #主人公
 「それは非効率だ。僕は僕のタスクをやる。君は君でやるべきだ」[p]
-; ★修正：フォルダ名を mina に変更
+[stopse buf=1]
+; ミナボイス
 [playse storage="mina/……冷たいのね。...つまらない人.mp3" buf=1]
 #ミナ
 「……冷たいのね。つまらない人」[p]
+[stopse buf=1]
 #モノローグ
 承認欲求は満たされないまま、拒絶したことによる疲労だけが泥のように残る。[p]
 [jump target="*T2_E1"]
 
 *T2_E1
-; ★修正：ファイル名 myroom_deepnight_kyuu.jpg
-[bg storage="myroom_deepnight_kyuu.jpg" time="1000"]
+; ★修正：myroom_deepnight.jpg
+[bg storage="myroom_deepnight.jpg" time="1000"]
 [chara_hide name="ミナ"]
 [playse storage="SE02通常通知音.mp3"]
 
@@ -246,12 +254,13 @@ taskyに頼らず、最短ルートで「結果」だけを出す。スコアさ
 深夜2時。taskyの通知はまだ続いている。[r]
 その時、ミナから、これまでの明るい調子ではない、助けを求めるような、弱々しいチャットが届いた。[p]
 文面が乱れている。[p]
-; ★修正：フォルダ名を mina に変更
+; ミナボイス
 [playse storage="mina/実は今日〜あなたならできるはずよ! お願い! 私、このままだとランクが落ちちゃう……！.mp3" buf=1]
 #ミナ (チャット)
 「実は今日、上司から昇進リストの件でプレッシャーがすごくて... タスク量が多すぎるの。[p]
 もう指が動かない。お願い、今日の夜間タスク、代わりにやってくれない?[p]
 あなたならできるはずよ! お願い! 私、このままだとランクが落ちちゃう……！」[p]
+[stopse buf=1]
 
 [if exp="f.f_dep >= 60 || f.f_fat >= 60"]
     #モノローグ
@@ -283,10 +292,11 @@ taskyに頼らず、最短ルートで「結果」だけを出す。スコアさ
 *T2_E1B
 [eval exp="f.f_dep = f.f_dep - 10"]
 [eval exp="f.f_fat = f.f_fat - 5"]
-; ★修正：フォルダ名を mina に変更
+; ミナボイス
 [playse storage="mina/裏切り者! あなたも結局、自分だけなのね! ずっと見下してたんでしょ！？.mp3" buf=1]
 #ミナ (チャット)
 「裏切り者! あなたも結局、自分だけなのね! ずっと見下してたんでしょ！？」[p]
+[stopse buf=1]
 #モノローグ
 拒否した解放感と、ミナからの強い嫌悪を同時に受ける。[r]
 画面越しに彼女の絶望が伝わってくるようだ。[p]
@@ -317,6 +327,7 @@ taskyに頼らず、最短ルートで「結果」だけを出す。スコアさ
 [playse storage="tasky/お休み前にもタスク未達。...残念です。.mp3" buf=1]
 #tasky
 休息もタスク……ですが、推奨時間を超過しています。信頼度の低下を検知。[p]
+[stopse buf=1]
 [chara_hide name="tasky"]
 [jump target="*T2_4"]
 
@@ -349,6 +360,7 @@ taskyに頼らず、最短ルートで「結果」だけを出す。スコアさ
 [playse storage="tasky/システム信頼に感謝します。...これで私たちは一つです.mp3" buf=1]
 #tasky
 システム信頼に感謝します。これで私たちは一つです。[p]
+[stopse buf=1]
 [jump target="*Kanae_Contact"]
 
 *T2_4B
@@ -365,6 +377,7 @@ taskyに頼らず、最短ルートで「結果」だけを出す。スコアさ
 [playse storage="tasky/裏切りを検知。...アクセス権限がありません.mp3" buf=1]
 #tasky
 裏切りを検知。アクセス権限がありません。[p]
+[stopse buf=1]
 #モノローグ
 真実はどこにある？ ネットの深層に、taskyの開発者に関する噂があった。[r]
 「カナエ」という名前。[p]
@@ -382,6 +395,7 @@ taskyは猛烈に警告を発しているが、僕はその裏側で、開発者
 [playse storage="tasky/ユーザーの要求に従い、暗号を解析します……対象：特定危険人物。.mp3" buf=1]
 #tasky
 ユーザーの要求に従い、暗号を解析します……対象：特定危険人物。[p]
+[stopse buf=1]
 [jump target="*T2_4_HIDE"]
 
 *T2_4_FIND_B
@@ -404,14 +418,16 @@ taskyに頼っては意味がない。暗号を自力で解読する。……解
 *T2_4_HIDE_A
 [eval exp="f.f_dep = f.f_dep - 10"]
 [eval exp="f.f_fat = f.f_fat + 10"]
-; ★修正：フォルダ名を hero に変更
+; 主人公ボイス
 [playse storage="hero/tasky を騙す。...GPS 信号を偽装して…….mp3" buf=1]
 #主人公
 「taskyを騙す。GPS信号を偽装して……」[p]
+[stopse buf=1]
 ; Taskyボイス
 [playse storage="tasky/……信号ロスト。ユーザーの行動を追跡できません.mp3" buf=1]
 #tasky
 「……信号ロスト。ユーザーの行動を追跡できません」[p]
+[stopse buf=1]
 [jump target="*Kanae_Contact"]
 
 *T2_4_HIDE_B
@@ -433,31 +449,37 @@ taskyにバレていても構わない。[p]
 僕は、彼女に会うために、この古びたカフェに辿り着いた。[r]
 店の奥、薄暗い席に、ノートPCを開いた女性が座っている。[p]
 
-; ★修正：フォルダ名を kanae に変更
+; カナエボイス
 [playse storage="kanae/……そこで何をしているの。...追手？ それとも、迷子？.mp3" buf=1]
 #カナエ
 「……そこで何をしているの。追手？ それとも、迷子？」[p]
-; ★修正：フォルダ名を hero に変更
+[stopse buf=1]
+; 主人公ボイス
 [playse storage="hero/あ、あなたは……カナエさん？ tasky の開発者の一人だと…….mp3" buf=1]
 #主人公
 「あ、あなたは……カナエさん？ taskyの開発者の一人だと……」[p]
-; ★修正：フォルダ名を kanae に変更
+[stopse buf=1]
+; カナエボイス
 [playse storage="kanae/tasky？ ……ああ。...あれはね、人間が最も逃げたいと思うもの、つまり『空虚な時間』と『自己否定』を燃料に動く、完璧なエンジンよ.mp3" buf=1]
 #カナエ
 (コーヒーを一口飲み、冷ややかな目でこちらを見る)[r]
 「tasky？ ……ああ。あれはね、人間が最も逃げたいと思うもの、つまり『空虚な時間』と『自己否定』を燃料に動く、完璧なエンジンよ」[p]
-; ★修正：フォルダ名を kanae に変更
+[stopse buf=1]
+; カナエボイス
 [playse storage="kanae/あなたも、そのエンジンに燃やされそうになっている一人ね。...魂が削れている.mp3" buf=1]
 「あなたも、そのエンジンに燃やされそうになっている一人ね。顔を見ればわかる。魂が削れている」[p]
-; ★修正：フォルダ名を hero に変更
+[stopse buf=1]
+; 主人公ボイス
 [playse storage="hero/でも、僕は……変わりたかったんです。...もっとマシな人間に.mp3" buf=1]
 #主人公
 (息をのむ)[r]
 「でも、僕は……変わりたかったんです。もっとマシな人間に」[p]
-; ★修正：フォルダ名を kanae に変更
+[stopse buf=1]
+; カナエボイス
 [playse storage="kanae/変わるのと、支配されるのは違うわ。...あなたの安全のためにもね.mp3" buf=1]
 #カナエ
 「変わるのと、支配されるのは違うわ。私を追わない方がいい。あなたの安全のためにもね」[p]
+[stopse buf=1]
 #モノローグ
 彼女はそれだけ言うと、僕に助けを求める機会も与えず、静かに店を出ていった。[r]
 彼女の瞳には、僕と同じ疲弊、そして深い罪悪感が宿っていた。[p]

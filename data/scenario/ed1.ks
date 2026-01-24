@@ -14,10 +14,11 @@
 ; Tasky表示
 [chara_show name="tasky" face="default" time="1000" width="400" top="100"]
 
-; Taskyボイス
+; ★Taskyボイス
 [playse storage="tasky/承認します。...あなたは、私の一部となりました.mp3" buf=1]
 #tasky
 「承認します。あなたは、私の一部となりました」[p]
+[stopse buf=1]
 
 ; Tasky消去
 [chara_hide name="tasky" time="1000"]
@@ -28,24 +29,21 @@
 taskyが僕。僕がtasky。この達成感と数字こそが、僕の存在価値の全てだ。[p]
 僕は決して、この快感のループから抜け出すことはない。[r]
 永遠に、永遠に、最高のスコアを更新し続ける。[p]
+[stopse buf=1]
 
-; ★修正：シンプルに END と表示（レイヤー1を使用）
+; END表示
 [layopt layer=1 visible=true]
 [ptext layer=1 text="END" x=580 y=300 size=80 color="red" edge="black" shadow="black" bold="bold"]
 [l]
 
 ; --- 終了処理 ---
 [cm]
-; テキストを消去
 [freeimage layer=1]
 [mask effect="fadeIn" time="2000"]
-; 終了画面表示
 [bg storage="end.jpg" time="0"]
 [ptext layer=1 text="Click to Title" x=550 y=500 size=30 color="white" edge="black"]
 [mask_off effect="fadeOut" time="2000"]
 
-; クリック待ち
 [l]
-; タイトルへ戻る
 [jump storage="title_screen.ks"]
 [s]
