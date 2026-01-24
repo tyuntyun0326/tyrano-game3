@@ -43,7 +43,8 @@
 ;-----------------------------------------
 ; シナリオ開始
 ;-----------------------------------------
-[bg storage="myroom-night(kyuu).jpg" time="1000"]
+; ★修正：ファイル名 myroom_night_kyuu.jpg
+[bg storage="myroom_night_kyuu.jpg" time="1000"]
 [playbgm storage="BGM_01_導入.mp3" volume="50"]
 [playse storage="SE11 環境音：都会の喧騒.mp3" volume="30" loop="true"]
 
@@ -70,14 +71,15 @@
 [playse storage="SE08 スマホタップ音.mp3"]
 [bg storage="bg_smartphone_task_done.jpg" time="500" method="crossfade"]
 
-; ★Taskyボイス（広告）
+; Taskyボイス
 [playse storage="tasky/まだ、迷っているのですか？ あなたの内なる可能性を引き出し、埋もれた努力を数値で証明します。...あなたの人生を変える、最初で最後の一歩を.mp3" buf=1]
 #tasky (広告音声)
 『まだ、迷っているのですか？ あなたの内なる可能性を引き出し、埋もれた努力を数値で証明します。[r]
 自己管理AIアプリ『tasky』。[r]
 今ならインストール無料。あなたの人生を変える、最初で最後の一歩を』[p]
 
-[bg storage="myroom-night(kyuu).jpg" time="500"]
+; ★修正：ファイル名 myroom_night_kyuu.jpg
+[bg storage="myroom_night_kyuu.jpg" time="500"]
 
 #モノローグ
 SNSのタイムラインが、taskyの広告で埋め尽くされている。[r]
@@ -89,12 +91,13 @@ SNSのタイムラインが、taskyの広告で埋め尽くされている。[r]
 
 [playse storage="SE01インストール音_起動音.mp3"]
 [mask effect="fadeIn" color="0xffffff" time="200"]
-[bg storage="myroom-night(kyuu).jpg" time="0"]
+; ★修正：ファイル名 myroom_night_kyuu.jpg
+[bg storage="myroom_night_kyuu.jpg" time="0"]
 [mask_off effect="fadeOut" time="1000"]
 
 [chara_show name="tasky" time="1000"]
 
-; ★Taskyボイス（挨拶）
+; Taskyボイス
 [playse storage="tasky/ようこそ、ユーザーID：404。...完了してください。.mp3" buf=1]
 #tasky
 ようこそ、ユーザーID：404。[r]

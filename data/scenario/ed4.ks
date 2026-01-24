@@ -6,7 +6,7 @@
 [start_keyconfig]
 
 ; 背景：自室（朝）
-[bg storage="myroom-mooning(kyuu).jpg" time="2000" method="crossfade"]
+[bg storage="myroom_mooning_kyuu.jpg" time="2000" method="crossfade"]
 
 ; BGM：希望
 [playbgm storage="BGM_07_希望.mp3" volume="50"]
@@ -17,10 +17,10 @@
 taskyは、もはや僕を支配する絶対者ではない。[r]
 僕が設定した、必要最低限のタスクしか提示しない。[p]
 
-; Tasky表示（位置調整済み）
-[chara_show name="tasky" face="default" time="1000" width="350" top="100"]
+; Tasky表示
+[chara_show name="tasky" face="default" time="1000" width="400" top="100"]
 
-; ★Taskyボイス
+; Taskyボイス
 [playse storage="tasky/今日のタスクは『十分な休息』です。...実行しますか？.mp3" buf=1]
 #tasky
 「今日のタスクは『十分な休息』です。報酬：『安定』。実行しますか？」[p]
@@ -33,14 +33,17 @@ taskyは、もはや僕を支配する絶対者ではない。[r]
 カナエの残したメッセージが、いつかこのシステムを完全に終わらせる道があることを示唆している。[r]
 この「制御」は、暫定的な勝利だ。でも、悪くない。[p]
 
-[ptext layer="message0" text="Ending 4: 共存と自律" x=300 y=300 size=50 color="orange" edge="black" shadow="black"]
+; ★修正：シンプルに END と表示
+[layopt layer=1 visible=true]
+[ptext layer=1 text="END" x=580 y=300 size=80 color="orange" edge="black" shadow="black" bold="bold"]
 [l]
 
 ; --- 終了処理 ---
 [cm]
+[freeimage layer=1]
 [mask effect="fadeIn" time="2000"]
 [bg storage="end.jpg" time="0"]
-[ptext layer="message0" text="Click to Title" x=550 y=500 size=30 color="white" edge="black"]
+[ptext layer=1 text="Click to Title" x=550 y=500 size=30 color="white" edge="black"]
 [mask_off effect="fadeOut" time="2000"]
 
 [l]

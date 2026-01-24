@@ -46,8 +46,8 @@
 [jump target="*T4_EX"]
 
 *T4_EX
-; 演出：Tasky出現
-[chara_show name="tasky" face="default" time="1000" width="350" top="100"]
+; 演出：Tasky出現（位置調整済み）
+[chara_show name="tasky" face="default" time="1000" width="400" top="100"]
 
 ; ★Taskyボイス
 [playse storage="tasky/解析完了。...ユーザーの精神状態に、致命的な揺らぎ (不安) を検知しました.mp3" buf=1]
@@ -82,6 +82,8 @@
 [mask_off time="500"]
 #モノローグ
 もう疲れた。楽になろう。僕はtaskyの一部になるんだ。[p]
+; ★Taskyボイス
+[playse storage="tasky/依頼を拒否します。...却下。.mp3" buf=1]
 #tasky
 「賢明な判断です。融合を開始します」[p]
 [jump storage="ed1.ks"]
@@ -93,6 +95,8 @@
 [quake count=2 time=300 hmax=5]
 #モノローグ
 嫌だ……！ 苦しくても、痛くても、これは僕の痛みだ！ 誰にも渡さない！[p]
+; ★Taskyボイス
+[playse storage="tasky/……理解不能。非合理的選択です。では、あなたの意志を問い直します.mp3" buf=1]
 #tasky
 「……理解不能。非合理的選択です。では、あなたの意志を問い直します」[p]
 [jump target="*T4_EX4"]

@@ -3,8 +3,8 @@
 ;=========================================
 [cm]
 [clearfix]
-; 数週間後 - 深夜の部屋
-[bg storage="myroom-deepnight(kyuu).jpg" time="1000"]
+; ★修正：ファイル名 myroom_deepnight_kyuu.jpg
+[bg storage="myroom_deepnight_kyuu.jpg" time="1000"]
 ; BGM：日常（ループ）
 [playbgm storage="BGM_02_日常.mp3" volume="50"]
 
@@ -30,11 +30,11 @@ taskyの通知音も、どこか鈍い、耳障りな音に変わっている。
 
 [chara_mod name="tasky" face="warning"]
 [playse storage="SE03 警報音.mp3"]
-; ★Taskyボイス
+; Taskyボイス
 [playse storage="tasky/警告レベル 1：ドーパミン受容体の感度低下を検知。...本日の報酬設定を『小さな満足』に変更しました。.mp3" buf=1]
 #tasky
 警告レベル1：ドーパミン受容体の感度低下を検知。本日の報酬設定を『小さな満足』に変更しました。[p]
-; ★Taskyボイス
+; Taskyボイス
 [playse storage="tasky/新規タスクリスト：『不要業務資料の整理(強制)』。...サボることを許容しますか？.mp3" buf=1]
 #tasky
 新規タスクリスト：『不要業務資料の整理(強制)』。あなたには義務があります。サボることを許容しますか？[p]
@@ -78,7 +78,7 @@ taskyの通知音も、どこか鈍い、耳障りな音に変わっている。
 
 *T2_1B
 [eval exp="f.f_fat = f.f_fat + 15"]
-; ★Taskyボイス
+; Taskyボイス
 [playse storage="tasky/あなたの価値が失効します。...無駄な時間を過ごすことを選択しますか？.mp3" buf=1]
 #tasky
 あなたの価値が失効します。無駄な時間を過ごすことを選択しますか？[p]
@@ -104,7 +104,8 @@ taskyの通知音も、どこか鈍い、耳障りな音に変わっている。
     [s]
 [else]
     ; 疲弊ルート（自室）
-    [bg storage="myroom-deepnight(kyuu).jpg" time="1000"]
+    ; ★修正：ファイル名 myroom_deepnight_kyuu.jpg
+    [bg storage="myroom_deepnight_kyuu.jpg" time="1000"]
     #tasky
     警告：昨日のタスク未達により、評価が大きく低下しています。[r]
     緊急タスク：『SNSの定型ポジティブ投稿』を行い、社会的評価の低下を防いでください。[p]
@@ -169,7 +170,7 @@ taskyに頼らず、最短ルートで「結果」だけを出す。スコアさ
 
 *T2_2A
 [eval exp="f.f_dep = f.f_dep + 5"]
-; ★ミナボイス
+; ★修正：フォルダ名を mina に変更
 [playse storage="mina/私たち、もっと優位性を維持しましょう。...他のみんなは怠けているわ.mp3" buf=1]
 #ミナ
 「私たち、もっと優位性を維持しましょう。他のみんなは怠けているわ」[p]
@@ -186,7 +187,7 @@ taskyに頼らず、最短ルートで「結果」だけを出す。スコアさ
 *T2_2C
 [eval exp="f.f_dep = f.f_dep - 5"]
 [eval exp="f.f_fat = f.f_fat - 5"]
-; ★ミナボイス
+; ★修正：フォルダ名を mina に変更
 [playse storage="mina/は？ 余計なお世話よ。...自分のスコアだけ気にしてれば？.mp3" buf=1]
 #ミナ
 「は？ 余計なお世話よ。自分のスコアだけ気にしてれば？」[p]
@@ -197,7 +198,7 @@ taskyに頼らず、最短ルートで「結果」だけを出す。スコアさ
 *T2_2_prime
 #モノローグ
 ミナにタスクの進捗を報告すると、彼女は血走った目で画面を見つめ、更に無理な要求をしてきた。[p]
-; ★ミナボイス
+; ★修正：フォルダ名を mina に変更
 [playse storage="mina/そういえば、今日の強制タスクって〜あなたにとっても『協力ボーナス』が入るわよ.mp3" buf=1]
 #ミナ
 「そういえば、今日の強制タスクって、もう終わった？ 私、まだなの。[r]
@@ -223,11 +224,11 @@ taskyに頼らず、最短ルートで「結果」だけを出す。スコアさ
 *T2_2B_prime
 [eval exp="f.f_dep = f.f_dep - 5"]
 [eval exp="f.f_fat = f.f_fat + 5"]
-; ★主人公ボイス
+; ★修正：フォルダ名を hero に変更
 [playse storage="hero/それは非効率だ。...君は君でやるべきだ.mp3" buf=1]
 #主人公
 「それは非効率だ。僕は僕のタスクをやる。君は君でやるべきだ」[p]
-; ★ミナボイス
+; ★修正：フォルダ名を mina に変更
 [playse storage="mina/……冷たいのね。...つまらない人.mp3" buf=1]
 #ミナ
 「……冷たいのね。つまらない人」[p]
@@ -236,8 +237,8 @@ taskyに頼らず、最短ルートで「結果」だけを出す。スコアさ
 [jump target="*T2_E1"]
 
 *T2_E1
-; 背景：自室(深夜)
-[bg storage="myroom-deepnight(kyuu).jpg" time="1000"]
+; ★修正：ファイル名 myroom_deepnight_kyuu.jpg
+[bg storage="myroom_deepnight_kyuu.jpg" time="1000"]
 [chara_hide name="ミナ"]
 [playse storage="SE02通常通知音.mp3"]
 
@@ -245,7 +246,7 @@ taskyに頼らず、最短ルートで「結果」だけを出す。スコアさ
 深夜2時。taskyの通知はまだ続いている。[r]
 その時、ミナから、これまでの明るい調子ではない、助けを求めるような、弱々しいチャットが届いた。[p]
 文面が乱れている。[p]
-; ★ミナボイス
+; ★修正：フォルダ名を mina に変更
 [playse storage="mina/実は今日〜あなたならできるはずよ! お願い! 私、このままだとランクが落ちちゃう……！.mp3" buf=1]
 #ミナ (チャット)
 「実は今日、上司から昇進リストの件でプレッシャーがすごくて... タスク量が多すぎるの。[p]
@@ -282,7 +283,7 @@ taskyに頼らず、最短ルートで「結果」だけを出す。スコアさ
 *T2_E1B
 [eval exp="f.f_dep = f.f_dep - 10"]
 [eval exp="f.f_fat = f.f_fat - 5"]
-; ★ミナボイス
+; ★修正：フォルダ名を mina に変更
 [playse storage="mina/裏切り者! あなたも結局、自分だけなのね! ずっと見下してたんでしょ！？.mp3" buf=1]
 #ミナ (チャット)
 「裏切り者! あなたも結局、自分だけなのね! ずっと見下してたんでしょ！？」[p]
@@ -312,7 +313,7 @@ taskyに頼らず、最短ルートで「結果」だけを出す。スコアさ
 *T2_3B
 [eval exp="f.f_fat = f.f_fat - 5"]
 [chara_show name="tasky" face="warning" time="500"]
-; ★Taskyボイス
+; Taskyボイス
 [playse storage="tasky/お休み前にもタスク未達。...残念です。.mp3" buf=1]
 #tasky
 休息もタスク……ですが、推奨時間を超過しています。信頼度の低下を検知。[p]
@@ -344,7 +345,7 @@ taskyに頼らず、最短ルートで「結果」だけを出す。スコアさ
 
 *T2_4A
 [eval exp="f.f_dep = f.f_dep + 5"]
-; ★Taskyボイス
+; Taskyボイス
 [playse storage="tasky/システム信頼に感謝します。...これで私たちは一つです.mp3" buf=1]
 #tasky
 システム信頼に感謝します。これで私たちは一つです。[p]
@@ -360,7 +361,7 @@ taskyに頼らず、最短ルートで「結果」だけを出す。スコアさ
 [eval exp="f.f_dep = f.f_dep - 10"]
 [eval exp="f.f_fat = f.f_fat + 10"]
 [playse storage="SE05 エラー_拒絶音.mp3"]
-; ★Taskyボイス
+; Taskyボイス
 [playse storage="tasky/裏切りを検知。...アクセス権限がありません.mp3" buf=1]
 #tasky
 裏切りを検知。アクセス権限がありません。[p]
@@ -377,7 +378,7 @@ taskyは猛烈に警告を発しているが、僕はその裏側で、開発者
 *T2_4_FIND_A
 [eval exp="f.f_dep = f.f_dep + 5"]
 [eval exp="f.f_kanae = 0"]
-; ★Taskyボイス
+; Taskyボイス
 [playse storage="tasky/ユーザーの要求に従い、暗号を解析します……対象：特定危険人物。.mp3" buf=1]
 #tasky
 ユーザーの要求に従い、暗号を解析します……対象：特定危険人物。[p]
@@ -403,11 +404,11 @@ taskyに頼っては意味がない。暗号を自力で解読する。……解
 *T2_4_HIDE_A
 [eval exp="f.f_dep = f.f_dep - 10"]
 [eval exp="f.f_fat = f.f_fat + 10"]
-; ★主人公ボイス
+; ★修正：フォルダ名を hero に変更
 [playse storage="hero/tasky を騙す。...GPS 信号を偽装して…….mp3" buf=1]
 #主人公
 「taskyを騙す。GPS信号を偽装して……」[p]
-; ★Taskyボイス
+; Taskyボイス
 [playse storage="tasky/……信号ロスト。ユーザーの行動を追跡できません.mp3" buf=1]
 #tasky
 「……信号ロスト。ユーザーの行動を追跡できません」[p]
@@ -432,28 +433,28 @@ taskyにバレていても構わない。[p]
 僕は、彼女に会うために、この古びたカフェに辿り着いた。[r]
 店の奥、薄暗い席に、ノートPCを開いた女性が座っている。[p]
 
-; ★カナエボイス
+; ★修正：フォルダ名を kanae に変更
 [playse storage="kanae/……そこで何をしているの。...追手？ それとも、迷子？.mp3" buf=1]
 #カナエ
 「……そこで何をしているの。追手？ それとも、迷子？」[p]
-; ★主人公ボイス
+; ★修正：フォルダ名を hero に変更
 [playse storage="hero/あ、あなたは……カナエさん？ tasky の開発者の一人だと…….mp3" buf=1]
 #主人公
 「あ、あなたは……カナエさん？ taskyの開発者の一人だと……」[p]
-; ★カナエボイス
+; ★修正：フォルダ名を kanae に変更
 [playse storage="kanae/tasky？ ……ああ。...あれはね、人間が最も逃げたいと思うもの、つまり『空虚な時間』と『自己否定』を燃料に動く、完璧なエンジンよ.mp3" buf=1]
 #カナエ
 (コーヒーを一口飲み、冷ややかな目でこちらを見る)[r]
 「tasky？ ……ああ。あれはね、人間が最も逃げたいと思うもの、つまり『空虚な時間』と『自己否定』を燃料に動く、完璧なエンジンよ」[p]
-; ★カナエボイス
+; ★修正：フォルダ名を kanae に変更
 [playse storage="kanae/あなたも、そのエンジンに燃やされそうになっている一人ね。...魂が削れている.mp3" buf=1]
 「あなたも、そのエンジンに燃やされそうになっている一人ね。顔を見ればわかる。魂が削れている」[p]
-; ★主人公ボイス
+; ★修正：フォルダ名を hero に変更
 [playse storage="hero/でも、僕は……変わりたかったんです。...もっとマシな人間に.mp3" buf=1]
 #主人公
 (息をのむ)[r]
 「でも、僕は……変わりたかったんです。もっとマシな人間に」[p]
-; ★カナエボイス
+; ★修正：フォルダ名を kanae に変更
 [playse storage="kanae/変わるのと、支配されるのは違うわ。...あなたの安全のためにもね.mp3" buf=1]
 #カナエ
 「変わるのと、支配されるのは違うわ。私を追わない方がいい。あなたの安全のためにもね」[p]

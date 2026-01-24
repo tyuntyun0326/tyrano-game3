@@ -9,7 +9,7 @@
 ; メニューボタンを隠す
 [hidemenubutton]
 
-; 標準のメッセージレイヤを非表示（タイトルでは不要なので）
+; 標準のメッセージレイヤを非表示
 [layopt layer=message0 visible=false]
 
 ; 背景画像
@@ -18,8 +18,8 @@
 ; タイトルBGM再生
 [playbgm storage="BGM_08_タイトル.mp3" volume="60"]
 
-; タイトル文字の表示（ptextで直接描画）
-[ptext layer=1 page=fore text="Routine Cage" x=280 y=150 size=90 color=0xffffff edge="0x000000" bold="bold" shadow="0x000000"]
+; タイトル文字の表示
+[ptext layer=1 page=fore text="Routine Cage" x=180 y=150 size=90 color=0xffffff edge="0x000000" bold="bold" shadow="0x000000"]
 [ptext layer=1 page=fore text="― ルーチンの檻 ―" x=450 y=280 size=30 color=0xcccccc edge="0x000000" bold="bold"]
 [layopt layer=1 visible=true]
 
@@ -34,9 +34,15 @@
 ; ゲーム開始時の初期化処理
 [cm]
 [clearfix]
+
+; ★重要：画面に残った画像や文字を完全に消去
+[freeimage layer=0]
 [freeimage layer=1]
-; ★重要：メッセージウィンドウを表示状態に戻す
+[layopt layer=1 visible=false]
+
+; メッセージウィンドウを表示状態に戻す
 [layopt layer=message0 visible=true]
+
 ; プロローグへ移動
 [jump storage="prologue.ks"]
 [s]
