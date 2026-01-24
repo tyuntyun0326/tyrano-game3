@@ -5,32 +5,39 @@
 [clearfix]
 [start_keyconfig]
 
-;UI設定や枠設定はすべて削除し、ビルダーのデフォルト設定に委ねる
+; ★重要：前の画面の残骸を消す
+[freeimage layer=1]
+[layopt layer=1 visible=false]
+
+; ★重要：メニューボタンを表示（これでセーブ・ロードが可能になります）
+[showmenubutton]
 
 ;=========================================
-; キャラクター定義
+; キャラクター定義（サイズ・位置 完全調整版）
 ;=========================================
-; 主人公
-[chara_new name="hero" storage="chara/1/hero_normal.png" jname="僕"]
+; 全キャラ共通で width=400, top=100 に統一して見切れを防止
+
+; ■ 主人公
+[chara_new name="hero" storage="chara/1/hero_normal.png" jname="僕" width="400" top="100"]
 [chara_face name="hero" face="default" storage="chara/1/hero_normal.png"]
 [chara_face name="hero" face="smile" storage="chara/1/hero_smile.png"]
 [chara_face name="hero" face="tired" storage="chara/1/hero_tired.png"]
 
-; ミナ
-[chara_new name="ミナ" storage="chara/2/mina_smile.png" jname="ミナ"]
+; ■ ミナ
+[chara_new name="ミナ" storage="chara/2/mina_smile.png" jname="ミナ" width="400" top="100"]
 [chara_face name="ミナ" face="default" storage="chara/2/mina_smile.png"]
 [chara_face name="ミナ" face="trouble" storage="chara/2/mina_trouble.png"]
 [chara_face name="ミナ" face="fear" storage="chara/2/mina_fear.png"]
 
-; カナエ
-[chara_new name="カナエ" storage="chara/3/kanae_normal.png" jname="カナエ"]
+; ■ カナエ
+[chara_new name="カナエ" storage="chara/3/kanae_normal.png" jname="カナエ" width="400" top="100"]
 [chara_face name="カナエ" face="default" storage="chara/3/kanae_normal.png"]
 [chara_face name="カナエ" face="angry" storage="chara/3/kanae_angry.png"]
 [chara_face name="カナエ" face="sad" storage="chara/3/kanae_sad.png"]
 [chara_face name="カナエ" face="smile" storage="chara/3/kanae_smile.png"]
 
-; tasky
-[chara_new name="tasky" storage="chara/4/tasky_normal.png" jname="tasky"]
+; ■ tasky (修正：サイズと位置を他キャラに合わせました)
+[chara_new name="tasky" storage="chara/4/tasky_normal.png" jname="tasky" width="400" top="100"]
 [chara_face name="tasky" face="default" storage="chara/4/tasky_normal.png"]
 [chara_face name="tasky" face="warning" storage="chara/4/tasky_warning.png"]
 
@@ -43,7 +50,7 @@
 ; シナリオ開始
 ;-----------------------------------------
 ; 背景：自室(夜)
-[bg storage="room-night.jpg" time="1000"]
+[bg storage="myroom-night(kyuu).jpg" time="1000"]
 ; BGM：導入
 [playbgm storage="BGM_01_導入.mp3" volume="50"]
 ; SE：環境音
@@ -53,19 +60,16 @@
 窓の外は、暴力的なまでに煌々と輝く〈インデックス・シティ〉のネオン。[p]
 その人工的な光は、遮光カーテンの隙間から強引に侵入し、僕の部屋の暗さを「非生産的な怠惰」という罪として訴えかけているようだった。[p]
 
-#モノローグ
 この街は、巨大な監視システムそのものだ。[r]
 街頭のカメラ、オフィスのPC、そして手元のスマートフォン。[p]
 誰もが画面に映る「ルーチン・スコア」を誇示し、互いの「努力」を監視し合っている。[r]
 「今日のスコアは98点だ」「睡眠効率が落ちているぞ」……そんな会話が挨拶代わりに交わされる世界。[p]
 その圧力は、公的な罰則よりも重く、粘着質な自己否定となって僕の胃を締め上げる。[p]
 
-#モノローグ
 僕のスコアは 72 。平均以下だ。[r]
 同僚たちは着実に昇進リストに名を連ねていく中、僕は卒業研究のテーマすら決まらず、日々の雑務に忙殺されている。[p]
 このままでは、社会から期待されない「平凡以下の不良資産（バッド・アセット）」として、この都市の光の届かない隅で埋もれてしまうだろう。[p]
 
-#モノローグ
 常に感じる、喉の奥に張り付いたような 焦燥感と自己嫌悪 。[r]
 「変わりたい」 その思いだけが空回りして、何一つ行動に移せない。[p]
 何とかして、この無力な日常の閉塞感から、自分の意志で抜け出したかった。[r]
@@ -81,7 +85,7 @@
 自己管理AIアプリ『tasky』。[r]
 今ならインストール無料。あなたの人生を変える、最初で最後の一歩を』[p]
 
-[bg storage="room-night.jpg" time="500"]
+[bg storage="myroom-night(kyuu).jpg" time="500"]
 
 #モノローグ
 SNSのタイムラインが、taskyの広告で埋め尽くされている。[r]
@@ -92,9 +96,9 @@ SNSのタイムラインが、taskyの広告で埋め尽くされている。[r]
 僕はtaskyに、僕の人生の主導権を委ねてみようと決めた。[p]
 
 [playse storage="SE01インストール音_起動音.mp3"]
-; 演出：ホワイトアウト（インストール完了）
-[mask effect="fadeIn" color="0xffffff" time="1000"]
-[bg storage="room-night.jpg" time="0"]
+; 演出：ホワイトフラッシュ
+[mask effect="fadeIn" color="0xffffff" time="200"]
+[bg storage="myroom-night(kyuu).jpg" time="0"]
 [mask_off effect="fadeOut" time="1000"]
 
 [chara_show name="tasky" time="1000"]
@@ -110,6 +114,9 @@ SNSのタイムラインが、taskyの広告で埋め尽くされている。[r]
 
 *approve
 [playse storage="SE08 スマホタップ音.mp3"]
+; 演出：承認時の衝撃（揺れ）
+[quake count=3 time=300 hmax=10]
+
 #モノローグ
 「承認」ボタンをタップした瞬間、全身が電流に打たれたように痺れ、そして同時に重荷が消え去ったような浮遊感を覚えた。[p]
 「素晴らしい判断です」……画面に表示されたその文字。[r]
@@ -117,4 +124,6 @@ SNSのタイムラインが、taskyの広告で埋め尽くされている。[r]
 まるで、生まれたての赤ちゃんのように、世界が輝いて見えた。[r]
 これで、僕もあの光を手に入れられる。さあ、始めよう。新しい僕を。[p]
 
+; 次の章へ行く前にキャラを消す
+[chara_hide_all time=500]
 [jump storage="chapter1.ks"]

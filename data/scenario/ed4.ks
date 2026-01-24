@@ -6,7 +6,7 @@
 [start_keyconfig]
 
 ; 背景：自室（朝）
-[bg storage="room-mooning.jpg" time="2000" method="crossfade"]
+[bg storage="myroom-mooning(kyuu).jpg" time="2000" method="crossfade"]
 
 ; BGM：希望
 [playbgm storage="BGM_07_希望.mp3" volume="50"]
@@ -17,8 +17,8 @@
 taskyは、もはや僕を支配する絶対者ではない。[r]
 僕が設定した、必要最低限のタスクしか提示しない。[p]
 
-; Tasky表示（穏やかな表情があればベストだが、通常顔でOK）
-[chara_show name="tasky" face="default" time="1000"]
+; Tasky表示（通常顔・適度な距離感）
+[chara_show name="tasky" face="default" time="1000" width="350" top="100"]
 
 #tasky
 「今日のタスクは『十分な休息』です。報酬：『安定』。実行しますか？」[p]
@@ -42,5 +42,5 @@ taskyは、もはや僕を支配する絶対者ではない。[r]
 [mask_off effect="fadeOut" time="2000"]
 
 [l]
-[jump storage="title.ks"]
+[jump storage="title_screen.ks"]
 [s]

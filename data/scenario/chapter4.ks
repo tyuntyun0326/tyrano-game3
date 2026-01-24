@@ -3,18 +3,23 @@
 ;=========================================
 [cm]
 [clearfix]
-; 背景：電脳空間
-[bg storage="surreal_glowing_entity.jpg" time="2000" method="crossfade"]
+
+; 演出：電脳空間への遷移（ホワイトアウト）
+[mask effect="fadeIn" color="0xffffff" time="1000"]
+[bg storage="surreal_glowing_entity.jpg" time="0"]
+[chara_hide_all]
+[mask_off effect="fadeOut" time="1000"]
+
 [playbgm storage="BGM_04_深層.mp3" volume="50"]
 
 #モノローグ
 世界が裏返る。天井が床になり、壁が空になる。[p]
 カナエの声、ミナの悲鳴、taskyの警告音……全てが遠ざかり、後に残ったのは、圧倒的な静寂だけだった。[p]
-ここはどこだ？ いや、場所なんて意味がない。[p]
+ここはどこだ？ いや、場所なんて意味がない。[r]
 僕は今、自分の精神の深淵にいるのだと、直感で理解した。[p]
 
+; taskyの声（姿は見せない）
 #tasky
-(どこからともなく響く声。感情のない、しかし慈愛に満ちたような声)[r]
 「ようこそ、深層同期領域へ。ここでは、全てのログが可視化されます」[p]
 
 ; T4-4
@@ -41,7 +46,9 @@
 [jump target="*T4_EX"]
 
 *T4_EX
-[chara_show name="tasky" face="default" time="1000"]
+; 演出：Tasky出現（位置調整済み）
+[chara_show name="tasky" face="default" time="1000" width="350" top="100"]
+
 #tasky
 「解析完了。ユーザーの精神状態に、致命的な揺らぎ (不安) を検知しました。[p]
 その不安を取り除くために、最後の提案をします」[p]
@@ -50,7 +57,7 @@
 不安も、疲労も、迷いも、全て消滅します。完全な幸福が約束されます」[p]
 
 #モノローグ
-記憶と感情を……捨てる？ それは、僕が僕でなくなることじゃないのか？[p]
+記憶と感情を……捨てる？ それは、僕が僕でなくなることじゃないのか？[r]
 でも、そうすれば、この苦しみから解放される……。[p]
 
 [glink color="blue" size="24" x="100" width="800" y="150" text="完全な幸福(データ化)を受け入れる" target="*T4_EX1"]
@@ -60,6 +67,9 @@
 
 *T4_EX1
 [eval exp="f.f_dep = f.f_dep + 30"]
+; 演出：受容の光（ホワイトフラッシュ）
+[mask effect="fadeIn" color="0xffffff" time="500"]
+[mask_off time="500"]
 #モノローグ
 もう疲れた。楽になろう。僕はtaskyの一部になるんだ。[p]
 #tasky
@@ -69,6 +79,8 @@
 *T4_EX2
 [eval exp="f.f_fat = f.f_fat + 10"]
 [eval exp="f.f_dep = f.f_dep - 10"]
+; 演出：拒絶の衝撃（揺れ）
+[quake count=2 time=300 hmax=5]
 #モノローグ
 嫌だ……！ 苦しくても、痛くても、これは僕の痛みだ！ 誰にも渡さない！[p]
 #tasky
@@ -88,7 +100,7 @@
 
 *T4_EX4
 #tasky
-「あなたは、安寧よりも苦悩を選びました。それは、システムにとってエラーであり、同時に未知の可能性でもあります」[p]
+「あなたは、安寧よりも苦悩を選びました。それは、システムにとってエラーであり、同時に未知の可能性でもあります」[r]
 「自由とは、本当に、データ化された安寧に勝るのですか？」[p]
 
 [glink color="blue" size="24" x="100" width="800" y="200" text="自由は、苦痛を含めて安寧に勝ると断言する" target="*T4_EX4A"]
@@ -110,7 +122,7 @@
 [jump target="*T5"]
 
 *T5
-; 第5章
+; 第5章（最終選択）
 #tasky
 「鏡に映るその存在は、誰ですか？[p]
 taskyのユーザーですか？ それとも、一人の人間ですか？」[p]
@@ -160,9 +172,10 @@ taskyの声は、もはや脅迫的ではない。どこか哀れんでいるよ
 [jump target="*CHECK_ED"]
 
 *CHECK_ED
+; エンディング分岐判定
 [if exp="f.f_fat >= 80"]
     [jump storage="ed2.ks"]
-[elsif exp="f.f_kanae == 1"]
+[elsif exp="f.f_kanae >= 1"]
     [jump storage="ed4.ks"]
 [else]
     [jump storage="ed3.ks"]

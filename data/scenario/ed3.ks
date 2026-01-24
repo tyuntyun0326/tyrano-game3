@@ -18,8 +18,9 @@ taskyを消してから、数ヶ月が経った。[p]
 SNSでは、みんなが新しいアプリ『Life-Up』のスコアを自慢している。[r]
 ……あれなら、違うかもしれない。[p]
 
-; SE：インストール音
+; 演出：インストール音（悲劇の再来）
 [playse storage="SE01インストール音_起動音.mp3"]
+[wait time=1000]
 
 #モノローグ
 気がつけば、僕は新しい管理アプリをインストールしていた。[r]
@@ -36,5 +37,5 @@ SNSでは、みんなが新しいアプリ『Life-Up』のスコアを自慢し�
 [mask_off effect="fadeOut" time="2000"]
 
 [l]
-[jump storage="title.ks"]
+[jump storage="title_screen.ks"]
 [s]

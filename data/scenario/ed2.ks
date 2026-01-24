@@ -12,16 +12,17 @@
 [playbgm storage="BGM_06_悲哀.mp3" volume="50"]
 
 ; Tasky表示（警告・エラー）
-[chara_show name="tasky" face="warning" time="500"]
+[chara_show name="tasky" face="warning" time="500" width="350" top="100"]
 [playse storage="SE03 警報音.mp3"]
 
 #tasky
 「エラー……エラー……自己決定権の奪取を検知しました。[r]
 あなたは社会的敗北者となります」[p]
 
-; Tasky消去（アンインストール）
-[chara_hide name="tasky" time="200" effect="fadeOut"]
+; 演出：崩壊（揺れ）と消去
+[quake count=3 time=500 hmax=10]
 [playse storage="SE05 エラー_拒絶音.mp3"]
+[chara_hide name="tasky" time="200" effect="fadeOut"]
 
 #モノローグ
 僕は、自分の意志で、このアプリをアンインストールした。[r]
@@ -42,5 +43,5 @@
 [mask_off effect="fadeOut" time="2000"]
 
 [l]
-[jump storage="title.ks"]
+[jump storage="title_screen.ks"]
 [s]
