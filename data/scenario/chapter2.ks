@@ -8,7 +8,7 @@
 ; BGM：日常（ループ）
 [playbgm storage="BGM_02_日常.mp3" volume="50"]
 
-; ナレーター音声 (mp3)
+; ナレーター音声
 [stopse buf=1]
 [playse storage="narrator/数週間が過ぎた。...あるのは、『スコアを維持しなければならない』という強迫観念だけだ。.mp3" buf=1]
 #モノローグ
@@ -21,10 +21,7 @@
 taskyの通知音も、どこか鈍い、耳障りな音に変わっている。[p]
 [stopse buf=1]
 
-; 演出：机へフォーカス
-[bg storage="myroom_deepnight.jpg" time="500"]
-
-; ナレーター音声 (mp3)
+; ナレーター音声
 [stopse buf=1]
 [playse storage="narrator/tasky の通知音も、どこか鈍い、耳障りな音に変わっている気がした。...これは... 本当に僕が求めていた「変化」なのか？.mp3" buf=1]
 #モノローグ
@@ -55,6 +52,7 @@ taskyの通知音も、どこか鈍い、耳障りな音に変わっている。
 警告レベル1：ドーパミン受容体の感度低下を検知。本日の報酬設定を『小さな満足』に変更しました。[p]
 [stopse buf=1]
 ; Taskyボイス
+[stopse buf=1]
 [playse storage="tasky/新規タスクリスト：『不要業務資料の整理(強制)』。...サボることを許容しますか？.mp3" buf=1]
 #tasky
 新規タスクリスト：『不要業務資料の整理(強制)』。あなたには義務があります。サボることを許容しますか？[p]
@@ -299,7 +297,8 @@ taskyに頼らず、最短ルートで「結果」だけを出す。スコアさ
 
 *T2_E1
 ; 背景：自室(深夜・全体)
-[bg storage="room-night.jpg" time="1000"]
+; ★修正：ミナとのチャット (bg_smartphone_task_done.jpg)
+[bg storage="bg_smartphone_task_done.jpg" time="1000"]
 [chara_hide name="ミナ"]
 [playse storage="SE02通常通知音.mp3"]
 
@@ -419,7 +418,7 @@ taskyに頼らず、最短ルートで「結果」だけを出す。スコアさ
 [stopse buf=1]
 よりパーソナライズされた指導が可能になります。[p]
 [stopse buf=1]
-; ナレーター音声 (mp3)
+; ナレーター音声
 [stopse buf=1]
 [playse storage="narrator/僕の私的な時間までもが、管理の対象になっていく。...すべてがタスク化されていくことに、僕は管理される心地よさと、微かな恐怖を同時に覚える。.mp3" buf=1]
 #モノローグ
