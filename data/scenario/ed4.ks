@@ -6,15 +6,23 @@
 [start_keyconfig]
 
 ; 背景：自室（朝）
-; ★修正：myroom_mooning.jpg
 [bg storage="myroom_mooning.jpg" time="2000" method="crossfade"]
 
 ; BGM：希望
 [playbgm storage="BGM_07_希望.mp3" volume="50"]
 
+; ★ナレーター音声
+[playse storage="narrator/僕は tasky をアンインストールしなかった。.wav" buf=1]
 #モノローグ
 僕はtaskyをアンインストールしなかった。[r]
+[stopse buf=1]
+; ★ナレーター音声
+[playse storage="narrator/カナエの助言を使い、システムの管理権限の一部を奪い取ったのだ。.wav" buf=1]
 カナエの助言を使い、システムの管理権限の一部を奪い取ったのだ。[p]
+[stopse buf=1]
+; ★ナレーター音声
+[playse storage="narrator/tasky は、もはや僕を支配する絶対者ではない。...僕が設定した、必要最低限のタスクしか提示しない。.wav" buf=1]
+#モノローグ
 taskyは、もはや僕を支配する絶対者ではない。[r]
 僕が設定した、必要最低限のタスクしか提示しない。[p]
 [stopse buf=1]
@@ -22,18 +30,40 @@ taskyは、もはや僕を支配する絶対者ではない。[r]
 ; Tasky表示
 [chara_show name="tasky" face="default" time="1000" width="400" top="100"]
 
-; ★Taskyボイス
+; ★Tasky音声
 [playse storage="tasky/今日のタスクは『十分な休息』です。...実行しますか？.mp3" buf=1]
 #tasky
 「今日のタスクは『十分な休息』です。報酬：『安定』。実行しますか？」[p]
 [stopse buf=1]
 
+; ★重要：ここで立ち絵を消去
+[chara_hide_all time=1000]
+
+; ★背景変更：カフェの午後 (bg_cafe_aftermoon.jpg)
+[bg storage="bg_cafe_aftermoon.jpg" time="1000"]
+
+; ★ナレーター音声
+[playse storage="narrator/疲労と快感のループは断ち切られた。...僕の人生は、退屈だが、僕自身のものになった。.wav" buf=1]
 #モノローグ
 疲労と快感のループは断ち切られた。[r]
 僕の人生は、退屈だが、僕自身のものになった。[p]
+[stopse buf=1]
+; ★ナレーター音声
+[playse storage="narrator/スコアは低いままだが、あの頃のような焦燥感はない。.wav" buf=1]
+#モノローグ
 スコアは低いままだが、あの頃のような焦燥感はない。[r]
+[stopse buf=1]
+; ★ナレーター音声
+[playse storage="narrator/僕は、「道具」を使いこなす、平凡な一人の人間として、インデックス・シティの片隅で生きていく。.wav" buf=1]
 僕は、「道具」を使いこなす、平凡な一人の人間として、インデックス・シティの片隅で生きていく。[p]
+[stopse buf=1]
+; ★ナレーター音声
+[playse storage="narrator/カナエの残したメッセージが、いつかこのシステムを完全に終わらせる道があることを示唆している。.wav" buf=1]
+#モノローグ
 カナエの残したメッセージが、いつかこのシステムを完全に終わらせる道があることを示唆している。[r]
+[stopse buf=1]
+; ★ナレーター音声
+[playse storage="narrator/この『制御』は、暫定的な勝利だ。...でも、悪くない。.wav" buf=1]
 この「制御」は、暫定的な勝利だ。でも、悪くない。[p]
 [stopse buf=1]
 

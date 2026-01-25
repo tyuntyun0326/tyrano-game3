@@ -6,28 +6,47 @@
 [start_keyconfig]
 
 ; 背景：自室（朝・整頓）
-; ★修正：myroom_mooning.jpg
 [bg storage="myroom_mooning.jpg" time="2000" method="crossfade"]
 
 ; BGM：悲哀（少し淡々と）
 [playbgm storage="BGM_06_悲哀.mp3" volume="40"]
 
+; ★ナレーター音声
+[playse storage="narrator/tasky を消してから、数ヶ月が経った。.wav" buf=1]
 #モノローグ
 taskyを消してから、数ヶ月が経った。[p]
+[stopse buf=1]
+; ★ナレーター音声
+[playse storage="narrator/最初は清々しかったが、次第に「何をすればいいか分からない」不安が戻ってきた.wav" buf=1]
+#モノローグ
 最初は清々しかったが、次第に「何をすればいいか分からない」不安が戻ってきた。[r]
+[stopse buf=1]
+; ★ナレーター音声
+[playse storage="narrator/日々の生活に張りがなく、また自堕落な生活に戻りつつある。.wav" buf=1]
 日々の生活に張りがなく、また自堕落な生活に戻りつつある。[p]
+[stopse buf=1]
+; ★ナレーター音声
+[playse storage="narrator/SNS では、みんなが新しいアプリ『Life-Up』のスコアを自慢している。...……あれなら、違うかもしれない。.wav" buf=1]
+#モノローグ
 SNSでは、みんなが新しいアプリ『Life-Up』のスコアを自慢している。[r]
 ……あれなら、違うかもしれない。[p]
 [stopse buf=1]
 
 ; 演出：インストール音
 [playse storage="SE01インストール音_起動音.mp3"]
+; ★背景変更：スマホ画面 (smartphone_night.jpg)
+[bg storage="smartphone_night.jpg" time="1000"]
 [wait time=1000]
 
+; ★ナレーター音声
+[playse storage="narrator/気がつけば、僕は新しい管理アプリをインストールしていた。...ループは終わらない。.wav" buf=1]
 #モノローグ
 気がつけば、僕は新しい管理アプリをインストールしていた。[r]
 また、同じループが始まる。[p]
 [stopse buf=1]
+
+; ★重要：念のため消去
+[chara_hide_all]
 
 ; END表示
 [layopt layer=1 visible=true]

@@ -15,7 +15,7 @@
 [chara_show name="tasky" face="warning" time="500" width="400" top="100"]
 [playse storage="SE03 警報音.mp3"]
 
-; ★Taskyボイス
+; ★Tasky音声
 [playse storage="tasky/エラー……エラー……自己決定権の奪取を検知しました。...あなたは社会的敗北者となります.mp3" buf=1]
 #tasky
 「エラー……エラー……自己決定権の奪取を検知しました。[r]
@@ -27,14 +27,27 @@
 [playse storage="SE05 エラー_拒絶音.mp3"]
 [chara_hide name="tasky" time="200" effect="fadeOut"]
 
+; ★ナレーター音声
+[playse storage="narrator/僕は、自分の意志で、このアプリをアンインストールした。...警告音が鳴り止んだ瞬間、体が崩れ落ちるほど重くなった。.wav" buf=1]
 #モノローグ
 僕は、自分の意志で、このアプリをアンインストールした。[r]
 警告音が鳴り止んだ瞬間、体が崩れ落ちるほど重くなった。[p]
+[stopse buf=1]
+; ★ナレーター音声
+[playse storage="narrator/疲労度は極限だったけれど、これでようやく自由になれる。...タスクも、報酬もない、ただの自分になれる。.wav" buf=1]
+#モノローグ
 疲労度は極限だったけれど、これでようやく自由になれる。[r]
 タスクも、報酬もない、ただの自分になれる。[p]
+[stopse buf=1]
+; ★ナレーター音声
+[playse storage="narrator/長い悪夢は終わった。...けれど、この痛みこそが、僕が生きている証だ。.wav" buf=1]
+#モノローグ
 長い悪夢は終わった。スコアは0になった。[r]
 けれど、この痛みこそが、僕が生きている証だ。[p]
 [stopse buf=1]
+
+; ★重要：念のため消去
+[chara_hide_all]
 
 ; END表示
 [layopt layer=1 visible=true]
