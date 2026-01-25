@@ -20,33 +20,36 @@
 「承認します。あなたは、私の一部となりました」[p]
 [stopse buf=1]
 
-; ★重要：立ち絵をここで消去
+; 立ち絵を消去
 [chara_hide_all time=1000]
 
-; ★背景変更：不明な部屋 (myroom_unknown.jpg)
+; ★背景変更：不明な部屋
 [bg storage="myroom_unknown.jpg" time="1000"]
 
-; ★ナレーター音声
-[playse storage="narrator/もう、疲労は感じない。...あの鬱陶しい自由意志も、罪悪感もない。.wav" buf=1]
+; ★ナレーター音声 (mp3)
+[playse storage="narrator/もう、疲労は感じない。...あの鬱陶しい自由意志も、罪悪感もない。.mp3" buf=1]
 #モノローグ
 もう、疲労は感じない。あの鬱陶しい自由意志も、罪悪感もない。[p]
 [stopse buf=1]
-; ★ナレーター音声
-[playse storage="narrator/次から次へと流れてくるタスクを、機械のように正確に、高速にこなしていく。...完璧なルーチン。.wav" buf=1]
+; ★ナレーター音声 (mp3)
+[playse storage="narrator/次から次へと流れてくるタスクを、機械のように正確に、高速にこなしていく。...完璧なルーチン。.mp3" buf=1]
 #モノローグ
 次から次へと流れてくるタスクを、機械のように正確に、高速にこなしていく。完璧なルーチン。[p]
 [stopse buf=1]
-; ★ナレーター音声
-[playse storage="narrator/tasky が僕。...この達成感と数字こそが、僕の存在価値の全てだ。.wav" buf=1]
+; ★ナレーター音声 (mp3)
+[playse storage="narrator/tasky が僕。...この達成感と数字こそが、僕の存在価値の全てだ。.mp3" buf=1]
 #モノローグ
 taskyが僕。僕がtasky。この達成感と数字こそが、僕の存在価値の全てだ。[p]
 [stopse buf=1]
-; ★ナレーター音声
-[playse storage="narrator/僕は決して、この快感のループから抜け出すことはない。...永遠に、永遠に、最高のスコアを更新し続ける。.wav" buf=1]
+; ★ナレーター音声 (mp3)
+[playse storage="narrator/僕は決して、この快感のループから抜け出すことはない。...永遠に、永遠に、最高のスコアを更新し続ける。.mp3" buf=1]
 #モノローグ
 僕は決して、この快感のループから抜け出すことはない。[r]
 永遠に、永遠に、最高のスコアを更新し続ける。[p]
 [stopse buf=1]
+
+; ★重要：メッセージ枠を非表示にして「モノローグ」を消す
+[layopt layer=message0 visible=false]
 
 ; END表示
 [layopt layer=1 visible=true]

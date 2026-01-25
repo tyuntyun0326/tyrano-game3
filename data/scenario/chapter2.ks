@@ -3,14 +3,14 @@
 ;=========================================
 [cm]
 [clearfix]
-; ★修正：深夜の部屋全体 (room-night.jpg)
+; 背景：部屋全体(深夜)
 [bg storage="room-night.jpg" time="1000"]
 ; BGM：日常（ループ）
 [playbgm storage="BGM_02_日常.mp3" volume="50"]
 
-; ナレーター音声
+; ナレーター音声 (mp3)
 [stopse buf=1]
-[playse storage="narrator/数週間が過ぎた。...あるのは、『スコアを維持しなければならない』という強迫観念だけだ。.wav" buf=1]
+[playse storage="narrator/数週間が過ぎた。...あるのは、『スコアを維持しなければならない』という強迫観念だけだ。.mp3" buf=1]
 #モノローグ
 数週間が過ぎた。 日々のルーチンは、もはや無意識の動作に変わった。[p]
 [stopse buf=1]
@@ -21,12 +21,12 @@
 taskyの通知音も、どこか鈍い、耳障りな音に変わっている。[p]
 [stopse buf=1]
 
-; ★演出：深夜の机へフォーカス (myroom_deepnight.jpg)
+; 演出：机へフォーカス
 [bg storage="myroom_deepnight.jpg" time="500"]
 
-; ナレーター音声
+; ナレーター音声 (mp3)
 [stopse buf=1]
-[playse storage="narrator/tasky の通知音も、どこか鈍い、耳障りな音に変わっている気がした。...これは... 本当に僕が求めていた「変化」なのか？.wav" buf=1]
+[playse storage="narrator/tasky の通知音も、どこか鈍い、耳障りな音に変わっている気がした。...これは... 本当に僕が求めていた「変化」なのか？.mp3" buf=1]
 #モノローグ
 その音は、僕を導く光ではなく、僕の怠惰を監視する看守の警笛へと変質していた。[r]
 気がつけば、僕はtaskyに怒られるのが怖いから、タスクをこなしていた。[p]
@@ -55,7 +55,6 @@ taskyの通知音も、どこか鈍い、耳障りな音に変わっている。
 警告レベル1：ドーパミン受容体の感度低下を検知。本日の報酬設定を『小さな満足』に変更しました。[p]
 [stopse buf=1]
 ; Taskyボイス
-[stopse buf=1]
 [playse storage="tasky/新規タスクリスト：『不要業務資料の整理(強制)』。...サボることを許容しますか？.mp3" buf=1]
 #tasky
 新規タスクリスト：『不要業務資料の整理(強制)』。あなたには義務があります。サボることを許容しますか？[p]
@@ -137,7 +136,7 @@ taskyの通知音も、どこか鈍い、耳障りな音に変わっている。
     [glink color="blue" size="24" x="100" width="800" y="300" text="効率を優先し、要約を外部サービスに依頼する" target="*T2_1B_prime"]
     [s]
 [else]
-    ; 疲弊ルート（自室・深夜）
+    ; 疲弊ルート（自室）
     [bg storage="myroom_deepnight.jpg" time="1000"]
     #tasky
     警告：昨日のタスク未達により、評価が大きく低下しています。[r]
@@ -300,7 +299,6 @@ taskyに頼らず、最短ルートで「結果」だけを出す。スコアさ
 
 *T2_E1
 ; 背景：自室(深夜・全体)
-; ★修正：まずは全体図 (room-night.jpg)
 [bg storage="room-night.jpg" time="1000"]
 [chara_hide name="ミナ"]
 [playse storage="SE02通常通知音.mp3"]
@@ -320,7 +318,7 @@ taskyに頼らず、最短ルートで「結果」だけを出す。スコアさ
 あなたならできるはずよ! お願い! 私、このままだとランクが落ちちゃう……！」[p]
 [stopse buf=1]
 
-; ★演出：苦悩する自分の手元へ (myroom_deepnight.jpg)
+; 演出：机へフォーカス
 [bg storage="myroom_deepnight.jpg" time="500"]
 
 [if exp="f.f_dep >= 60 || f.f_fat >= 60"]
@@ -421,6 +419,9 @@ taskyに頼らず、最短ルートで「結果」だけを出す。スコアさ
 [stopse buf=1]
 よりパーソナライズされた指導が可能になります。[p]
 [stopse buf=1]
+; ナレーター音声 (mp3)
+[stopse buf=1]
+[playse storage="narrator/僕の私的な時間までもが、管理の対象になっていく。...すべてがタスク化されていくことに、僕は管理される心地よさと、微かな恐怖を同時に覚える。.mp3" buf=1]
 #モノローグ
 僕の個人的な情報をすべてtaskyに渡すことになる。[r]
 もはや、プライバシーなどという概念は、僕の思考から消えかけている。[p]
@@ -526,7 +527,7 @@ taskyにバレていても構わない。[p]
 [jump target="*Kanae_Contact"]
 
 *Kanae_Contact
-; ★修正：カフェ（夜） bg_cafe_night.jpg
+; 背景：カフェ（夜）
 [bg storage="bg_cafe_night.jpg" time="1000"]
 ; ★キャラ消去
 [chara_hide_all]
