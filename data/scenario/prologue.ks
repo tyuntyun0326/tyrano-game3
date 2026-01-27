@@ -10,7 +10,9 @@
 [layopt layer=1 visible=false]
 [showmenubutton]
 
+;=========================================
 ; キャラクター定義
+;=========================================
 [chara_new name="hero" storage="chara/1/hero_normal.png" jname="僕" width="400" top="100"]
 [chara_face name="hero" face="default" storage="chara/1/hero_normal.png"]
 [chara_face name="hero" face="smile" storage="chara/1/hero_smile.png"]
@@ -39,12 +41,12 @@
 ;-----------------------------------------
 ; シナリオ開始
 ;-----------------------------------------
-; 背景：部屋全体（room-night.jpg）
+; 背景：部屋全体
 [bg storage="room-night.jpg" time="1000"]
 [playbgm storage="BGM_01_導入.mp3" volume="50"]
 [playse storage="SE11 環境音：都会の喧騒.mp3" volume="30" loop="true"]
 
-; ▼修正：文章をまとめて表示（[r]で改行）
+; ナレーター音声
 [stopse buf=1]
 [playse storage="narrator/窓の外は、暴力的なまでに〜として訴えかけているようだった。.mp3" buf=1]
 #モノローグ
@@ -68,7 +70,8 @@
 [playse storage="narrator/僕のスコアは 72 。...このままでは、社会から期待されない『平凡以下の不良資産（バッド・アセット）』として、この都市の光の届かない隅で埋もれてしまうだろう。.mp3" buf=1]
 #モノローグ
 僕のスコアは 72 。平均以下だ。[r]
-同僚たちは着実に昇進リストに名を連ねていく中、僕は卒業研究のテーマすら決まらず、日々の雑務に忙殺されている。[p]
+同僚たちは着実に昇進リストに名を連ねていく中、[r]
+僕は卒業研究のテーマすら決まらず、日々の雑務に忙殺されている。[p]
 
 #モノローグ
 このままでは、社会から期待されない「平凡以下の不良資産（バッド・アセット）」として、[r]
@@ -90,9 +93,8 @@
 [stopse]
 [playse storage="SE08 スマホタップ音.mp3"]
 
-; ★修正：PCモニタ合成画像（monitor_ad.jpg）
-; ※ファイルが無い場合は advertisement.jpg に戻してください
-[bg storage="monitor_ad.jpg" time="500" method="crossfade"]
+; ★修正：元の画像名に戻す
+[bg storage="advertisement.jpg" time="500" method="crossfade"]
 [wait time=2000]
 
 ; Taskyボイス
@@ -145,7 +147,8 @@ SNSのタイムラインが、taskyの広告で埋め尽くされている。[r]
 [stopse buf=1]
 [playse storage="narrator/「承認」ボタンをタップした瞬間、全身が電流に打たれたように痺れ、そして同時に重荷が消え去ったような浮遊感を覚えた。...新しい僕を。.mp3" buf=1]
 #モノローグ
-「承認」ボタンをタップした瞬間、全身が電流に打たれたように痺れ、そして同時に重荷が消え去ったような浮遊感を覚えた。[p]
+「承認」ボタンをタップした瞬間、全身が電流に打たれたように痺れ、[r]
+そして同時に重荷が消え去ったような浮遊感を覚えた。[p]
 #モノローグ
 「素晴らしい判断です」……画面に表示されたその文字。[r]
 そんなポジティブな肯定の言葉、最近誰からもかけられていなかった。[p]
