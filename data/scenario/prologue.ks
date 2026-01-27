@@ -5,13 +5,40 @@
 [clearfix]
 [start_keyconfig]
 
-; 前の画面の残骸を消す
-[freeimage layer=1]
-[layopt layer=1 visible=false]
-[showmenubutton]
+; ----------------------------------------------------
+; ★UI設定：メッセージウィンドウを5行表示用に拡張
+; ----------------------------------------------------
+; height=350 (広め), top=370 (少し上に拡張)
+[position layer=message0 width=1280 height=350 top=370 left=0]
+[position layer=message0 page=fore frame="" opacity=150]
+; 文字の余白設定
+[position layer=message0 page=fore margint=40 marginb=40 marginl=50 marginr=50]
+; 文字サイズ調整（26px程度が読みやすく5行収まります）
+[deffont size=26 line=32]
+; ----------------------------------------------------
+
+; -------------------------------------------
+; ★ロード演出（ここへ移動）
+; -------------------------------------------
+; 背景を黒などで隠す（あるいはtitleのまま）
+[bg storage="title.jpg" time="0"]
+[layopt layer=2 visible=true]
+[ptext layer=2 name="loading_text" text="Now Loading" x=50 y=650 size=30 color="white" edge="black"]
+
+; アニメーションループ（疑似的な読み込み時間）
+[wait time=200]
+[ptext layer=2 name="loading_text" text="Now Loading ." x=50 y=650 size=30 color="white" edge="black" overwrite=true]
+[wait time=200]
+[ptext layer=2 name="loading_text" text="Now Loading . ." x=50 y=650 size=30 color="white" edge="black" overwrite=true]
+[wait time=200]
+[ptext layer=2 name="loading_text" text="Now Loading . . ." x=50 y=650 size=30 color="white" edge="black" overwrite=true]
+[wait time=200]
+[ptext layer=2 name="loading_text" text="Now Loading" x=50 y=650 size=30 color="white" edge="black" overwrite=true]
+[wait time=200]
+[ptext layer=2 name="loading_text" text="Now Loading ." x=50 y=650 size=30 color="white" edge="black" overwrite=true]
 
 ;=========================================
-; キャラクター定義
+; キャラクター定義（ここで重い処理を行う）
 ;=========================================
 [chara_new name="hero" storage="chara/1/hero_normal.png" jname="僕" width="400" top="100"]
 [chara_face name="hero" face="default" storage="chara/1/hero_normal.png"]
@@ -38,62 +65,63 @@
 [eval exp="f.f_fat = 0"]
 [eval exp="f.f_kanae = 0"]
 
+; ロード画面消去
+[freeimage layer=2]
+[layopt layer=2 visible=false]
+[showmenubutton]
+; -------------------------------------------
+
 ;-----------------------------------------
 ; シナリオ開始
 ;-----------------------------------------
-; 背景：部屋全体
+; 背景：部屋全体（room-night.jpg）
 [bg storage="room-night.jpg" time="1000"]
 [playbgm storage="BGM_01_導入.mp3" volume="50"]
 [playse storage="SE11 環境音：都会の喧騒.mp3" volume="30" loop="true"]
 
 ; ナレーター音声
 [stopse buf=1]
-[playse storage="narrator/窓の外は、暴力的なまでに〜として訴えかけているようだった。.mp3" buf=1]
+[playse storage="narrator/窓の外は、暴力的なまでに〜として訴えかけているようだった.mp3" buf=1]
 #モノローグ
 窓の外は、暴力的なまでに煌々と輝く〈インデックス・シティ〉のネオン。[r]
 その人工的な光は、遮光カーテンの隙間から強引に侵入し、[r]
 僕の部屋の暗さを「非生産的な怠惰」という罪として訴えかけているようだった。[p]
 
 [stopse buf=1]
-[playse storage="narrator/この街は、巨大な監視システムそのものだ。...その圧力は、公的な罰則よりも重く、粘着質な自己否定となって僕の胃を締め上げる。.mp3" buf=1]
+[playse storage="narrator/この街は、巨大な監視システムそのものだ。...その圧力は、公的な罰則よりも重く、粘着質な自己否定となって僕の胃を締め上げる.mp3" buf=1]
 #モノローグ
 この街は、巨大な監視システムそのものだ。[r]
 街頭のカメラ、オフィスのPC、そして手元のスマートフォン。[r]
-誰もが画面に映る「ルーチン・スコア」を誇示し、互いの「努力」を監視し合っている。[p]
-
-#モノローグ
+誰もが画面に映る「ルーチン・スコア」を誇示し、互いの「努力」を監視し合っている。[r]
 「今日のスコアは98点だ」「睡眠効率が落ちているぞ」……[r]
 そんな会話が挨拶代わりに交わされる世界。[r]
 その圧力は、公的な罰則よりも重く、粘着質な自己否定となって僕の胃を締め上げる。[p]
 
 [stopse buf=1]
-[playse storage="narrator/僕のスコアは 72 。...このままでは、社会から期待されない『平凡以下の不良資産（バッド・アセット）』として、この都市の光の届かない隅で埋もれてしまうだろう。.mp3" buf=1]
+[playse storage="narrator/僕のスコアは 72 。...このままでは、社会から期待されない『平凡以下の不良資産（バッド・アセット）』として、この都市の光の届かない隅で埋もれてしまうだろう.mp3" buf=1]
 #モノローグ
 僕のスコアは 72 。平均以下だ。[r]
 同僚たちは着実に昇進リストに名を連ねていく中、[r]
-僕は卒業研究のテーマすら決まらず、日々の雑務に忙殺されている。[p]
-
-#モノローグ
+僕は卒業研究のテーマすら決まらず、日々の雑務に忙殺されている。[r]
 このままでは、社会から期待されない「平凡以下の不良資産（バッド・アセット）」として、[r]
 この都市の光の届かない隅で埋もれてしまうだろう。[p]
 
-; 演出：机へフォーカス
+; 演出：ここで自分の領域へ没入（myroom_night.jpg）
 [bg storage="myroom_night.jpg" time="1000"]
 
+; ナレーター音声
 [stopse buf=1]
-[playse storage="narrator/常に感じる、喉の奥に張り付いたような焦燥感と自己嫌悪。...誰かに、正解を教えて欲しかった。.mp3" buf=1]
+[playse storage="narrator/常に感じる、喉の奥に張り付いたような焦燥感と自己嫌悪。...誰かに、正解を教えて欲しかった.mp3" buf=1]
 #モノローグ
 常に感じる、喉の奥に張り付いたような 焦燥感と自己嫌悪 。[r]
-「変わりたい」 その思いだけが空回りして、何一つ行動に移せない。[p]
-
-#モノローグ
+「変わりたい」 その思いだけが空回りして、何一つ行動に移せない。[r]
 何とかして、この無力な日常の閉塞感から、自分の意志で抜け出したかった。[r]
 誰かに、正解を教えて欲しかった。[p]
 
 [stopse]
 [playse storage="SE08 スマホタップ音.mp3"]
 
-; ★修正：元の画像名に戻す
+; ★修正：元の画像（advertisement.jpg）を使用
 [bg storage="advertisement.jpg" time="500" method="crossfade"]
 [wait time=2000]
 
@@ -108,14 +136,13 @@
 ; 部屋（机）に戻る
 [bg storage="myroom_night.jpg" time="500"]
 
+; ナレーター音声
 [stopse buf=1]
-[playse storage="narrator/SNS のタイムラインが、tasky の広告で埋め尽くされている。...僕は tasky に、僕の人生の主導権を委ねてみようと決めた。.mp3" buf=1]
+[playse storage="narrator/SNS のタイムラインが、tasky の広告で埋め尽くされている。...僕は tasky に、僕の人生の主導権を委ねてみようと決めた.mp3" buf=1]
 #モノローグ
 SNSのタイムラインが、taskyの広告で埋め尽くされている。[r]
 まるで、僕の深夜の苦悩を見透かしたかのように。[r]
-友人も、同僚も、皆これを使っているという。[p]
-
-#モノローグ
+友人も、同僚も、皆これを使っているという。[r]
 これが、最後のチャンスかもしれない。[r]
 藁にもすがる思いで、震える指先を画面に伸ばす。[r]
 僕はtaskyに、僕の人生の主導権を委ねてみようと決めた。[p]
@@ -133,7 +160,7 @@ SNSのタイムラインが、taskyの広告で埋め尽くされている。[r]
 #tasky
 ようこそ、ユーザーID：404。[r]
 私はあなたの生産性を最大限に引き出し、理想の自己へと導くパートナーです。[p]
-[stopse buf=1]
+#tasky
 あなたの無駄を削ぎ落とし、幸福への最短ルートを計算します。[r]
 初回起動タスク：『自己紹介の承認』を認識しました。完了してください。[p]
 
@@ -144,8 +171,9 @@ SNSのタイムラインが、taskyの広告で埋め尽くされている。[r]
 [playse storage="SE08 スマホタップ音.mp3"]
 [quake count=3 time=300 hmax=10]
 
+; ナレーター音声
 [stopse buf=1]
-[playse storage="narrator/「承認」ボタンをタップした瞬間、全身が電流に打たれたように痺れ、そして同時に重荷が消え去ったような浮遊感を覚えた。...新しい僕を。.mp3" buf=1]
+[playse storage="narrator/「承認」ボタンをタップした瞬間、全身が電流に打たれたように痺れ、そして同時に重荷が消え去ったような浮遊感を覚えた。...新しい僕を。.mp3" buf=1]
 #モノローグ
 「承認」ボタンをタップした瞬間、全身が電流に打たれたように痺れ、[r]
 そして同時に重荷が消え去ったような浮遊感を覚えた。[p]
