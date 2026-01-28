@@ -46,7 +46,8 @@
 長い悪夢は終わった。スコアは0になった。[l][r]
 けれど、この痛みこそが、僕が生きている証だ。[p]
 
-; メッセージ枠非表示
+; 立ち絵消去・メッセージ枠消去
+[chara_hide_all]
 [layopt layer=message0 visible=false]
 
 ; END表示
