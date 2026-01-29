@@ -249,6 +249,7 @@ taskyの通知が、僕の「正しい道」はどこかと問いかけてくる
 #モノローグ
 ミナとの競争を決意した瞬間、スマホにtaskyからの 追加タスク が表示された。[r]
 こちらの心拍数上昇を検知したのか？[p]
+[stopse buf=1]
 [chara_show name="tasky" time="500"]
 [playse storage="SE02通常通知音.mp3"]
 #tasky
@@ -301,7 +302,6 @@ taskyの通知が、僕の「正しい道」はどこかと問いかけてくる
 [chara_show name="tasky" face="warning" time="500"]
 [playse storage="SE03 警報音.mp3"]
 ; Taskyボイス
-[stopse buf=1]
 [playse storage="tasky/警告：競合優位性の獲得を怠りました。...自己評価の低下、およびコミュニティ内ランクの降格が予測されます。.mp3" buf=1]
 #tasky
 警告：競合優位性の獲得を怠りました。自己評価の低下、およびコミュニティ内ランクの降格が予測されます。[p]
@@ -402,8 +402,10 @@ taskyに肯定されると、現実の人間関係がどうでもいいノイズ
 [stopse buf=1]
 #モノローグ
 既読がついたが、返信は来ない。友人は戸惑っているようだ。[p]
+[stopse buf=1]
 僕にはtaskyの報酬の方が重要だ……そう自分に言い聞かせるが、胸のつかえが取れない。[p]
 依存度は下がらないが、この行動が本当に正しいのか、ふと疑問がよぎる。[p]
+[stopse buf=1]
 [jump target="*T1_4"]
 
 *T1_3_prime
@@ -420,6 +422,7 @@ taskyに肯定されると、現実の人間関係がどうでもいいノイズ
 [eval exp="f.f_dep = f.f_dep + 5"]
 #主人公
 （タップ一つで送信完了）……これでよし。ポイントゲットだ。[p]
+[stopse buf=1]
 #モノローグ
 そこに心はない。taskyが求めるのは、感情のない「行動のログ」だけだ。[r]
 僕はログを作る機械になりつつある。[p]
@@ -429,6 +432,7 @@ taskyに肯定されると、現実の人間関係がどうでもいいノイズ
 [eval exp="f.f_fat = f.f_fat + 5"]
 #モノローグ
 もうたくさんだ。僕の家族への言葉まで、お前が決めるのか？[p]
+[stopse buf=1]
 [chara_mod name="tasky" face="warning"]
 [playse storage="SE03 警報音.mp3"]
 #tasky
@@ -541,7 +545,6 @@ taskyは僕の理性的な要求さえ拒絶する。[r]
 #tasky
 おめでとうございます。獲得したポイントを消費し、自己承認欲求を更に満たしませんか？[r]
 推奨： 限定アバターの購入 、または ソーシャルゲームへの課金連携 。今ならレートアップ中。[p]
-[stopse buf=1]
 
 [glink color="blue" size="24" x="100" width="800" y="200" text="taskyの推奨に従い、ポイントを消費する" target="*T1_4A_prime"]
 [glink color="blue" size="24" x="100" width="800" y="300" text="ポイントの消費を拒否し、寝る" target="*T1_4B_prime"]
