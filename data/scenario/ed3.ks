@@ -46,8 +46,7 @@ SNSでは、みんなが新しいアプリ『Life-Up』のスコアを自慢し�
 気がつけば、僕は新しい管理アプリをインストールしていた。[l][r]
 また、同じループが始まる。[p]
 
-; 立ち絵消去・メッセージ枠消去
-[chara_hide_all]
+; メッセージ枠非表示
 [layopt layer=message0 visible=false]
 
 ; END表示
