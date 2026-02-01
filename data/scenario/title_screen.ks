@@ -1,5 +1,5 @@
 ;==============================
-; title_screen.ks （修正版）
+; title_screen.ks （軽量修正版）
 ;==============================
 [cm]
 [clearfix]
@@ -13,44 +13,34 @@
 [bg storage="title2.jpg" time="100"]
 
 ; -------------------------------------------
-; ★2. 裏読み込み（画面はtitle2のまま）
+; ★2. クリック待ち（画像不要のクリック領域を作成）
 ; -------------------------------------------
-[preload storage="data/fgimage/chara/1/hero_normal.png"]
-[preload storage="data/fgimage/chara/2/mina_smile.png"]
-[preload storage="data/fgimage/chara/3/kanae_normal.png"]
-[preload storage="data/fgimage/chara/4/tasky_normal.png"]
-[preload storage="data/bgimage/room-night.jpg"]
-[preload storage="data/bgimage/bg_smartphone_task_done.jpg"]
+; 画面全体（1280x720）をクリック可能にします
+[clickable width=1280 height=720 target="*press_start" opacity=0 mouseopacity=0]
 
-; -------------------------------------------
-; ★3. クリック待ち（Click to Start）
-; -------------------------------------------
-; 画面全体を覆う「透明なボタン」を配置します。
-; これを押すまで、画面はtitle2のままで、先へ進みません。
-[button graphic="title2.jpg" target="*press_start" x=0 y=0 width=1280 height=720 opacity=0]
-
-; 画面下部に点滅する文字を出す（任意）
+; 画面下部に点滅テキスト（任意）
 [layopt layer=1 visible=true]
 [ptext layer=1 page=fore text="Click to Start" x=500 y=600 size=40 color=white edge=black name="flash"]
 [anim name="flash" opacity=0 time=1000 loop=true]
 
+; ここで入力を待ちます
 [s]
 
 ; -------------------------------------------
-; ★4. クリック後の処理（UI表示・BGM再生）
+; ★3. クリック後の処理
 ; -------------------------------------------
 *press_start
-; アニメーション停止・ボタン消去
+; クリック領域とテキストを消去
 [cm]
 [freeimage layer=1]
 
-; 効果音（クリックした瞬間に鳴る）
+; 効果音
 [playse storage="SE08 スマホタップ音.mp3"]
 
 ; 背景を「メニュー画面（title.jpg）」に切り替え
 [bg storage="title.jpg" time="500"]
 
-; ここで初めてBGMを再生（ユーザー操作後なので確実に鳴ります）
+; BGM再生
 [playbgm storage="BGM_08_タイトル.mp3" volume="60"]
 
 ; タイトルロゴ表示

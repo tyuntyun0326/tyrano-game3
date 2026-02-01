@@ -6,13 +6,20 @@
 [start_keyconfig]
 
 ; ---------------------------------------------
-; ★【重要】メッセージ枠の強制表示設定
+; ★【修正】メッセージウィンドウを標準サイズに戻す
 ; ---------------------------------------------
 [layopt layer=message0 visible=true]
-[position layer=message0 width=1280 height=350 top=370 left=0]
+; 高さ230px、下寄せ（top=490）の標準的なサイズ
+[position layer=message0 width=1280 height=230 top=490 left=0]
 [position layer=message0 page=fore frame="" opacity=150]
-[position layer=message0 page=fore margint=80 marginb=40 marginl=50 marginr=50 visible=true]
-[deffont size=26 line=32]
+[position layer=message0 page=fore margint=40 marginb=20 marginl=50 marginr=50 visible=true]
+
+; フォント設定
+[deffont size=26 line=32 color="white"]
+[resetfont]
+
+; 書き込み先をmessage0に確定させる（文字が出ない対策）
+[current layer="message0"]
 
 ; 前の画面の残骸を消す
 [freeimage layer=1]
@@ -44,7 +51,6 @@
 
 ; ナレーター
 [stopse buf=1]
-; ※ファイル名が長いですが、フォルダ名が narrator であることを確認してください
 [playse storage="narrator/窓の外は、暴力的なまでに〜として訴えかけているようだった。.mp3" buf=1]
 #モノローグ
 窓の外は、暴力的なまでに煌々と輝く〈インデックス・シティ〉のネオン。[l][r]
@@ -98,7 +104,6 @@
 
 ; Taskyボイス
 [stopse buf=1]
-; ★【重要】フォルダ名が tasky か確認してください。Tasky や TASKY だと動きません。
 [playse storage="tasky/まだ、迷っているのですか？ あなたの内なる可能性を引き出し、埋もれた努力を数値で証明します。...あなたの人生を変える、最初で最後の一歩を.mp3" buf=1]
 #tasky (広告音声)
 『まだ、迷っているのですか？[l][r]
