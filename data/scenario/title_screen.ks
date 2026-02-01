@@ -9,39 +9,24 @@
 [hidemenubutton]
 [layopt layer=message0 visible=false]
 
-; ★1. 起動時は「表紙（title2.jpg）」を表示して停止
+; ★1. 起動時は「表紙（title2.jpg）」を表示
 [bg storage="title2.jpg" time="100"]
 
-; -------------------------------------------
-; ★2. クリック待ち（ここですべてを止める）
-; -------------------------------------------
-; 画面中央に点滅テキストを表示
-[layopt layer=1 visible=true]
-[ptext layer=1 page=fore text="Click to Start" x=500 y=600 size=40 color=white edge=black name="flash"]
-[anim name="flash" opacity=0 time=1000 loop=true]
-
-; 画面全体（1280x720）を透明なボタンにする
-; ※ここをクリックしない限り、背景変更も音楽再生も始まりません
-[clickable width=1280 height=720 target="*press_start" opacity=0 mouseopacity=0]
-
-; 処理停止（sタグ）
-[s]
+; ★2. クリック待ち（最も基本的な[l]タグを使用）
+; 画面をクリックするまで、ここで完全に停止します。
+[l]
 
 ; -------------------------------------------
-; ★3. クリックされたら初めて動き出す
+; ★3. クリック後の処理
 ; -------------------------------------------
 *press_start
-; クリック領域とテキストを消去
-[cm]
-[freeimage layer=1]
-
 ; 効果音
 [playse storage="SE08 スマホタップ音.mp3"]
 
-; ★ここで初めて背景を「メニュー画面（title.jpg）」に切り替え
+; 背景を「メニュー画面（title.jpg）」に切り替え
 [bg storage="title.jpg" time="500"]
 
-; ★ここで初めてBGMを再生（クリック後なのでブラウザ制限に引っかかりません）
+; BGM再生
 [playbgm storage="BGM_08_タイトル.mp3" volume="60"]
 
 ; タイトルロゴ表示
