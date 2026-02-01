@@ -10,32 +10,29 @@
 [layopt layer=message0 visible=false]
 
 ; -------------------------------------------
-; ★1. 起動時は「表紙（title2.jpg）」を表示
+; ★1. 起動時は「表紙（title2.jpg）」を表示して待機
 ; -------------------------------------------
 [bg storage="title2.jpg" time="100"]
 
-; 少し待機（読み込み演出の代わり）
-[wait time=2000]
+; 読み込み待機の演出（少しだけ待つ）
+[wait time=1000]
 
 ; -------------------------------------------
-; ★2. 自動で「メニュー背景（title.jpg）」へ切り替え
-; -------------------------------------------
-[bg storage="title.jpg" time="1500"]
-
-; -------------------------------------------
-; ★3. クリック待ち（Click to Start）
+; ★2. クリック待ち（この時点ではまだ背景は変えない！）
 ; -------------------------------------------
 ; 画面中央に点滅テキストを表示
 [layopt layer=1 visible=true]
 [ptext layer=1 page=fore text="Click to Start" x=500 y=600 size=40 color=white edge=black name="flash"]
 [anim name="flash" opacity=0 time=1000 loop=true]
 
-; 画面全体をクリック待ちにする
+; 画面全体をクリック待ちにする（透明なボタン）
 [clickable width=1280 height=720 target="*press_start" opacity=0 mouseopacity=0]
+
+; ★ここで完全に停止！クリックされるまで下には進みません
 [s]
 
 ; -------------------------------------------
-; ★4. クリック後の処理（UI表示・BGM再生）
+; ★3. クリックされたら初めて背景を変えてUI表示
 ; -------------------------------------------
 *press_start
 ; クリック領域とテキストを消去
@@ -45,7 +42,10 @@
 ; 効果音
 [playse storage="SE08 スマホタップ音.mp3"]
 
-; BGM再生（ここで初めて鳴ります）
+; ★ここで背景を「メニュー画面（title.jpg）」に切り替え
+[bg storage="title.jpg" time="500"]
+
+; BGM再生（操作後なので確実に鳴ります）
 [playbgm storage="BGM_08_タイトル.mp3" volume="60"]
 
 ; タイトルロゴ表示
