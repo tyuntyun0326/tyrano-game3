@@ -3,12 +3,7 @@
 ;=========================================
 [cm]
 [clearfix]
-[start_keyconfig]
-
-; 背景：自室（朝）
 [bg storage="myroom_mooning.jpg" time="2000" method="crossfade"]
-
-; BGM：希望
 [playbgm storage="BGM_07_希望.mp3" volume="50"]
 
 ; ★ナレーター音声
@@ -25,29 +20,25 @@
 [stopse buf=1]
 [playse storage="narrator/tasky は、もはや僕を支配する絶対者ではない。...僕が設定した、必要最低限のタスクしか提示しない。.mp3" buf=1]
 #モノローグ
-taskyは、もはや僕を支配する絶対者ではない。[l][r]
+taskyは、もはや僕を支配する絶対者ではない。[r]
 僕が設定した、必要最低限のタスクしか提示しない。[p]
 
-; Tasky表示
 [chara_show name="tasky" face="default" time="1000" width="400" top="100"]
 
 ; ★Taskyボイス
 [stopse buf=1]
-[playse storage="tasky/今日のタスクは『十分な休息』です。...実行しますか？.mp3" buf=1]
+[playse storage="tasky/報酬予測：称号『パーフェクト・モーニング』および 10pt。.mp3" buf=1]
 #tasky
 「今日のタスクは『十分な休息』です。報酬：『安定』。実行しますか？」[p]
 
-; 立ち絵消去
 [chara_hide_all time=1000]
-
-; ★背景変更：カフェ (bg_cafe_aftermoon.jpg)
 [bg storage="bg_cafe_aftermoon.jpg" time="1000"]
 
 ; ★ナレーター音声
 [stopse buf=1]
 [playse storage="narrator/疲労と快感のループは断ち切られた。...僕の人生は、退屈だが、僕自身のものになった。.mp3" buf=1]
 #モノローグ
-疲労と快感のループは断ち切られた。[l][r]
+疲労と快感のループは断ち切られた。[r]
 僕の人生は、退屈だが、僕自身のものになった。[p]
 ; ★ナレーター音声
 [stopse buf=1]
@@ -70,22 +61,17 @@ taskyは、もはや僕を支配する絶対者ではない。[l][r]
 #モノローグ
 この「制御」は、暫定的な勝利だ。でも、悪くない。[p]
 
-; メッセージ枠消去
 [layopt layer=message0 visible=false]
-
-; END表示
 [layopt layer=1 visible=true]
 [ptext layer=1 text="END" x=580 y=300 size=80 color="orange" edge="black" shadow="black" bold="bold"]
 [l]
 
-; --- 終了処理 ---
 [cm]
 [freeimage layer=1]
 [mask effect="fadeIn" time="2000"]
 [bg storage="end.jpg" time="0"]
 [ptext layer=1 text="Click to Title" x=550 y=500 size=30 color="white" edge="black"]
 [mask_off effect="fadeOut" time="2000"]
-
 [l]
 [jump storage="title_screen.ks"]
 [s]
