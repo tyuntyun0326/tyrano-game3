@@ -6,17 +6,16 @@
 [start_keyconfig]
 
 ; ---------------------------------------------
-; ★【修正】メッセージウィンドウを「画面幅いっぱい」の標準に戻す
+; ★【修正】ウィンドウを細くし、文字を上寄りに配置
 ; ---------------------------------------------
 [layopt layer=message0 visible=false]
 
-; 【標準設定】
-; 横幅:1280（画面最大） 高さ:230 / 位置:下部
-[position layer=message0 width=1280 height=230 top=490 left=0]
+; 横幅:1280 高さ:180（細め） / 位置:画面最下部(top=540)
+[position layer=message0 width=1280 height=180 top=540 left=0]
 [position layer=message0 page=fore frame="" opacity=150]
 
-; 文字の余白設定（読みやすく調整）
-[position layer=message0 page=fore margint=45 marginb=10 marginl=50 marginr=50]
+; 文字の余白設定（上を10pxに詰めて、文字を上側に表示）
+[position layer=message0 page=fore margint=10 marginb=10 marginl=50 marginr=50]
 
 ; 表示
 [layopt layer=message0 visible=true]
@@ -27,7 +26,7 @@
 ; 書き込みレイヤー固定
 [current layer="message0"]
 
-; 画面クリア
+; 前の画面の残骸を消す
 [freeimage layer=1]
 [layopt layer=1 visible=false]
 [showmenubutton]
@@ -82,8 +81,7 @@
 #モノローグ
 僕のスコアは 72 。平均以下だ。[r]
 同僚たちは着実に昇進リストに名を連ねていく中、[r]
-僕は卒業研究のテーマすら決まらず、日々の雑務に忙殺されている。[p]
-[cm]
+僕は卒業研究のテーマすら決まらず、日々の雑務に忙殺されている。[r]
 このままでは、社会から期待されない「平凡以下の不良資産（バッド・アセット）」として、[r]
 この都市の光の届かない隅で埋もれてしまうだろう。[p]
 
@@ -115,8 +113,7 @@
 #tasky (広告音声)
 『まだ、迷っているのですか？[r]
 あなたの内なる可能性を引き出し、埋もれた努力を数値で証明します。[r]
-自己管理AIアプリ『tasky』。[p]
-[cm]
+自己管理AIアプリ『tasky』。[r]
 今ならインストール無料。あなたの人生を変える、最初で最後の一歩を』[p]
 
 ; 部屋へ戻る
