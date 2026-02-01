@@ -16,7 +16,7 @@
 
 ; ★Taskyボイス
 [stopse buf=1]
-[playse storage="tasky/承認します。不必要なノイズを排除し、自己最適化を継続します.mp3" buf=1]
+[playse storage="tasky/承認します。...あなたは、私の一部となりました.mp3" buf=1]
 #tasky
 「承認します。あなたは、私の一部となりました」[p]
 

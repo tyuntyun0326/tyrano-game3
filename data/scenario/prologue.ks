@@ -5,13 +5,12 @@
 [clearfix]
 [start_keyconfig]
 
-; メッセージウィンドウ設定（5行表示対応）
+; メッセージウィンドウ設定
 [position layer=message0 width=1280 height=350 top=370 left=0]
 [position layer=message0 page=fore frame="" opacity=150]
 [position layer=message0 page=fore margint=80 marginb=40 marginl=50 marginr=50]
 [deffont size=26 line=32]
 
-; 前の画面の残骸を消す
 [freeimage layer=1]
 [layopt layer=1 visible=false]
 [showmenubutton]
@@ -76,7 +75,7 @@
 [stopse buf=1]
 [playse storage="narrator/常に感じる、喉の奥に張り付いたような焦燥感と自己嫌悪。... 「変わりたい」 その思いだけが空回りして、何一つ行動に移せない。.mp3" buf=1]
 #モノローグ
-常に感じる、喉の奥に張り付いたような 焦燥感と自己嫌悪 。[l][r]
+常に感じる、喉の奥に張り付いたような焦燥感と自己嫌悪 。[l][r]
 「変わりたい」 その思いだけが空回りして、何一つ行動に移せない。[p]
 
 [stopse buf=1]

@@ -13,7 +13,7 @@
 
 ; ★ナレーター音声
 [stopse buf=1]
-[playse storage="narrator/僕は、自分の意志で、このアプリをアンインストールした。...警告音が鳴り止んだ瞬間、体が崩れ落ちるほど重くなった。.mp3" buf=1]
+[playse storage="narrator/僕は tasky をアンインストールしなかった。.mp3" buf=1]
 #モノローグ
 僕はtaskyをアンインストールしなかった。[p]
 ; ★ナレーター音声
