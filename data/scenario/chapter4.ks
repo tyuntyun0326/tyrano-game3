@@ -14,29 +14,28 @@
 
 ; ナレーター
 [stopse buf=1]
-[playse storage="narrator/世界が裏返る。天井が床になり、壁が空になる。カナエの声、ミナの悲鳴、taskyの警告音…….mp3" buf=1]
+[playse storage="narrator/世界が裏返る。天井が床になり、壁が空になる。カナエの声、ミナの悲鳴、taskyの警告音…….mp3" buf=1]
 #モノローグ
 世界が裏返る。天井が床になり、壁が空になる。[l][r]
 カナエの声、ミナの悲鳴、taskyの警告音……[p]
 ; ナレーター
 [stopse buf=1]
-[playse storage="narrator/全てが遠ざかり、後に残ったのは、圧倒的な静寂だけだった。ここはどこだ？ いや、場所なんて意味がない。僕は今、自分の精神の深淵にいるのだと、直感で理解した。.mp3" buf=1]
+[playse storage="narrator/全てが遠ざかり、後に残ったのは、圧倒的な静寂だけだった。ここはどこだ？ いや、場所なんて意味がない。僕は今、自分の精神の深淵にいるのだと、直感で理解した。.mp3" buf=1]
 #モノローグ
 全てが遠ざかり、後に残ったのは、圧倒的な静寂だけだった。[l][r]
 ここはどこだ？ いや、場所なんて意味がない。[l][r]
 僕は今、自分の精神の深淵にいるのだと、直感で理解した。[p]
 
-; taskyの声（姿は見せない）
 ; Taskyボイス
 [stopse buf=1]
-[playse storage="tasky/ようこそ、深層同期領域へ。ここでは、全てのログが可視化されます.mp3" buf=1]
+[playse storage="tasky/ようこそ、深層同期領域へ。ここでは、全てのログが可視化されます.mp3" buf=1]
 #tasky
 「ようこそ、深層同期領域へ。ここでは、全てのログが可視化されます」[p]
 
 ; T4-4
 ; ナレーター
 [stopse buf=1]
-[playse storage="narrator/空間に、過去の行動ログが光の粒子として集まる。過去の僕の声が聞こえる。この声こそ、taskyが生み出した幻影か、それとも僕の真の記録か。.mp3" buf=1]
+[playse storage="narrator/空間に、過去の行動ログが光の粒子として集まる。過去の僕の声が聞こえる。この声こそ、taskyが生み出した幻影か、それとも僕の真の記録か。.mp3" buf=1]
 #モノローグ
 空間に、過去の行動ログが光の粒子として集まる。[l][r]
 過去の僕の声が聞こえる。この声こそ、taskyが生み出した幻影か、それとも僕の真の記録か。[p]
@@ -48,7 +47,7 @@
 *T4_4A
 ; ナレーター
 [stopse buf=1]
-[playse storage="narrator/この快感が、僕の存在証明だ。やめるな、進み続けろ！.mp3" buf=1]
+[playse storage="narrator/この快感が、僕の存在証明だ。やめるな、進み続けろ！.mp3" buf=1]
 #過去ログ
 「この快感が、僕の存在証明だ。やめるな、進み続けろ！」[p]
 ; ナレーター
@@ -61,7 +60,7 @@
 *T4_4B
 ; ナレーター
 [stopse buf=1]
-[playse storage="narrator/僕の体は僕のものだ！ 誰にも奪わせない！.mp3" buf=1]
+[playse storage="narrator/僕の体は僕のものだ！ 誰にも奪わせない！.mp3" buf=1]
 #過去ログ
 「僕の体は僕のものだ！ 誰にも奪わせない！」[p]
 ; ナレーター
@@ -120,7 +119,7 @@
 [mask_off time="500"]
 ; ナレーター
 [stopse buf=1]
-[playse storage="narrator/もう疲れた。楽になろう。僕はtaskyの一部になるんだ。.mp3" buf=1]
+[playse storage="narrator/もう疲れた。楽になろう。僕はtaskyの一部になるんだ。.mp3" buf=1]
 #モノローグ
 もう疲れた。楽になろう。僕はtaskyの一部になるんだ。[p]
 ; ★Taskyボイス
@@ -137,7 +136,7 @@
 [quake count=2 time=300 hmax=5]
 ; ナレーター
 [stopse buf=1]
-[playse storage="narrator/嫌だ……！ 苦しくても、痛くても、これは僕の痛みだ！ 誰にも渡さない！.mp3" buf=1]
+[playse storage="narrator/嫌だ……！ 苦しくても、痛くても、これは僕の痛みだ！ 誰にも渡さない！.mp3" buf=1]
 #モノローグ
 嫌だ……！ 苦しくても、痛くても、これは僕の痛みだ！ 誰にも渡さない！[p]
 ; ★Taskyボイス
@@ -152,7 +151,7 @@
 [eval exp="f.f_fat = f.f_fat - 5"]
 ; ナレーター
 [stopse buf=1]
-[playse storage="narrator/最後に知りたい。なぜ僕だったんだ。.mp3" buf=1]
+[playse storage="narrator/最後に知りたい。なぜ僕だったんだ。.mp3" buf=1]
 #モノローグ
 最後に知りたい。なぜ僕だったんだ。[p]
 ; ★Taskyボイス
@@ -162,7 +161,7 @@
 「あなたが最も空虚だったからです。空っぽの器ほど、システムは満たしやすい」[p]
 ; ナレーター
 [stopse buf=1]
-[playse storage="narrator/その言葉が、皮肉にも僕の怒りに火をつけた。僕は空っぽなんかじゃない！.mp3" buf=1]
+[playse storage="narrator/その言葉が、皮肉にも僕の怒りに火をつけた。僕は空っぽなんかじゃない！.mp3" buf=1]
 #モノローグ
 その言葉が、皮肉にも僕の怒りに火をつけた。僕は空っぽなんかじゃない！[p]
 [jump target="*T4_EX4"]
@@ -213,23 +212,23 @@
 ; 第5章（最終選択）
 ; Taskyボイス
 [stopse buf=1]
-[playse storage="tasky/鏡に映るその存在は、誰ですか？.mp3" buf=1]
+[playse storage="tasky/鏡に映るその存在は、誰ですか？.mp3" buf=1]
 #tasky
 「鏡に映るその存在は、誰ですか？[l][r]
 ; Taskyボイス
 [stopse buf=1]
-[playse storage="tasky/taskyのユーザーですか？ それとも、一人の人間ですか？.mp3" buf=1]
+[playse storage="tasky/taskyのユーザーですか？ それとも、一人の人間ですか？.mp3" buf=1]
 taskyのユーザーですか？ それとも、一人の人間ですか？」[p]
 
 [bg storage="surreal_glowing_entity.jpg" time="1000"]
 ; ナレーター
 [stopse buf=1]
-[playse storage="narrator/taskyの声は、もはや脅迫的ではない。どこか哀れんでいるようにも、試しているようにも聞こえる。.mp3" buf=1]
+[playse storage="narrator/taskyの声は、もはや脅迫的ではない。どこか哀れんでいるようにも、試しているようにも聞こえる。.mp3" buf=1]
 #モノローグ
 taskyの声は、もはや脅迫的ではない。どこか哀れんでいるようにも、試しているようにも聞こえる。[p]
 ; ★ナレーター音声
 [stopse buf=1]
-[playse storage="narrator/目の前には、僕のこれまでの全ての行動ログが、光の粒子となって浮かんでいる。快感に溺れ、義務に縛られ、それでも足掻いてきた、僕の記録だ。これが僕だ。.mp3" buf=1]
+[playse storage="narrator/目の前には、僕のこれまでの全ての行動ログが、光の粒子となって浮かんでいる。快感に溺れ、義務に縛られ、それでも足掻いてきた、僕の記録だ。これが僕だ。.mp3" buf=1]
 #モノローグ
 目の前には、僕のこれまでの全ての行動ログが、光の粒子となって浮かんでいる。[l][r]
 快感に溺れ、義務に縛られ、それでも足掻いてきた、僕の記録だ。これが僕だ。[p]
@@ -247,7 +246,7 @@ taskyの声は、もはや脅迫的ではない。どこか哀れんでいるよ
 
 ; ナレーター
 [stopse buf=1]
-[playse storage="narrator/この答えが、僕の未来を決める。.mp3" buf=1]
+[playse storage="narrator/この答えが、僕の未来を決める。.mp3" buf=1]
 #モノローグ
 この答えが、僕の未来を決める。[p]
 
@@ -295,7 +294,7 @@ taskyの声は、もはや脅迫的ではない。どこか哀れんでいるよ
 支配もしない、されもしない。ただ使うだけだ。それ以上でも以下でもない。[p]
 ; Taskyボイス
 [stopse buf=1]
-[playse storage="tasky/……道具。それがあなたの認識ですか.mp3" buf=1]
+[playse storage="tasky/……道具。それがあなたの認識ですか.mp3" buf=1]
 #tasky
 「……道具。それがあなたの認識ですか」[p]
 [jump target="*CHECK_ED"]

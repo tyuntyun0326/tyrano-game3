@@ -5,7 +5,7 @@
 [clearfix]
 [start_keyconfig]
 
-; メッセージウィンドウ設定
+; メッセージウィンドウ設定（5行表示対応）
 [position layer=message0 width=1280 height=350 top=370 left=0]
 [position layer=message0 page=fore frame="" opacity=150]
 [position layer=message0 page=fore margint=80 marginb=40 marginl=50 marginr=50]
@@ -40,6 +40,7 @@
 
 ; ナレーター
 [stopse buf=1]
+; ※ファイル名が非常に長いため、改行せずに1行で記述しています
 [playse storage="narrator/窓の外は、暴力的なまでに〜として訴えかけているようだった。.mp3" buf=1]
 #モノローグ
 窓の外は、暴力的なまでに煌々と輝く〈インデックス・シティ〉のネオン。[l][r]
@@ -73,9 +74,9 @@
 [bg storage="myroom_night.jpg" time="1000"]
 
 [stopse buf=1]
-[playse storage="narrator/常に感じる、喉の奥に張り付いたような焦燥感と自己嫌悪。... 「変わりたい」 その思いだけが空回りして、何一つ行動に移せない。.mp3" buf=1]
+[playse storage="narrator/常に感じる、喉の奥に張り付いたような焦燥感と自己嫌悪。...誰かに、正解を教えて欲しかった。.mp3" buf=1]
 #モノローグ
-常に感じる、喉の奥に張り付いたような焦燥感と自己嫌悪 。[l][r]
+常に感じる、喉の奥に張り付いたような 焦燥感と自己嫌悪 。[l][r]
 「変わりたい」 その思いだけが空回りして、何一つ行動に移せない。[p]
 
 [stopse buf=1]
