@@ -6,16 +6,18 @@
 [start_keyconfig]
 
 ; ---------------------------------------------
-; ★【強制修正】メッセージウィンドウを標準サイズにする
+; ★【修正】メッセージウィンドウを「画像の設定通り」に戻す
 ; ---------------------------------------------
 ; 一度設定をリセット
 [layopt layer=message0 visible=false]
 
-; 標準的なノベルゲームのサイズ（高さ230px、下寄せ）に設定
-; top=490 にすることで画面下部に配置されます
-[position layer=message0 width=1280 height=230 top=490 left=0]
+; 添付画像の数値を適用
+; 横幅:920 高さ:211 / X位置:20 Y位置:371
+[position layer=message0 width=920 height=211 top=371 left=20]
 [position layer=message0 page=fore frame="" opacity=150]
-[position layer=message0 page=fore margint=45 marginb=10 marginl=50 marginr=50]
+
+; メッセージ表示位置調整（上:45 下:10 左:10 右:20）
+[position layer=message0 page=fore margint=45 marginb=10 marginl=10 marginr=20]
 
 ; 設定を適用して表示
 [layopt layer=message0 visible=true]
