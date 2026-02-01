@@ -1,22 +1,20 @@
 ;==============================
-; title_screen.ks
+; title_screen.ks （修正版）
 ;==============================
 [cm]
 [clearfix]
 [start_keyconfig]
 
-; メニューボタン等を隠す
+; メニュー類を隠す
 [hidemenubutton]
 [layopt layer=message0 visible=false]
 
-; ★1. まず「表紙（title2.jpg）」を表示
-; ※data/bgimage/に title2.jpg が必要です！
+; ★1. 起動時は「表紙（title2.jpg）」を表示
 [bg storage="title2.jpg" time="100"]
 
 ; -------------------------------------------
-; ★2. 裏読み込み（この間、画面はtitle2のまま維持されます）
+; ★2. 裏読み込み（画面はtitle2のまま）
 ; -------------------------------------------
-; ※ここで少し待ち時間が発生します
 [preload storage="data/fgimage/chara/1/hero_normal.png"]
 [preload storage="data/fgimage/chara/2/mina_smile.png"]
 [preload storage="data/fgimage/chara/3/kanae_normal.png"]
@@ -25,24 +23,35 @@
 [preload storage="data/bgimage/bg_smartphone_task_done.jpg"]
 
 ; -------------------------------------------
-; ★3. 読み込み完了後、「title.jpg」へ自動切り替え
+; ★3. クリック待ち（Click to Start）
 ; -------------------------------------------
-[bg storage="title.jpg" time="1000"]
+; 画面全体を覆う「透明なボタン」を配置します。
+; これを押すまで、画面はtitle2のままで、先へ進みません。
+[button graphic="title2.jpg" target="*press_start" x=0 y=0 width=1280 height=720 opacity=0]
+
+; 画面下部に点滅する文字を出す（任意）
+[layopt layer=1 visible=true]
+[ptext layer=1 page=fore text="Click to Start" x=500 y=600 size=40 color=white edge=black name="flash"]
+[anim name="flash" opacity=0 time=1000 loop=true]
+
+[s]
 
 ; -------------------------------------------
-; ★4. クリック待ち（まだボタンは出しません）
+; ★4. クリック後の処理（UI表示・BGM再生）
 ; -------------------------------------------
-; 画面をクリック（またはキー入力）するまでここで止まります
-[l]
+*press_start
+; アニメーション停止・ボタン消去
+[cm]
+[freeimage layer=1]
 
-; -------------------------------------------
-; ★5. クリックされたらUI（タイトル・ボタン）を表示
-; -------------------------------------------
-; 効果音
+; 効果音（クリックした瞬間に鳴る）
 [playse storage="SE08 スマホタップ音.mp3"]
 
-; ボタン消去（念のため）
-[cm]
+; 背景を「メニュー画面（title.jpg）」に切り替え
+[bg storage="title.jpg" time="500"]
+
+; ここで初めてBGMを再生（ユーザー操作後なので確実に鳴ります）
+[playbgm storage="BGM_08_タイトル.mp3" volume="60"]
 
 ; タイトルロゴ表示
 [layopt layer=1 visible=true]
@@ -52,9 +61,6 @@
 ; メニューボタン表示
 [glink color="black" text="はじめから" x=500 y=450 size=24 target="*start" width="200"]
 [glink color="black" text="つづきから" x=500 y=550 size=24 target="*load" width="200"]
-
-; BGM再生（メニューが出たタイミングで再生）
-[playbgm storage="BGM_08_タイトル.mp3" volume="60"]
 
 [s]
 
@@ -73,5 +79,5 @@
 *load
 [cm]
 [showload]
-[jump target="*start"]
+[jump target="*press_start"]
 [s]

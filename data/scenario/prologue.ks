@@ -5,12 +5,16 @@
 [clearfix]
 [start_keyconfig]
 
-; メッセージウィンドウ設定（5行表示対応）
+; ---------------------------------------------
+; ★【重要】メッセージ枠の強制表示設定
+; ---------------------------------------------
+[layopt layer=message0 visible=true]
 [position layer=message0 width=1280 height=350 top=370 left=0]
 [position layer=message0 page=fore frame="" opacity=150]
-[position layer=message0 page=fore margint=80 marginb=40 marginl=50 marginr=50]
+[position layer=message0 page=fore margint=80 marginb=40 marginl=50 marginr=50 visible=true]
 [deffont size=26 line=32]
 
+; 前の画面の残骸を消す
 [freeimage layer=1]
 [layopt layer=1 visible=false]
 [showmenubutton]
@@ -40,7 +44,7 @@
 
 ; ナレーター
 [stopse buf=1]
-; ※ファイル名が非常に長いため、改行せずに1行で記述しています
+; ※ファイル名が長いですが、フォルダ名が narrator であることを確認してください
 [playse storage="narrator/窓の外は、暴力的なまでに〜として訴えかけているようだった。.mp3" buf=1]
 #モノローグ
 窓の外は、暴力的なまでに煌々と輝く〈インデックス・シティ〉のネオン。[l][r]
@@ -74,7 +78,7 @@
 [bg storage="myroom_night.jpg" time="1000"]
 
 [stopse buf=1]
-[playse storage="narrator/常に感じる、喉の奥に張り付いたような焦燥感と自己嫌悪。...誰かに、正解を教えて欲しかった。.mp3" buf=1]
+[playse storage="narrator/常に感じる、喉の奥に張り付いたような焦燥感と自己嫌悪。... 「変わりたい」 その思いだけが空回りして、何一つ行動に移せない。.mp3" buf=1]
 #モノローグ
 常に感じる、喉の奥に張り付いたような 焦燥感と自己嫌悪 。[l][r]
 「変わりたい」 その思いだけが空回りして、何一つ行動に移せない。[p]
@@ -94,6 +98,7 @@
 
 ; Taskyボイス
 [stopse buf=1]
+; ★【重要】フォルダ名が tasky か確認してください。Tasky や TASKY だと動きません。
 [playse storage="tasky/まだ、迷っているのですか？ あなたの内なる可能性を引き出し、埋もれた努力を数値で証明します。...あなたの人生を変える、最初で最後の一歩を.mp3" buf=1]
 #tasky (広告音声)
 『まだ、迷っているのですか？[l][r]
