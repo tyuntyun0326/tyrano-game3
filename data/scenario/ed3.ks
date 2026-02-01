@@ -13,22 +13,19 @@
 
 ; ★ナレーター音声
 [stopse buf=1]
-[playse storage="narrator/tasky を消してから、数ヶ月が経った。.mp3" buf=1]
+[playse storage="narrator/taskyを消してから、数ヶ月が経った。最初は清々しかったが、次第に「何をすればいいか分からない」不安が戻ってきた.mp3" buf=1]
 #モノローグ
 taskyを消してから、数ヶ月が経った。[p]
-; ★ナレーター音声
-[stopse buf=1]
-[playse storage="narrator/最初は清々しかったが、次第に「何をすればいいか分からない」不安が戻ってきた.mp3" buf=1]
 #モノローグ
 最初は清々しかったが、次第に「何をすればいいか分からない」不安が戻ってきた。[p]
 ; ★ナレーター音声
 [stopse buf=1]
-[playse storage="narrator/日々の生活に張りがなく、また自堕落な生活に戻りつつある。.mp3" buf=1]
+[playse storage="narrator/日々の生活に張りがなく、また自堕落な生活に戻りつつある。.mp3" buf=1]
 #モノローグ
 日々の生活に張りがなく、また自堕落な生活に戻りつつある。[p]
 ; ★ナレーター音声
 [stopse buf=1]
-[playse storage="narrator/SNS では、みんなが新しいアプリ『Life-Up』のスコアを自慢している。...……あれなら、違うかもしれない。.mp3" buf=1]
+[playse storage="narrator/SNSでは、みんなが新しいアプリ『Life-Up』のスコアを自慢している。……あれなら、違うかもしれない。.mp3" buf=1]
 #モノローグ
 SNSでは、みんなが新しいアプリ『Life-Up』のスコアを自慢している。[l][r]
 ……あれなら、違うかもしれない。[p]
@@ -41,7 +38,7 @@ SNSでは、みんなが新しいアプリ『Life-Up』のスコアを自慢し�
 
 ; ★ナレーター音声
 [stopse buf=1]
-[playse storage="narrator/気がつけば、僕は新しい管理アプリをインストールしていた。...ループは終わらない。.mp3" buf=1]
+[playse storage="narrator/これが、最後のチャンスかもしれない。...僕はtaskyに、僕の人生の主導権を委ねてみようと決めた。.mp3" buf=1]
 #モノローグ
 気がつけば、僕は新しい管理アプリをインストールしていた。[l][r]
 また、同じループが始まる。[p]

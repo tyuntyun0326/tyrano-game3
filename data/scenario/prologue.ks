@@ -5,15 +5,6 @@
 [clearfix]
 [start_keyconfig]
 
-; -------------------------------------------
-; ★ロード画面の消去
-; -------------------------------------------
-[iscript]
-clearInterval(window.loadingInterval);
-$('#custom_loader').fadeOut(500, function(){ $(this).remove(); });
-[endscript]
-[wait time=500]
-
 ; メッセージウィンドウ設定（5行表示対応）
 [position layer=message0 width=1280 height=350 top=370 left=0]
 [position layer=message0 page=fore frame="" opacity=150]
@@ -25,9 +16,7 @@ $('#custom_loader').fadeOut(500, function(){ $(this).remove(); });
 [layopt layer=1 visible=false]
 [showmenubutton]
 
-;=========================================
 ; キャラクター定義
-;=========================================
 [chara_new name="hero" storage="chara/1/hero_normal.png" jname="僕" width="400" top="100"]
 [chara_face name="hero" face="default" storage="chara/1/hero_normal.png"]
 [chara_new name="ミナ" storage="chara/2/mina_smile.png" jname="ミナ" width="400" top="100"]

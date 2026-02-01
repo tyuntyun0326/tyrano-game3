@@ -26,7 +26,6 @@
 ここはどこだ？ いや、場所なんて意味がない。[l][r]
 僕は今、自分の精神の深淵にいるのだと、直感で理解した。[p]
 
-; taskyの声（姿は見せない）
 ; Taskyボイス
 [stopse buf=1]
 [playse storage="tasky/ようこそ、深層同期領域へ。ここでは、全てのログが可視化されます.mp3" buf=1]
@@ -219,7 +218,6 @@
 ; Taskyボイス
 [stopse buf=1]
 [playse storage="tasky/taskyのユーザーですか？ それとも、一人の人間ですか？.mp3" buf=1]
-#tasky
 taskyのユーザーですか？ それとも、一人の人間ですか？」[p]
 
 [bg storage="surreal_glowing_entity.jpg" time="1000"]
