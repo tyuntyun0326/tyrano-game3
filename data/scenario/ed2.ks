@@ -11,10 +11,9 @@
 
 ; ★Taskyボイス
 [stopse buf=1]
-[playse storage="tasky/エラー……エラー……自己決定権の奪取を検知しました。...あなたは社会的敗北者となります.mp3" buf=1]
+[playse storage="tasky/救済を拒否？ なぜ？ 苦しいでしょう？.mp3" buf=1]
 #tasky
-「エラー……エラー……自己決定権の奪取を検知しました。[r]
-あなたは社会的敗北者となります」[p]
+「救済を拒否？ なぜ？ 苦しいでしょう？」[p]
 
 [quake count=3 time=500 hmax=10]
 [playse storage="SE05 エラー_拒絶音.mp3"]
