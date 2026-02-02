@@ -8,18 +8,21 @@
 
 ; ★ナレーター音声
 [stopse buf=1]
-[playse storage="narrator/taskyを消してから、数ヶ月が経った。最初は清々しかったが、次第に「何をすればいいか分からない」不安が戻ってきた.mp3" buf=1]
+; ★リスト完全一致
+[playse storage="narrator/taskyを消してから、数ヶ月が経った。最初は清々しかったが、次第に「何をすればいいか分からない」不安が戻ってきた.mp3" buf=1]
 #モノローグ
 taskyを消してから、数ヶ月が経った。[r]
 最初は清々しかったが、次第に「何をすればいいか分からない」不安が戻ってきた。[p]
 ; ★ナレーター音声
 [stopse buf=1]
-[playse storage="narrator/日々の生活に張りがなく、また自堕落な生活に戻りつつある。.mp3" buf=1]
+; ★リスト完全一致
+[playse storage="narrator/日々の生活に張りがなく、また自堕落な生活に戻りつつある。.mp3" buf=1]
 #モノローグ
 日々の生活に張りがなく、また自堕落な生活に戻りつつある。[p]
 ; ★ナレーター音声
 [stopse buf=1]
-[playse storage="narrator/SNSでは、みんなが新しいアプリ『Life-Up』のスコアを自慢している。……あれなら、違うかもしれない。.mp3" buf=1]
+; ★リスト完全一致
+[playse storage="narrator/SNSでは、みんなが新しいアプリ『Life-Up』のスコアを自慢している。……あれなら、違うかもしれない。.mp3" buf=1]
 #モノローグ
 SNSでは、みんなが新しいアプリ『Life-Up』のスコアを自慢している。[r]
 ……あれなら、違うかもしれない。[p]
@@ -30,10 +33,11 @@ SNSでは、みんなが新しいアプリ『Life-Up』のスコアを自慢し�
 
 ; ★ナレーター音声
 [stopse buf=1]
-[playse storage="narrator/これが、最後のチャンスかもしれない。...僕はtaskyに、僕の人生の主導権を委ねてみようと決めた。.mp3" buf=1]
+; ★リスト完全一致
+[playse storage="narrator/これが、最後のチャンスかもしれない。...僕はtaskyに、僕の人生の主導権を委ねてみようと決めた。.mp3" buf=1]
 #モノローグ
-気がつけば、僕は新しい管理アプリをインストールしていた。[r]
-また、同じループが始まる。[p]
+これが、最後のチャンスかもしれない。[r]
+...僕はtaskyに、僕の人生の主導権を委ねてみようと決めた。[p]
 
 [layopt layer=message0 visible=false]
 [layopt layer=1 visible=true]

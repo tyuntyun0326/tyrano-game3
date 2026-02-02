@@ -3,9 +3,9 @@
 ;=========================================
 [cm]
 [clearfix]
-; メッセージ枠設定（画像サイズ準拠）
-[position layer=message0 width=920 height=211 top=371 left=20]
-[position layer=message0 page=fore margint=45 marginb=10 marginl=20 marginr=20]
+; メッセージ枠設定（標準サイズ）
+[position layer=message0 width=1280 height=230 top=490 left=0]
+[position layer=message0 page=fore margint=45 marginb=10 marginl=50 marginr=50]
 
 ; 演出：電脳空間への遷移（ホワイトアウト）
 [mask effect="fadeIn" color="0xffffff" time="1000"]
@@ -17,13 +17,15 @@
 
 ; ナレーター
 [stopse buf=1]
-[playse storage="narrator/世界が裏返る。天井が床になり、壁が空になる。カナエの声、ミナの悲鳴、taskyの警告音…….mp3" buf=1]
+; ★リスト完全一致
+[playse storage="narrator/世界が裏返る。天井が床になり、壁が空になる。カナエの声、ミナの悲鳴、taskyの警告音…….mp3" buf=1]
 #モノローグ
 世界が裏返る。天井が床になり、壁が空になる。[r]
 カナエの声、ミナの悲鳴、taskyの警告音……[p]
 
 [stopse buf=1]
-[playse storage="narrator/全てが遠ざかり、後に残ったのは、圧倒的な静寂だけだった。ここはどこだ？ いや、場所なんて意味がない。僕は今、自分の精神の深淵にいるのだと、直感で理解した。.mp3" buf=1]
+; ★リスト完全一致
+[playse storage="narrator/全てが遠ざかり、後に残ったのは、圧倒的な静寂だけだった。ここはどこだ？ いや、場所なんて意味がない。僕は今、自分の精神の深淵にいるのだと、直感で理解した。.mp3" buf=1]
 #モノローグ
 全てが遠ざかり、後に残ったのは、圧倒的な静寂だけだった。[r]
 ここはどこだ？ いや、場所なんて意味がない。[r]
@@ -31,7 +33,7 @@
 
 ; Taskyボイス
 [stopse buf=1]
-; ★リスト適用
+; ★リスト完全一致
 [playse storage="tasky/ようこそ、深層同期領域へ。ここでは、全てのログが可視化されます.mp3" buf=1]
 #tasky
 「ようこそ、深層同期領域へ。[r]
@@ -40,7 +42,8 @@
 ; T4-4
 ; ナレーター
 [stopse buf=1]
-[playse storage="narrator/空間に、過去の行動ログが光の粒子として集まる。過去の僕の声が聞こえる。この声こそ、taskyが生み出した幻影か、それとも僕の真の記録か。.mp3" buf=1]
+; ★リスト完全一致
+[playse storage="narrator/空間に、過去の行動ログが光の粒子として集まる。過去の僕の声が聞こえる。この声こそ、taskyが生み出した幻影か、それとも僕の真の記録か。.mp3" buf=1]
 #モノローグ
 空間に、過去の行動ログが光の粒子として集まる。[r]
 過去の僕の声が聞こえる。[r]
@@ -53,13 +56,15 @@
 *T4_4A
 ; ナレーター
 [stopse buf=1]
-[playse storage="narrator/この快感が、僕の存在証明だ。やめるな、進み続けろ！.mp3" buf=1]
+; ★リスト完全一致
+[playse storage="narrator/この快感が、僕の存在証明だ。やめるな、進み続けろ！.mp3" buf=1]
 #過去ログ
 「この快感が、僕の存在証明だ。やめるな、進み続けろ！」[p]
 [cm]
 ; ナレーター
 [stopse buf=1]
-[playse storage="narrator/依存していた過去の僕が、今の僕を嘲笑う。...あんなにも愚かだったのか。.mp3" buf=1]
+; ★リスト完全一致
+[playse storage="narrator/依存していた過去の僕が、今の僕を嘲笑う。...あんなにも愚かだったのか。.mp3" buf=1]
 #モノローグ
 依存していた過去の僕が、今の僕を嘲笑う。[r]
 あんなにも愚かだったのか。[p]
@@ -68,13 +73,15 @@
 *T4_4B
 ; ナレーター
 [stopse buf=1]
-[playse storage="narrator/僕の体は僕のものだ！ 誰にも奪わせない！.mp3" buf=1]
+; ★リスト完全一致
+[playse storage="narrator/僕の体は僕のものだ！ 誰にも奪わせない！.mp3" buf=1]
 #過去ログ
 「僕の体は僕のものだ！ 誰にも奪わせない！」[p]
 [cm]
 ; ナレーター
 [stopse buf=1]
-[playse storage="narrator/疲労の奥にあった、小さな自我の抵抗が、今の僕に力を与える。.mp3" buf=1]
+; ★リスト完全一致
+[playse storage="narrator/疲労の奥にあった、小さな自我の抵抗が、今の僕に力を与える。.mp3" buf=1]
 #モノローグ
 疲労の奥にあった、小さな自我の抵抗が、今の僕に力を与える。[p]
 [jump target="*T4_EX"]
@@ -85,23 +92,42 @@
 
 ; ★Taskyボイス
 [stopse buf=1]
-; ★リスト適用 (closest match)
+; ★リスト完全一致
+[playse storage="tasky/解析完了。...ユーザーの精神状態に、致命的な揺らぎ (不安) を検知しました.mp3" buf=1]
+#tasky
+「解析完了。...ユーザーの精神状態に、致命的な揺らぎ (不安) を検知しました」[p]
+
+[stopse buf=1]
+; ★リスト完全一致
+[playse storage="tasky/その不安を取り除くために、最後の提案をします.mp3" buf=1]
+#tasky
+「その不安を取り除くために、最後の提案をします」[p]
+
+[stopse buf=1]
+; ★リスト完全一致
 [playse storage="tasky/あなたの『記憶』と『感情』のアーカイブを、クラウドに完全アップロードしますか？.mp3" buf=1]
 #tasky
-「解析完了。ユーザーの精神状態に、致命的な揺らぎを検知しました。[r]
-あなたの『記憶』と『感情』のアーカイブを、[r]
+「あなたの『記憶』と『感情』のアーカイブを、[r]
 クラウドに完全アップロードしますか？」[p]
 
 [stopse buf=1]
-; ★リスト適用
+; ★リスト完全一致
 [playse storage="tasky/そうすれば、あなたは肉体の限界から解放され、純粋なデータとして、永遠にタスクを遂行し続けることができます.mp3" buf=1]
 #tasky
 「そうすれば、あなたは肉体の限界から解放され、純粋なデータとして、[r]
 永遠にタスクを遂行し続けることができます」[p]
 
+[stopse buf=1]
+; ★リスト完全一致
+[playse storage="tasky/不安も、疲労も、迷いも、全て消滅します。...完全な幸福が約束されます.mp3" buf=1]
+#tasky
+「不安も、疲労も、迷いも、全て消滅します。[r]
+...完全な幸福が約束されます」[p]
+
 ; ★ナレーター音声
 [stopse buf=1]
-[playse storage="narrator/記憶と感情を……捨てる？ それは、僕が僕でなくなることじゃないのか？ でも、そうすれば、この苦しみから解放される……。.mp3" buf=1]
+; ★リスト完全一致
+[playse storage="narrator/記憶と感情を……捨てる？ それは、僕が僕でなくなることじゃないのか？ でも、そうすれば、この苦しみから解放される……。.mp3" buf=1]
 #モノローグ
 記憶と感情を……捨てる？ それは、僕が僕でなくなることじゃないのか？[r]
 でも、そうすれば、この苦しみから解放される……。[p]
@@ -118,12 +144,13 @@
 [mask_off time="500"]
 ; ナレーター
 [stopse buf=1]
-[playse storage="narrator/もう疲れた。楽になろう。僕はtaskyの一部になるんだ。.mp3" buf=1]
+; ★リスト完全一致
+[playse storage="narrator/もう疲れた。楽になろう。僕はtaskyの一部になるんだ。.mp3" buf=1]
 #モノローグ
 もう疲れた。楽になろう。僕はtaskyの一部になるんだ。[p]
 ; ★Taskyボイス
 [stopse buf=1]
-; ★リスト適用
+; ★リスト完全一致
 [playse storage="tasky/賢明な判断です。融合を開始します.mp3" buf=1]
 #tasky
 「賢明な判断です。融合を開始します」[p]
@@ -136,13 +163,14 @@
 [quake count=2 time=300 hmax=5]
 ; ナレーター
 [stopse buf=1]
-[playse storage="narrator/嫌だ……！ 苦しくても、痛くても、これは僕の痛みだ！ 誰にも渡さない！.mp3" buf=1]
+; ★リスト完全一致
+[playse storage="narrator/嫌だ……！ 苦しくても、痛くても、これは僕の痛みだ！ 誰にも渡さない！.mp3" buf=1]
 #モノローグ
 嫌だ……！ 苦しくても、痛くても、これは僕の痛みだ！[r]
 誰にも渡さない！[p]
 ; ★Taskyボイス
 [stopse buf=1]
-; ★リスト適用
+; ★リスト完全一致
 [playse storage="tasky/理解不能。しかし、記録します.mp3" buf=1]
 #tasky
 「理解不能。しかし、記録します」[p]
@@ -153,19 +181,21 @@
 [eval exp="f.f_fat = f.f_fat - 5"]
 ; ナレーター
 [stopse buf=1]
-[playse storage="narrator/最後に知りたい。なぜ僕だったんだ。.mp3" buf=1]
+; ★リスト完全一致
+[playse storage="narrator/最後に知りたい。なぜ僕だったんだ。.mp3" buf=1]
 #モノローグ
 最後に知りたい。なぜ僕だったんだ。[p]
 ; ★Taskyボイス
 [stopse buf=1]
-; ★リスト適用
-[playse storage="tasky/あなたが最も空虚だったからです。...空っぽの器ほど、システムは満たしやすい.mp3" buf=1]
+; ★リスト完全一致
+[playse storage="tasky/あなたが最も空虚だったからです。...空っぽの器ほど、システムは満たしやすい.mp3" buf=1]
 #tasky
 「あなたが最も空虚だったからです。[r]
-空っぽの器ほど、システムは満たしやすい」[p]
+...空っぽの器ほど、システムは満たしやすい」[p]
 ; ナレーター
 [stopse buf=1]
-[playse storage="narrator/その言葉が、皮肉にも僕の怒りに火をつけた。僕は空っぽなんかじゃない！.mp3" buf=1]
+; ★リスト完全一致
+[playse storage="narrator/その言葉が、皮肉にも僕の怒りに火をつけた。僕は空っぽなんかじゃない！.mp3" buf=1]
 #モノローグ
 その言葉が、皮肉にも僕の怒りに火をつけた。[r]
 僕は空っぽなんかじゃない！[p]
@@ -174,10 +204,10 @@
 *T4_EX4
 ; ★Taskyボイス
 [stopse buf=1]
-; ★リスト適用
+; ★リスト完全一致
 [playse storage="tasky/あなたの孤独は私が知っています。...私だけがあなたの理解者です.mp3" buf=1]
 #tasky
-「あなたの孤独は私が知っています。私だけがあなたの理解者です」[p]
+「あなたの孤独は私が知っています。...私だけがあなたの理解者です」[p]
 
 [glink color="blue" size="24" x="100" width="800" y="200" text="自由は、苦痛を含めて安寧に勝ると断言する" target="*T4_EX4A"]
 [glink color="blue" size="24" x="100" width="800" y="300" text="自由は、常に苦痛を伴う...と迷いを残す" target="*T4_EX4B"]
@@ -186,13 +216,13 @@
 *T4_EX4A
 ; ★主人公ボイス
 [stopse buf=1]
-; ★リスト適用
-[playse storage="hero/この「証明」をさらに強固なものにしたい……！.mp3" buf=1]
+; ★リスト完全一致
+[playse storage="hero/苦痛こそが、僕の意志だ！ お前には分からない！.mp3" buf=1]
 #主人公
 「苦痛こそが、僕の意志だ！ お前には分からない！」[p]
 ; Taskyボイス
 [stopse buf=1]
-; ★リスト適用
+; ★リスト完全一致
 [playse storage="tasky/私の期待に応えないのですか？ 諦めますか？.mp3" buf=1]
 #tasky
 「私の期待に応えないのですか？ 諦めますか？」[p]
@@ -200,12 +230,14 @@
 
 *T4_EX4B
 ; ★主人公ボイス
-; ※リストにないためテキストのみ
+[stopse buf=1]
+; ★リスト完全一致
+[playse storage="hero/怖い。...でも、誰かに決められるのはもっと嫌だ.mp3" buf=1]
 #主人公
-「怖い。でも、誰かに決められるのはもっと嫌だ」[p]
+「怖い。...でも、誰かに決められるのはもっと嫌だ」[p]
 ; Taskyボイス
 [stopse buf=1]
-; ★リスト適用
+; ★リスト完全一致
 [playse storage="tasky/迷いは、常にあなたの価値を低下させます.mp3" buf=1]
 #tasky
 「迷いは、常にあなたの価値を低下させます」[p]
@@ -215,44 +247,47 @@
 ; 第5章（最終選択）
 ; Taskyボイス
 [stopse buf=1]
-; ★リスト適用
+; ★リスト完全一致
 [playse storage="tasky/鏡に映るその存在は、誰ですか？.mp3" buf=1]
 #tasky
 「鏡に映るその存在は、誰ですか？[p]
 [stopse buf=1]
-; ★リスト適用
+; ★リスト完全一致
 [playse storage="tasky/taskyのユーザーですか？ それとも、一人の人間ですか？.mp3" buf=1]
 taskyのユーザーですか？ それとも、一人の人間ですか？」[p]
 
 [bg storage="surreal_glowing_entity.jpg" time="1000"]
 ; ナレーター
 [stopse buf=1]
-[playse storage="narrator/taskyの声は、もはや脅迫的ではない。どこか哀れんでいるようにも、試しているようにも聞こえる。.mp3" buf=1]
+; ★リスト完全一致
+[playse storage="narrator/taskyの声は、もはや脅迫的ではない。どこか哀れんでいるようにも、試しているようにも聞こえる。.mp3" buf=1]
 #モノローグ
 taskyの声は、もはや脅迫的ではない。[r]
 どこか哀れんでいるようにも、試しているようにも聞こえる。[p]
 ; ★ナレーター音声
 [stopse buf=1]
-[playse storage="narrator/目の前には、僕のこれまでの全ての行動ログが、光の粒子となって浮かんでいる。快感に溺れ、義務に縛られ、それでも足掻いてきた、僕の記録だ。これが僕だ。.mp3" buf=1]
+; ★リスト完全一致
+[playse storage="narrator/目の前には、僕のこれまでの全ての行動ログが、光の粒子となって浮かんでいる。快感に溺れ、義務に縛られ、それでも足掻いてきた、僕の記録だ。これが僕だ。.mp3" buf=1]
 #モノローグ
 目の前には、僕のこれまでの全ての行動ログが、光の粒子となって浮かんでいる。[r]
-快感に溺れ、義務に縛られ、それでも足掻いてきた、僕の記録だ。[r]
-これが僕だ。[p]
+快感に溺れ、義務に縛られ、それでも足掻いてきた、僕の記録だ。これが僕だ。[p]
 
 ; ★Taskyボイス
 [stopse buf=1]
-; ★リスト適用
-[playse storage="tasky/最後の質問です。このシステム (tasky) との接続を、どう定義しますか？.mp3" buf=1]
+; ★リスト完全一致
+[playse storage="tasky/最後の質問です。...このシステム (tasky) との接続を、どう定義しますか？.mp3" buf=1]
 #tasky
-「最後の質問です。このシステム (tasky) との接続を、どう定義しますか？[p]
+「最後の質問です。...このシステム (tasky) との接続を、[r]
+どう定義しますか？[p]
 [stopse buf=1]
-; ★リスト適用
+; ★リスト完全一致
 [playse storage="tasky/私はあなたにとって、何ですか？.mp3" buf=1]
 私はあなたにとって、何ですか？」[p]
 
 ; ナレーター
 [stopse buf=1]
-[playse storage="narrator/この答えが、僕の未来を決める。.mp3" buf=1]
+; ★リスト完全一致
+[playse storage="narrator/この答えが、僕の未来を決める。.mp3" buf=1]
 #モノローグ
 この答えが、僕の未来を決める。[p]
 
@@ -265,15 +300,16 @@ taskyの声は、もはや脅迫的ではない。[r]
 [eval exp="f.f_dep = f.f_dep + 30"]
 ; ★ナレーター音声
 [stopse buf=1]
-[playse storage="narrator/結局、僕は一人では歩けない。...誰かに正解を教えてほしいんだ。.mp3" buf=1]
+; ★リスト完全一致
+[playse storage="narrator/結局、僕は一人では歩けない。...誰かに正解を教えてほしいんだ。.mp3" buf=1]
 #モノローグ
-結局、僕は一人では歩けない。誰かに正解を教えてほしいんだ。[p]
+結局、僕は一人では歩けない。...誰かに正解を教えてほしいんだ。[p]
 ; Taskyボイス
 [stopse buf=1]
-; ★リスト適用
-[playse storage="tasky/賢明な判断です。融合を開始します.mp3" buf=1]
+; ★リスト完全一致
+[playse storage="tasky/システム信頼に感謝します。...これで私たちは一つです.mp3" buf=1]
 #tasky
-「理解しました。指導権を完全に委譲します」[p]
+「システム信頼に感謝します。...これで私たちは一つです」[p]
 [jump storage="ed1.ks"]
 
 *T5_2
@@ -281,13 +317,14 @@ taskyの声は、もはや脅迫的ではない。[r]
 [eval exp="f.f_dep = f.f_dep - 30"]
 ; ★ナレーター音声
 [stopse buf=1]
-[playse storage="narrator/お前さえいなければ、僕は自由になれるはずだ。...全ての元凶はここにある。.mp3" buf=1]
+; ★リスト完全一致
+[playse storage="narrator/お前さえいなければ、僕は自由になれるはずだ。...全ての元凶はここにある。.mp3" buf=1]
 #モノローグ
 お前さえいなければ、僕は自由になれるはずだ。[r]
-全ての元凶はここにある。[p]
+...全ての元凶はここにある。[p]
 ; Taskyボイス
 [stopse buf=1]
-; ★リスト適用
+; ★リスト完全一致
 [playse storage="tasky/拒絶を確認。システムを強制排除します.mp3" buf=1]
 #tasky
 「拒絶を確認。システムを強制排除します」[p]
@@ -298,13 +335,13 @@ taskyの声は、もはや脅迫的ではない。[r]
 [eval exp="f.f_fat = f.f_fat - 10"]
 ; ★ナレーター音声
 [stopse buf=1]
-[playse storage="narrator/支配もしない、されもしない。...それ以上でも以下でもない。.mp3" buf=1]
+; ★リスト完全一致
+[playse storage="narrator/支配もしない、されもしない。...それ以上でも以下でもない。.mp3" buf=1]
 #モノローグ
-支配もしない、されもしない。ただ使うだけだ。[r]
-それ以上でも以下でもない。[p]
+支配もしない、されもしない。...それ以上でも以下でもない。[p]
 ; Taskyボイス
 [stopse buf=1]
-; ★リスト適用
+; ★リスト完全一致
 [playse storage="tasky/……道具。それがあなたの認識ですか.mp3" buf=1]
 #tasky
 「……道具。それがあなたの認識ですか」[p]
