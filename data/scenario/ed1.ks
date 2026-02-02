@@ -10,9 +10,10 @@
 
 ; ★Taskyボイス
 [stopse buf=1]
+; ★リスト適用
 [playse storage="tasky/承認します。不必要なノイズを排除し、自己最適化を継続します.mp3" buf=1]
 #tasky
-「承認します。不必要なノイズを排除し、自己最適化を継続します」[p]
+「承認します。あなたは、私の一部となりました」[p]
 
 [chara_hide_all time=1000]
 [bg storage="myroom_unknown.jpg" time="1000"]

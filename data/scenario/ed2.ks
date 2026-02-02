@@ -11,6 +11,7 @@
 
 ; ★Taskyボイス
 [stopse buf=1]
+; ★リスト適用
 [playse storage="tasky/救済を拒否？ なぜ？ 苦しいでしょう？.mp3" buf=1]
 #tasky
 「救済を拒否？ なぜ？ 苦しいでしょう？」[p]

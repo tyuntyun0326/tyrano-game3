@@ -6,51 +6,40 @@
 [start_keyconfig]
 
 ; ---------------------------------------------
-; ★【修正】メッセージウィンドウを「ティラノビルダー標準」に戻す
+; ★メッセージウィンドウ設定（ティラノ標準サイズ）
 ; ---------------------------------------------
 [layopt layer=message0 visible=false]
-
-; 【標準設定（1280x720用）】
-; 横幅:1280（画面最大） 高さ:240 / 位置:画面最下部（top=480）
-[position layer=message0 width=1280 height=240 top=480 left=0]
+[position layer=message0 width=1280 height=230 top=490 left=0]
 [position layer=message0 page=fore frame="" opacity=150]
-
-; 文字の余白設定（読みやすく調整：上45, 下10, 左右50）
 [position layer=message0 page=fore margint=45 marginb=10 marginl=50 marginr=50]
-
-; 設定を適用して表示
 [layopt layer=message0 visible=true]
 
 ; フォント設定
 [deffont size=26 line=32 color="white"]
 [resetfont]
-; 書き込みレイヤー固定
 [current layer="message0"]
 
-; 前の画面の残骸を消す
+; 画面クリア
 [freeimage layer=1]
 [layopt layer=1 visible=false]
 [showmenubutton]
 
 ; ---------------------------------------------
-; キャラクター表情の登録（ミナ含む）
+; キャラクター登録
 ; ---------------------------------------------
-; 主人公
 [chara_new name="hero" storage="chara/1/hero_normal.png" jname="僕" width="400" top="100"]
 [chara_face name="hero" face="default" storage="chara/1/hero_normal.png"]
 
-; ミナ（表情差分登録）
+; ★ミナ（表情登録）
 [chara_new name="ミナ" storage="chara/2/mina_smile.png" jname="ミナ" width="400" top="100"]
 [chara_face name="ミナ" face="default" storage="chara/2/mina_smile.png"]
 [chara_face name="ミナ" face="smile" storage="chara/2/mina_smile.png"]
 [chara_face name="ミナ" face="trouble" storage="chara/2/mina_trouble.png"]
 [chara_face name="ミナ" face="fear" storage="chara/2/mina_fear.png"]
 
-; カナエ
 [chara_new name="カナエ" storage="chara/3/kanae_normal.png" jname="カナエ" width="400" top="100"]
 [chara_face name="カナエ" face="default" storage="chara/3/kanae_normal.png"]
 
-; tasky
 [chara_new name="tasky" storage="chara/4/tasky_normal.png" jname="tasky" width="400" top="100"]
 [chara_face name="tasky" face="default" storage="chara/4/tasky_normal.png"]
 [chara_face name="tasky" face="warning" storage="chara/4/tasky_warning.png"]
@@ -94,8 +83,7 @@
 #モノローグ
 僕のスコアは 72 。平均以下だ。[r]
 同僚たちは着実に昇進リストに名を連ねていく中、[r]
-僕は卒業研究のテーマすら決まらず、日々の雑務に忙殺されている。[p]
-[cm]
+僕は卒業研究のテーマすら決まらず、日々の雑務に忙殺されている。[r]
 このままでは、社会から期待されない「平凡以下の不良資産（バッド・アセット）」として、[r]
 この都市の光の届かない隅で埋もれてしまうだろう。[p]
 
@@ -123,12 +111,12 @@
 
 ; Taskyボイス
 [stopse buf=1]
+; ★リストのファイル名を適用
 [playse storage="tasky/まだ、迷っているのですか？ あなたの内なる可能性を引き出し、埋もれた努力を数値で証明します。...あなたの人生を変える、最初で最後の一歩を.mp3" buf=1]
 #tasky (広告音声)
 『まだ、迷っているのですか？[r]
 あなたの内なる可能性を引き出し、埋もれた努力を数値で証明します。[r]
-自己管理AIアプリ『tasky』。[p]
-[cm]
+自己管理AIアプリ『tasky』。[r]
 今ならインストール無料。あなたの人生を変える、最初で最後の一歩を』[p]
 
 ; 部屋へ戻る
@@ -157,12 +145,14 @@ SNSのタイムラインが、taskyの広告で埋め尽くされている。[r]
 
 ; Taskyボイス
 [stopse buf=1]
+; ★リストのファイル名を適用
 [playse storage="tasky/ようこそ、ユーザーID：404。...私はあなたの生産性を最大限に引き出し、理想の自己へと導くパートナーです。.mp3" buf=1]
 #tasky
 ようこそ、ユーザーID：404。[r]
 私はあなたの生産性を最大限に引き出し、理想の自己へと導くパートナーです。[p]
 
 [stopse buf=1]
+; ★リストのファイル名を適用
 [playse storage="tasky/あなたの無駄を削ぎ落とし、幸福への最短ルートを計算します。...完了してください。.mp3" buf=1]
 #tasky
 あなたの無駄を削ぎ落とし、幸福への最短ルートを計算します。[r]
