@@ -1,11 +1,13 @@
 ;=========================================
-; プロローグ
+; プロローグ: 〈インデックス・シティ〉の影
 ;=========================================
 [cm]
 [clearfix]
 [start_keyconfig]
 
-; メッセージ枠設定（標準）
+; ---------------------------------------------
+; メッセージウィンドウ設定（標準）
+; ---------------------------------------------
 [layopt layer=message0 visible=false]
 [position layer=message0 width=1280 height=230 top=490 left=0]
 [position layer=message0 page=fore frame="" opacity=150]
@@ -17,24 +19,30 @@
 [resetfont]
 [current layer="message0"]
 
-; 画面クリア
-[freeimage layer=1]
-[layopt layer=1 visible=false]
-[showmenubutton]
-
-; キャラクター登録
+; ---------------------------------------------
+; キャラクター画像登録（フォルダ番号準拠）
+; ---------------------------------------------
+; フォルダ1：主人公
 [chara_new name="hero" storage="chara/1/hero_normal.png" jname="僕" width="400" top="100"]
 [chara_face name="hero" face="default" storage="chara/1/hero_normal.png"]
+[chara_face name="hero" face="smile" storage="chara/1/hero_smile.png"]
+[chara_face name="hero" face="tired" storage="chara/1/hero_tired.png"]
 
+; フォルダ2：ミナ
 [chara_new name="ミナ" storage="chara/2/mina_smile.png" jname="ミナ" width="400" top="100"]
 [chara_face name="ミナ" face="default" storage="chara/2/mina_smile.png"]
 [chara_face name="ミナ" face="smile" storage="chara/2/mina_smile.png"]
 [chara_face name="ミナ" face="trouble" storage="chara/2/mina_trouble.png"]
 [chara_face name="ミナ" face="fear" storage="chara/2/mina_fear.png"]
 
+; フォルダ3：カナエ
 [chara_new name="カナエ" storage="chara/3/kanae_normal.png" jname="カナエ" width="400" top="100"]
 [chara_face name="カナエ" face="default" storage="chara/3/kanae_normal.png"]
+[chara_face name="カナエ" face="angry" storage="chara/3/kanae_angry.png"]
+[chara_face name="カナエ" face="sad" storage="chara/3/kanae_sad.png"]
+[chara_face name="カナエ" face="smile" storage="chara/3/kanae_smile.png"]
 
+; フォルダ4：tasky
 [chara_new name="tasky" storage="chara/4/tasky_normal.png" jname="tasky" width="400" top="100"]
 [chara_face name="tasky" face="default" storage="chara/4/tasky_normal.png"]
 [chara_face name="tasky" face="warning" storage="chara/4/tasky_warning.png"]
@@ -47,11 +55,13 @@
 ;-----------------------------------------
 ; シナリオ開始
 ;-----------------------------------------
+; [SCENE START: 主人公の自室、夜]
 [bg storage="room-night.jpg" time="1000"]
+; [SE: 遠くで鳴るサイレン、冷蔵庫の低い駆動音]
+; ※該当SEがない場合は省略、または環境音を使用
 [playbgm storage="BGM_01_導入.mp3" volume="50"]
-[playse storage="SE11 環境音：都会の喧騒.mp3" volume="30" loop="true"]
 
-; ナレーター
+; モノローグ
 [stopse buf=1]
 [playse storage="narrator/窓の外は、暴力的なまでに〜として訴えかけているようだった。.mp3" buf=1]
 #モノローグ
@@ -74,41 +84,37 @@
 その圧力は、公的な罰則よりも重く、粘着質な自己否定となって僕の胃を締め上げる。[p]
 
 [stopse buf=1]
-; ★【修正】リスト適用
 [playse storage="narrator/僕のスコアは72。... 同僚たちは着実に昇進リストに名を連ねていく中、僕は卒業研究のテーマすら決まらず、日々の雑務に忙殺されている。.mp3" buf=1]
 #モノローグ
 僕のスコアは 72 。平均以下だ。[r]
 同僚たちは着実に昇進リストに名を連ねていく中、[r]
 僕は卒業研究のテーマすら決まらず、日々の雑務に忙殺されている。[p]
 [cm]
+[stopse buf=1]
+[playse storage="narrator/このままでは、社会から期待されない「平凡以下の不良資産（バッド・アセット）」として、この都市の光の届かない隅で埋もれてしまうだろう。.mp3" buf=1]
 このままでは、社会から期待されない「平凡以下の不良資産（バッド・アセット）」として、[r]
 この都市の光の届かない隅で埋もれてしまうだろう。[p]
-
-; 机へフォーカス
-[bg storage="myroom_night.jpg" time="1000"]
 
 [stopse buf=1]
 [playse storage="narrator/常に感じる、喉の奥に張り付いたような焦燥感と自己嫌悪。... 「変わりたい」 その思いだけが空回りして、何一つ行動に移せない。.mp3" buf=1]
 #モノローグ
 常に感じる、喉の奥に張り付いたような 焦燥感と自己嫌悪 。[r]
 「変わりたい」 その思いだけが空回りして、何一つ行動に移せない。[p]
-
 [stopse buf=1]
 [playse storage="narrator/何とかして、この無力な日常の閉塞感から、自分の意志で抜け出したかった。...誰かに、正解を教えて欲しかった。.mp3" buf=1]
 #モノローグ
 何とかして、この無力な日常の閉塞感から、自分の意志で抜け出したかった。[r]
 誰かに、正解を教えて欲しかった。[p]
 
-[stopse]
+; [SE: 軽快な電子音と派手な広告のポップアップ音]
 [playse storage="SE08 スマホタップ音.mp3"]
 
-; 広告画像
+; 広告画像表示
 [bg storage="advertisement.jpg" time="500" method="crossfade"]
-[wait time=2000]
+[wait time=1000]
 
-; Taskyボイス
+; tasky (広告音声)
 [stopse buf=1]
-; ★【修正】リスト適用
 [playse storage="tasky/まだ、迷っているのですか？ あなたの内なる可能性を引き出し、埋もれた努力を数値で証明します。...あなたの人生を変える、最初で最後の一歩を.mp3" buf=1]
 #tasky (広告音声)
 『まだ、迷っているのですか？[r]
@@ -118,7 +124,7 @@
 今ならインストール無料。あなたの人生を変える、最初で最後の一歩を』[p]
 
 ; 部屋へ戻る
-[bg storage="myroom_night.jpg" time="500"]
+[bg storage="room-night.jpg" time="500"]
 
 [stopse buf=1]
 [playse storage="narrator/SNSのタイムラインが、taskyの広告で埋め尽くされている。...友人も、同僚も、皆これを使っているという。.mp3" buf=1]
@@ -134,14 +140,15 @@ SNSのタイムラインが、taskyの広告で埋め尽くされている。[r]
 藁にもすがる思いで、震える指先を画面に伸ばす。[r]
 僕はtaskyに、僕の人生の主導権を委ねてみようと決めた。[p]
 
+; [SE: インストール完了音]
 [playse storage="SE01インストール音_起動音.mp3"]
 [mask effect="fadeIn" color="0xffffff" time="200"]
-[bg storage="myroom_night.jpg" time="0"]
+[bg storage="room-night.jpg" time="0"]
 [mask_off effect="fadeOut" time="1000"]
 
+; tasky登場
 [chara_show name="tasky" time="1000"]
 
-; Taskyボイス
 [stopse buf=1]
 [playse storage="tasky/ようこそ、ユーザーID：404。...私はあなたの生産性を最大限に引き出し、理想の自己へと導くパートナーです。.mp3" buf=1]
 #tasky
