@@ -111,7 +111,7 @@ taskyの通知音も、どこか鈍い、耳障りな音に変わっている気
 #tasky
 あなたの価値が失効します。[r]
 無駄な時間を過ごすことを選択しますか？[p]
-[jump target="*T2_1prime"]
+[jump target="*T2_1_prime"]
 
 *T2_1C
 [eval exp="f.f_dep = f.f_dep - 5"]
