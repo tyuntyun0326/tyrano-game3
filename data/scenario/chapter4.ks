@@ -3,9 +3,6 @@
 ;=========================================
 [cm]
 [clearfix]
-; メッセージ枠設定（標準）
-[position layer=message0 width=1280 height=230 top=490 left=0]
-[position layer=message0 page=fore margint=45 marginb=10 marginl=50 marginr=50]
 
 ; 演出：電脳空間への遷移
 [mask effect="fadeIn" color="0xffffff" time="1000"]

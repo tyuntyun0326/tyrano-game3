@@ -3,9 +3,6 @@
 ;=========================================
 [cm]
 [clearfix]
-; メッセージ枠設定（画像サイズ準拠）
-[position layer=message0 width=920 height=211 top=371 left=20]
-[position layer=message0 page=fore margint=45 marginb=10 marginl=10 marginr=20]
 
 ; 背景：自室(ノイズ)
 [bg storage="myroom_noise.jpg" time="1000"]

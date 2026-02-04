@@ -39,6 +39,9 @@
 
 [chara_new name="カナエ" storage="chara/3/kanae_normal.png" jname="カナエ" width="400" top="100"]
 [chara_face name="カナエ" face="default" storage="chara/3/kanae_normal.png"]
+[chara_face name="カナエ" face="angry" storage="chara/3/kanae_angry.png"]
+[chara_face name="カナエ" face="sad" storage="chara/3/kanae_sad.png"]
+[chara_face name="カナエ" face="smile" storage="chara/3/kanae_smile.png"]
 
 [chara_new name="tasky" storage="chara/4/tasky_normal.png" jname="tasky" width="400" top="100"]
 [chara_face name="tasky" face="default" storage="chara/4/tasky_normal.png"]
