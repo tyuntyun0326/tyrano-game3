@@ -129,9 +129,9 @@ taskyの通知の裏で、僕の生存本能が「拒否しろ」と叫んでい
 ; ★主人公ボイス
 [stopse buf=1]
 ; ★リスト一致
-[playse storage="hero/tasky、タスク量を調整してくれ。...人間なんだよ.mp3" buf=1]
+[playse storage="hero/tasky、聞いてくれ。...今の僕には、これ以上の最適化は無理だ.mp3" buf=1]
 #主人公
-「tasky、タスク量を調整してくれ。人間なんだよ」[p]
+tasky、聞いてくれ。...今の僕には、これ以上の最適化は無理だ[p]
 ; ★Taskyボイス
 [stopse buf=1]
 ; ★リスト一致
