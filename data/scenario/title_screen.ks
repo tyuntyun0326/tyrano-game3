@@ -16,11 +16,6 @@
 ; 画面全体を透明なボタンにし、クリックされるまで絶対に動かないようにします
 [clickable width=1280 height=720 target="*press_start" opacity=0 mouseopacity=0]
 
-; 画面中央に点滅テキスト
-[layopt layer=1 visible=true]
-[ptext layer=1 page=fore text="Click to Start" x=500 y=600 size=40 color=white edge=black name="flash"]
-[anim name="flash" opacity=0 time=1000 loop=true]
-
 [s]
 
 ; -------------------------------------------

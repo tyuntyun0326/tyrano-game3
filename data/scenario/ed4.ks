@@ -36,7 +36,6 @@ taskyは、もはや僕を支配する絶対者ではない。[r]
 #tasky
 「今日のタスクは『十分な休息』です。...実行しますか？」[p]
 
-[chara_hide_all time=1000]
 [bg storage="bg_cafe_aftermoon.jpg" time="1000"]
 
 ; ★ナレーター音声
@@ -67,5 +66,7 @@ taskyは、もはや僕を支配する絶対者ではない。[r]
 [ptext layer=1 text="Click to Title" x=550 y=500 size=30 color="white" edge="black"]
 [mask_off effect="fadeOut" time="2000"]
 [l]
+[cm]
+[chara_hide_all time=1000]
 [jump storage="title_screen.ks"]
 [s]

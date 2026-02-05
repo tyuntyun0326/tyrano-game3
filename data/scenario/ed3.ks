@@ -1,6 +1,7 @@
 ;=========================================
 ; エンディング3: 忘却と再発
 ;=========================================
+[chara_hide_all time=1000]
 [cm]
 [clearfix]
 [bg storage="myroom_mooning.jpg" time="2000" method="crossfade"]
@@ -51,5 +52,6 @@ SNSでは、みんなが新しいアプリ『Life-Up』のスコアを自慢し�
 [ptext layer=1 text="Click to Title" x=550 y=500 size=30 color="white" edge="black"]
 [mask_off effect="fadeOut" time="2000"]
 [l]
+[cm]
 [jump storage="title_screen.ks"]
 [s]
