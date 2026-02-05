@@ -35,10 +35,9 @@ SNSでは、みんなが新しいアプリ『Life-Up』のスコアを自慢し�
 ; ★ナレーター音声
 [stopse buf=1]
 ; ★リスト一致
-[playse storage="narrator/これが、最後のチャンスかもしれない。...僕はtaskyに、僕の人生の主導権を委ねてみようと決めた。.mp3" buf=1]
+[playse storage="narrator/気がつけば、僕は新しい管理アプリをインストールしていた。ループは終わらない。.mp3" buf=1]
 #モノローグ
-これが、最後のチャンスかもしれない。[r]
-...僕はtaskyに、僕の人生の主導権を委ねてみようと決めた。[p]
+気がつけば、僕は新しい管理アプリをインストールしていた。ループは終わらない。[p]
 
 [layopt layer=message0 visible=false]
 [layopt layer=1 visible=true]

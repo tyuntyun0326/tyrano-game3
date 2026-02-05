@@ -9,10 +9,9 @@
 ; ★ナレーター音声
 [stopse buf=1]
 ; ★リスト一致
-[playse storage="narrator/僕はシステムの一部ではない。まだ、僕の意志が残っている。これ以上の侵入は許さない。.mp3" buf=1]
+[playse storage="narrator/僕は tasky をアンインストールしなかった。.mp3" buf=1]
 #モノローグ
-僕はシステムの一部ではない。まだ、僕の意志が残っている。[r]
-これ以上の侵入は許さない。[p]
+僕はtaskyをアンインストールしなかった。[p]
 ; ★ナレーター音声
 [stopse buf=1]
 ; ★リスト一致
@@ -36,7 +35,7 @@ taskyは、もはや僕を支配する絶対者ではない。[r]
 #tasky
 「今日のタスクは『十分な休息』です。...実行しますか？」[p]
 
-[bg storage="bg_cafe_aftermoon.jpg" time="1000"]
+[bg storage="bg_cafe_aftermoon2.jpg" time="1000"]
 
 ; ★ナレーター音声
 [stopse buf=1]
@@ -49,10 +48,12 @@ taskyは、もはや僕を支配する絶対者ではない。[r]
 ; ★ナレーター音声
 [stopse buf=1]
 ; ★リスト一致
-[playse storage="narrator/真実はどこにある？ ネットの深層に、taskyの開発者に関する噂があった。「カナエ」という名前。.mp3" buf=1]
 #モノローグ
-真実はどこにある？ ネットの深層に、taskyの開発者に関する噂があった。[r]
-「カナエ」という名前。[p]
+[playse storage="narrator/カナエの残したメッセージが、いつかこのシステムを完全に終わらせる道があることを示唆している。.mp3" buf=1]
+カナエの残したメッセージが、いつかこのシステムを完全に終わらせる道があることを示唆している。[r]
+[playse storage="narrator/この『制御』は、暫定的な勝利だ。...でも、悪くない。.mp3" buf=1].mp3" buf=1]
+この「制御」は、暫定的な勝利だ。でも、悪くない。
+[p]
 
 [layopt layer=message0 visible=false]
 [layopt layer=1 visible=true]
