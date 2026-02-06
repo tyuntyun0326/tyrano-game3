@@ -56,5 +56,6 @@
 [mask_off effect="fadeOut" time="2000"]
 [l]
 [cm]
+[freeimage layer=1]
 [jump storage="title_screen.ks"]
 [s]

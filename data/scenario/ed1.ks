@@ -60,5 +60,6 @@ taskyが僕。僕がtasky。この達成感と数字こそが、僕の存在価�
 [mask_off effect="fadeOut" time="2000"]
 [l]
 [cm]
+[freeimage layer=1]
 [jump storage="title_screen.ks"]
 [s]
