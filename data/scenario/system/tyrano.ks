@@ -182,4 +182,9 @@ tf.savetext = "<span style='font-size:10px'>"+tf.save_date+"</span><br />"+tf.ti
 
 [return]
 
-
+/* アスペクト比率固定携帯data/system/tyrano.css */
+#tyrano_base {
+  aspect-ratio: 4 / 3;
+  margin: auto;
+  background: black;
+}
