@@ -40,16 +40,18 @@ taskyは、もはや僕を支配する絶対者ではない。[r]
 ; ★ナレーター音声
 [stopse buf=1]
 ; ★リスト一致
-[playse storage="narrator/僕は、「道具」を使いこなす、平凡な一人の人間として、インデックス・シティの片隅で生きていく。.mp3" buf=1]
+[playse storage="narrator/疲労と快感のループは断ち切られた。僕の人生は、インデックスシティの片隅で生きていく.mp3" buf=1]
 #モノローグ
 疲労と快感のループは断ち切られた。[r]
+僕の人生は、退屈だが、僕自身のものになった。[r]
+スコアは低いままだが、あの頃のような焦燥感はな[r]い。
 僕は、「道具」を使いこなす、平凡な一人の人間として、[r]
 インデックス・シティの片隅で生きていく。[p]
 ; ★ナレーター音声
 [stopse buf=1]
 ; ★リスト一致
 #モノローグ
-[playse storage="narrator/カナエの残したメッセージが、いつかこのシステムを完全に終わらせる道があることを示唆している。.mp3" buf=1]
+[playse storage="narrator/カナエの残したメッセージが、システムを完全に終わらせる道があることを示唆している。でも、悪くない.mp3" buf=1]
 カナエの残したメッセージが、いつかこのシステムを完全に終わらせる道があることを示唆している。[r]
 [playse storage="narrator/この『制御』は、暫定的な勝利だ。...でも、悪くない。.mp3" buf=1]
 この「制御」は、暫定的な勝利だ。でも、悪くない。
@@ -60,13 +62,14 @@ taskyは、もはや僕を支配する絶対者ではない。[r]
 [ptext layer=1 text="END" x=580 y=300 size=80 color="orange" edge="black" shadow="black" bold="bold"]
 [l]
 [cm]
-[chara_hide_all time=1000]
+[chara_move name="tasky" x=-300 time=3000]
 [freeimage layer=1]
 [mask effect="fadeIn" time="2000"]
 [bg storage="end.jpg" time="0"]
 [ptext layer=1 text="Click to Title" x=550 y=500 size=30 color="white" edge="black"]
 [mask_off effect="fadeOut" time="2000"]
 [l]
+[chara_hide_all time=1000]
 [freeimage layer=1]
 [jump storage="title_screen.ks"]
 [s]
