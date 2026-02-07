@@ -56,16 +56,9 @@
 ; シナリオ開始
 ;-----------------------------------------
 [bg storage="room-night.jpg" time="1000"]
-[layopt layer=7 visible=false]
-; ローディング表示
-[ptext layer=7 text="Loading......" x=30 y=550 size=28 color="white" edge="black"]
 
-; 3秒表示
-[wait time=3000]
 [playbgm storage="BGM_01_導入.mp3" volume="50"]
 [playse storage="SE11 環境音：都会の喧騒.mp3" volume="30" loop="true"]
-; 重処理後に挿入し文字を非表示
-[freeimage layer=7]
 
 ; ナレーター
 [stopse buf=1]
