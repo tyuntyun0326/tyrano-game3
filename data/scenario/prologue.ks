@@ -56,6 +56,7 @@
 ; シナリオ開始
 ;-----------------------------------------
 [bg storage="room-night.jpg" time="1000"]
+[layopt layer=7 visible=false]
 ; ローディング表示
 [ptext layer=7 text="Loading......" x=30 y=550 size=28 color="white" edge="black"]
 
