@@ -52,6 +52,14 @@
 [eval exp="f.f_fat = 0"]
 [eval exp="f.f_kanae = 0"]
 
+; Loading 表示
+[ptext layer=7 text="Loading......" x=30 y=550 size=28 color="white" edge="black"]
+
+; 描画を確定させる
+[wait time=100]
+
+; Loading を消す物語開始直前
+[freeimage layer=7]
 ;-----------------------------------------
 ; シナリオ開始
 ;-----------------------------------------
