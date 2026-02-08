@@ -60,15 +60,6 @@
 [playbgm storage="BGM_01_導入.mp3" volume="50"]
 [playse storage="SE11 環境音：都会の喧騒.mp3" volume="30" loop="true"]
 
-; Loading 表示
-[ptext layer=7 text="Loading......" x=30 y=550 size=28 color="white" edge="black"]
-
-; 描画を確定させる
-[wait time=100]
-
-; Loading を消す物語開始直前
-[freeimage layer=7]
-
 ; ナレーター
 [stopse buf=1]
 ; ★リスト一致確認済

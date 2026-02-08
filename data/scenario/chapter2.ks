@@ -283,6 +283,18 @@ taskyに頼らず、最短ルートで「結果」だけを出す。[r]
 [playse storage="narrator/誰も助けてくれない。...スコアだけが僕を縛る鎖だ。.mp3" buf=1]
 #モノローグ
 誰も助けてくれない。スコアだけが僕を縛る鎖だ。[p]
+; Taskyボイス
+[stopse buf=1]
+; ★リスト完全一致
+[playse storage="tasky/あなたの孤独は私が知っています。私だけがあなたの理解者です.mp3" buf=1]
+#tasky
+あなたの孤独は私が知っています。私だけがあなたの理解者です。[p]
+; ナレーター
+[stopse buf=1]
+; ★リスト一致確認済
+[playse storage="narrator/taskyの機械音声に慰められる.mp3" buf=1]
+#モノローグ
+taskyの機械音声に慰められる。[p]
 [jump target="*T2_E1"]
 
 *T2_2C
@@ -524,9 +536,9 @@ taskyに頼らず、最短ルートで「結果」だけを出す。[r]
 ; Taskyボイス
 [stopse buf=1]
 ; ★リスト完全一致
-[playse storage="tasky/お休み前にもタスク未達。あなたの連続記録（ストリーク）は途切れます。残念です。.mp3" buf=1]
+[playse storage="tasky/信頼度の低下を検知。がっかりさせないでください.mp3" buf=1]
 #tasky
-お休み前にもタスク未達。あなたの連続記録（ストリーク）は途切れます。残念です。[p]
+信頼度の低下を検知。がっかりさせないでください。[p]
 [chara_hide name="tasky"]
 [jump target="*T2_4"]
 
@@ -539,6 +551,12 @@ taskyに頼らず、最短ルートで「結果」だけを出す。[r]
 [playse storage="tasky/不正行為を検知。あなたのプライドはどこへ？.mp3" buf=1]
 #tasky
 不正行為を検知。あなたのプライドはどこへ？[p]
+; ナレーター
+[stopse buf=1]
+; ★リスト完全一致
+[playse storage="narrator/罪悪感だけが残った。でも、少しだけ楽になった.mp3" buf=1]
+#モノローグ
+罪悪感だけが残った。でも、少しだけ楽になった。[p]
 [chara_hide name="tasky"]
 [jump target="*T2_4"]
 
@@ -577,13 +595,27 @@ taskyに頼らず、最短ルートで「結果」だけを出す。[r]
 ; Taskyボイス
 [stopse buf=1]
 ; ★リスト完全一致
-[playse storage="tasky/システムへの信頼をありがとうございます。.mp3" buf=1]
+[playse storage="tasky/システム信頼に感謝します、これで私たちは一つです.mp3" buf=1]
 #tasky
-システムへの信頼をありがとうございます。[p]
+システム信頼に感謝します、これで私たちは一つです。[p]
+; ナレーター
+[stopse buf=1]
+; ★リスト完全一致
+[playse storage="narrator/最適化の過程で流れてきたログの隅に、「カナエ」の噂が紛れ込んでいた.mp3" buf=1]
+#モノローグ
+最適化の過程で流れてきたログの隅に、開発者の一人であった「カナエ」の噂が紛れ込んでいた。[p]
+
 [jump target="*Kanae_Contact"]
 
 *T2_4B
 [eval exp="f.f_fat = f.f_fat + 10"]
+; ナレーター
+[stopse buf=1]
+; ★リスト完全一致
+[playse storage="narrator/僕はシステムの一部ではない。これ以上の侵入は許さない.mp3" buf=1]
+#モノローグ
+僕はシステムの一部ではない。これ以上の侵入は許さない。[p]
+
 ; Taskyボイス
 [stopse buf=1]
 ; ★リスト完全一致
@@ -591,6 +623,13 @@ taskyに頼らず、最短ルートで「結果」だけを出す。[r]
 #tasky
 信頼度の低下を検知。[r]
 自己超越を諦めるのですか？ 破滅を望みますか？[p]
+; ナレーター
+[stopse buf=1]
+; ★リスト完全一致
+[playse storage="narrator/最適化の過程で流れてきたログの隅に、「カナエ」の噂が紛れ込んでいた.mp3" buf=1]
+#モノローグ
+最適化の過程で流れてきたログの隅に、開発者の一人であった「カナエ」の噂が紛れ込んでいた。[p]
+
 [jump target="*Kanae_Contact"]
 
 *T2_4C

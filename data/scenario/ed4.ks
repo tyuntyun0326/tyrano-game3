@@ -52,9 +52,7 @@ taskyは、もはや僕を支配する絶対者ではない。[r]
 #モノローグ
 [playse storage="narrator/カナエの残したメッセージが、システムを完全に終わらせる道があることを示唆している。でも、悪くない.mp3" buf=1]
 カナエの残したメッセージが、いつかこのシステムを完全に終わらせる道があることを示唆している。[r]
-[playse storage="narrator/この『制御』は、暫定的な勝利だ。...でも、悪くない。.mp3" buf=1]
-この「制御」は、暫定的な勝利だ。でも、悪くない。
-[p]
+この「制御」は、暫定的な勝利だ。でも、悪くない。[p]
 
 [layopt layer=message0 visible=false]
 [layopt layer=1 visible=true]
