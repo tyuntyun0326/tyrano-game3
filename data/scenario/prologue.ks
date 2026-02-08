@@ -52,6 +52,14 @@
 [eval exp="f.f_fat = 0"]
 [eval exp="f.f_kanae = 0"]
 
+;-----------------------------------------
+; シナリオ開始
+;-----------------------------------------
+[bg storage="room-night.jpg" time="1000"]
+
+[playbgm storage="BGM_01_導入.mp3" volume="50"]
+[playse storage="SE11 環境音：都会の喧騒.mp3" volume="30" loop="true"]
+
 ; Loading 表示
 [ptext layer=7 text="Loading......" x=30 y=550 size=28 color="white" edge="black"]
 
@@ -60,13 +68,6 @@
 
 ; Loading を消す物語開始直前
 [freeimage layer=7]
-;-----------------------------------------
-; シナリオ開始
-;-----------------------------------------
-[bg storage="room-night.jpg" time="1000"]
-
-[playbgm storage="BGM_01_導入.mp3" volume="50"]
-[playse storage="SE11 環境音：都会の喧騒.mp3" volume="30" loop="true"]
 
 ; ナレーター
 [stopse buf=1]
