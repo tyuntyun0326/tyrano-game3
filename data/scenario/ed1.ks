@@ -24,12 +24,6 @@
 
 [chara_hide_all time=1000]
 [bg storage="myroom_unknown.jpg" time="1000"]
-; ★ナレーター音声
-[stopse buf=1]
-; ★リスト一致
-[playse storage="narrator/もう、疲労は感じない。あの鬱陶しい自由意志も、罪悪感もない.mp3" buf=1]
-#モノローグ
-もう、疲労は感じない。あの鬱陶しい自由意志も、罪悪感もない。[p]
 
 ; ★ナレーター音声
 [stopse buf=1]

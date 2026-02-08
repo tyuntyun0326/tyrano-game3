@@ -248,11 +248,11 @@
 [playse storage="tasky/鏡に映るその存在は、誰ですか？.mp3" buf=1]
 #tasky
 (光の球体が、巨大な鏡のようになる。)[r]
-「鏡に映るその存在は、誰ですか？[p]
+「鏡に映るその存在は、誰ですか？」[p]
 [stopse buf=1]
 ; ★リスト一致
 [playse storage="tasky/taskyのユーザーですか？ それとも、一人の人間ですか？.mp3" buf=1]
-taskyのユーザーですか？ それとも、一人の人間ですか？」[p]
+「taskyのユーザーですか？ それとも、一人の人間ですか？」[p]
 
 [bg storage="surreal_glowing_entity.jpg" time="1000"]
 ; ナレーター
@@ -276,11 +276,11 @@ taskyの声は、もはや脅迫的ではない。[r]
 [playse storage="tasky/最後の質問です。...このシステム (tasky) との接続を、どう定義しますか？.mp3" buf=1]
 #tasky
 「最後の質問です。...このシステム (tasky) との接続を、[r]
-どう定義しますか？[p]
+どう定義しますか？」[p]
 [stopse buf=1]
 ; ★リスト一致
 [playse storage="tasky/私はあなたにとって、何ですか？.mp3" buf=1]
-私はあなたにとって、何ですか？」[p]
+「私はあなたにとって、何ですか？」[p]
 
 ; ナレーター
 [stopse buf=1]
