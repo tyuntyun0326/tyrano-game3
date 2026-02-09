@@ -3,7 +3,7 @@
 ;=========================================
 [cm]
 [clearfix]
-[bg storage="bg_smartphone_task_done.jpg" time="2000" method="crossfade"]
+[bg storage="myroom_unknown.jpg" time="2000" method="crossfade"]
 [playbgm storage="BGM_05_快楽.mp3" volume="60"]
 
 [chara_show name="tasky" face="default" time="1000" width="400" top="100"]
@@ -23,7 +23,7 @@
 もう、疲労は感じない。あの鬱陶しい自由意志も、罪悪感もない。[p]
 
 [chara_hide_all time=1000]
-[bg storage="myroom_unknown.jpg" time="1000"]
+[bg storage="surreal_glowing_entity2.jpg" time="1000"]
 
 ; ★ナレーター音声
 [stopse buf=1]

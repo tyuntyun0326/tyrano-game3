@@ -3,7 +3,8 @@
 ;=========================================
 [cm]
 [clearfix]
-[bg storage="park-snow.jpg" time="2000" method="crossfade"]
+[bg storage="bg_smartphone_task_done.jpg
+" time="2000" method="crossfade"]
 [playbgm storage="BGM_06_悲哀.mp3" volume="50"]
 
 [chara_show name="tasky" face="warning" time="500" width="400" top="100"]
@@ -20,6 +21,8 @@
 [quake count=3 time=500 hmax=10]
 [playse storage="SE05 エラー_拒絶音.mp3"]
 [chara_hide name="tasky" time="200" effect="fadeOut"]
+[bg storage="park-snow.jpg" time="1000"]
+
 
 ; ★ナレーター音声
 [stopse buf=1]

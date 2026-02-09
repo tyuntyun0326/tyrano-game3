@@ -137,7 +137,7 @@
 今ならインストール無料。あなたの人生を変える、最初で最後の一歩を』[p]
 
 ; 部屋へ戻る
-[bg storage="myroom_night.jpg" time="500"]
+[bg storage="myroom_night2.jpg" time="500"]
 
 [stopse buf=1]
 ; ★リスト一致確認済
