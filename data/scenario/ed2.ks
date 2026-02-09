@@ -3,8 +3,7 @@
 ;=========================================
 [cm]
 [clearfix]
-[bg storage="bg_smartphone_task_done.jpg
-" time="2000" method="crossfade"]
+[bg storage="bg_smartphone_task_done.jpg" time="2000" method="crossfade"]
 [playbgm storage="BGM_06_悲哀.mp3" volume="50"]
 
 [chara_show name="tasky" face="warning" time="500" width="400" top="100"]
