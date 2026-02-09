@@ -58,7 +58,7 @@
 [bg storage="room-night.jpg" time="1000"]
 ; 画面左下に3秒点滅テキスト
 [layopt layer=1 visible=true]
-[ptext layer=1 page=fore text="Loading......." x=40 y=560 size=30 color=white edge=black name="flash"]
+[ptext layer=1 page=fore text="Loading......." x=40 y=600 size=30 color=white edge=black name="flash"]
 [anim name="flash" opacity=0 time=3000 loop=true]
 
 

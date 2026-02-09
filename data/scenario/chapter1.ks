@@ -8,6 +8,10 @@
 [position layer=message0 page=fore margint=45 marginb=10 marginl=50 marginr=50]
 
 [bg storage="room-mooning.jpg" time="1000"]
+; 画面左下に3秒点滅テキスト
+[layopt layer=1 visible=true]
+[ptext layer=1 page=fore text="Loading......." x=40 y=600 size=30 color=white edge=black name="flash"]
+[anim name="flash" opacity=0 time=3000 loop=true]
 [playbgm storage="BGM_02_日常.mp3" volume="50"]
 [playse storage="SE02通常通知音.mp3"]
 
