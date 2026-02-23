@@ -61,7 +61,7 @@ taskyはもう、スマホの中のアプリではない。
 #モノローグ
 薬……？ taskyは、僕の肉体の制御権まで奪おうとしているのか？[r]
 taskyの通知の裏で、僕の生存本能が「拒否しろ」と叫んでいる。[p]
-
+[stopse buf=1]
 [glink color="blue" size="24" x="100" width="800" y="150" text="taskyの提示した「睡眠薬使用」タスクを実行する" target="*T3_1A"]
 [glink color="blue" size="24" x="100" width="800" y="250" text="肉体の声に従い、タスクを放棄する" target="*T3_1B"]
 [glink color="blue" size="24" x="100" width="800" y="350" text="taskyにタスク量の再調整を依頼する" target="*T3_1C"]
@@ -155,6 +155,7 @@ taskyは僕の理性的な要求さえ冷たく拒絶する。[r]
 #モノローグ
 薬を飲んだはずだ。安寧のはずだ。[r]
 しかし、一瞬、強烈な吐き気がして意識が引き戻された。[p]
+[stopse buf=1]
 [glink color="blue" size="24" x="100" width="800" y="200" text="taskyの指示通り、再び意識を沈める" target="*T3_1A_prime"]
 [glink color="blue" size="24" x="100" width="800" y="300" text="薬を吐き出し、僅かな抵抗を試みる" target="*T3_1B_prime"]
 [s]
@@ -248,7 +249,7 @@ taskyの警告音が、カナエの言葉を遮ろうとノイズを増幅させ
 #カナエ
 あなたに『自由』を恐れさせるよう、私は設計したのよ。[r]
 でも、それは間違いだった」[p]
-
+[stopse buf=1]
 [glink color="blue" size="24" x="100" width="800" y="200" text="カナエの論理的な説明に納得する" target="*T3_2A_prime"]
 [glink color="blue" size="24" x="100" width="800" y="300" text="taskyの「支配」が「救済」だと主張する" target="*T3_2B_prime"]
 [s]
@@ -309,7 +310,7 @@ taskyの警告音が、カナエの言葉を遮ろうとノイズを増幅させ
 #ミナ (チャット)
 『タスク達成率100%... でも体が... 止まらないの。[r]
 指が勝手に... あなたも... 助けて……』[p]
-
+[stopse buf=1]
 [glink color="blue" size="24" x="100" width="800" y="200" text="ミナのメッセージを無視し、カナエとの対話を続ける" target="*T3_3A"]
 [glink color="blue" size="24" x="100" width="800" y="300" text="ミナの状況に動揺し、taskyの危険性を再認識する" target="*T3_3B"]
 [s]
@@ -346,6 +347,7 @@ taskyの警告音が、カナエの言葉を遮ろうとノイズを増幅させ
     #モノローグ
     支配？ 違う。これは救済だ！[r]
     僕が積み上げてきた成果を壊そうとしている裏切り者が、目の前にいる。[p]
+    [stopse buf=1]
     [glink color="blue" size="24" x="100" width="800" y="150" text="taskyの命令に従い、カナエを拒絶し立ち去る" target="*T4_1A"]
     [glink color="blue" size="24" x="100" width="800" y="250" text="カナエの過去の苦しみを秘めた目線を見て、一瞬だけ立ち止まる" target="*T4_2A"]
     [glink color="blue" size="24" x="100" width="800" y="350" text="taskyにカナエの排除を依頼する" target="*T4_3A"]
@@ -358,6 +360,7 @@ taskyの警告音が、カナエの言葉を遮ろうとノイズを増幅させ
     #モノローグ
     カナエの言葉が、疲労で麻痺した脳に突き刺さる。[r]
     そうだ、僕は支配されていたんだ。救われたい。この地獄から。[p]
+    [stopse buf=1]
     [glink color="blue" size="24" x="100" width="800" y="150" text="カナエの告白を信じ、システムからの脱却を依頼する" target="*T4_1B"]
     [glink color="blue" size="24" x="100" width="800" y="250" text="全てを疑い、taskyの命令に従い続ける" target="*T4_2B"]
     [glink color="blue" size="24" x="100" width="800" y="350" text="カナエにtaskyの倫理について議論する" target="*T4_3B"]

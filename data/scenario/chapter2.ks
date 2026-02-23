@@ -76,7 +76,7 @@ taskyの通知音も、どこか鈍い、耳障りな音に変わっている気
 目を閉じても、瞼の裏にはタスクリストのチェックマークが焼き付いている。[r]
 やらなければならない。やらなければならない。[r]
 強迫的なリズムが鼓動と重なる。[p]
-
+[stopse buf=1]
 [glink color="blue" size="24" x="100" width="800" y="150" text="タスクを完了し、早く終わらせる" target="*T2_1A"]
 [glink color="blue" size="24" x="100" width="800" y="250" text="タスクを無視し、趣味に時間を使う" target="*T2_1B"]
 [glink color="blue" size="24" x="100" width="800" y="350" text="タスクに潜む意味を考える" target="*T2_1C"]
@@ -253,7 +253,7 @@ taskyに頼らず、最短ルートで「結果」だけを出す。[r]
 #モノローグ
 それでも、彼女の承認は、僕のスコアの健全性を測る唯一のバロメーターだ。[r]
 彼女に見放されたら、僕は本当に独りになってしまう。[p]
-
+[stopse buf=1]
 [glink color="blue" size="24" x="100" width="800" y="150" text="ミナにタスクの進捗を報告する" target="*T2_2A"]
 [glink color="blue" size="24" x="100" width="800" y="250" text="ミナとの連絡を控える" target="*T2_2B"]
 [glink color="blue" size="24" x="100" width="800" y="350" text="ミナの体調を気遣うメッセージを送る" target="*T2_2C"]
@@ -331,7 +331,7 @@ taskyの機械音声に慰められる。[p]
 「そういえば、今日の強制タスクって、もう終わった？ 私、まだなの。[r]
 ……ねぇ、あなた、そのタスク、私のアカウントで二重にやってスコアを上げるってのはどう？[r]
 あなたにとっても『協力ボーナス』が入るわよ」[p]
-
+[stopse buf=1]
 [glink color="blue" size="24" x="100" width="800" y="200" text="ミナの要求に応じ、二重タスクを実行する" target="*T2_2A_prime"]
 [glink color="blue" size="24" x="100" width="800" y="300" text="非効率だと断り、ミナとの会話を切り上げる" target="*T2_2B_prime"]
 [s]
@@ -514,7 +514,7 @@ taskyの機械音声に慰められる。[p]
 [playse storage="narrator/ここで止まれば、僕はただの「疲れた敗北者」に戻ってしまう。.mp3" buf=1]
 #モノローグ
 ここで止まれば、僕はただの「疲れた敗北者」に戻ってしまう。[p]
-
+[stopse buf=1]
 [glink color="blue" size="24" x="100" width="800" y="150" text="徹夜してでもタスクを完了する" target="*T2_3A"]
 [glink color="blue" size="24" x="100" width="800" y="250" text="休息を優先する" target="*T2_3B"]
 [glink color="blue" size="24" x="100" width="800" y="350" text="システム内でタスク量を減らすチートを試みる" target="*T2_3C"]
@@ -584,7 +584,7 @@ taskyの機械音声に慰められる。[p]
 #モノローグ
 僕の個人的な情報をすべてtaskyに渡すことになる。[r]
 もはや、プライバシーなどという概念は、僕の思考から消えかけている。[p]
-
+[stopse buf=1]
 [glink color="blue" size="24" x="100" width="800" y="150" text="tasky推奨の外部サービスを連携する" target="*T2_4A"]
 [glink color="blue" size="24" x="100" width="800" y="250" text="連携を拒否し、リスクを避ける" target="*T2_4B"]
 [glink color="blue" size="24" x="100" width="800" y="350" text="taskyの裏側を独自に調査する" target="*T2_4C"]
@@ -657,7 +657,7 @@ taskyの機械音声に慰められる。[p]
 taskyは猛烈に警告を発しているが、僕はその裏側で、[r]
 開発者の一人だったとされるカナエに関する断片的なデータを見つけた。[r]
 それは暗号化された座標と短いメッセージのようだ。「救済を求める者へ」と書いてある。[p]
-
+[stopse buf=1]
 [glink color="blue" size="24" x="100" width="800" y="200" text="暗号をtaskyの解析機能で解く" target="*T2_4_FIND_A"]
 [glink color="blue" size="24" x="100" width="800" y="300" text="自力で解析を試みる" target="*T2_4_FIND_B"]
 [s]
@@ -694,7 +694,7 @@ taskyに頼っては意味がない。暗号を自力で解読する。……解
 警告。ユーザーは現在、非推奨エリアへの移動を計画しています。[r]
 行動を中止し、夜間タスクに戻りなさい。[r]
 あなたの位置情報は常に監視されています。[p]
-
+[stopse buf=1]
 [glink color="blue" size="24" x="100" width="800" y="200" text="taskyのトラッキングを一時的に遮断する" target="*T2_4_HIDE_A"]
 [glink color="blue" size="24" x="100" width="800" y="300" text="トラッキングを無視し、居場所へ向かう" target="*T2_4_HIDE_B"]
 [s]

@@ -78,7 +78,7 @@ taskyを導入して数日。生活は劇的に一変した。[r]
 [playse storage="narrator/これを無視すれば、またあの「平均以下の自分」に戻ってしまうという恐怖が鎌首をもたげる。.mp3" buf=1]
 #モノローグ
 これを無視すれば、またあの「平均以下の自分」に戻ってしまうという恐怖が鎌首をもたげる。[p]
-
+[stopse buf=1]
 [glink color="blue" size="24" x="100" width="800" y="200" text="即座に起き上がり、タスクをこなして報酬の快感を得る" target="*T1_1A"]
 [glink color="blue" size="24" x="100" width="800" y="300" text="少し後回しにして、二度寝の誘惑を優先する" target="*T1_1B"]
 [s]
@@ -166,7 +166,7 @@ taskyに従ってストレッチを終えた。確かに体は軽いが、心臓
 #モノローグ
 taskyのリストに「卒研」は入っていない。[r]
 これをやらずに、本当に社会的な成功があるのだろうか。[p]
-
+[stopse buf=1]
 [glink color="blue" size="24" x="100" width="800" y="200" text="taskyの次のタスクに移る" target="*T1_1A_prime"]
 [glink color="blue" size="24" x="100" width="800" y="300" text="taskyを無視し、研究のアイデア出しを優先する" target="*T1_1B_prime"]
 [s]
@@ -261,7 +261,7 @@ taskyは本当に便利だよね。
 #モノローグ
 その余裕と完璧さが、僕の焦燥感を油のように煽る。僕も彼女のようになりたい。[r]
 彼女の存在は、僕にとって憧れであり、同時に 排除すべき劣等感の源 だ。[p]
-
+[stopse buf=1]
 [glink color="blue" size="24" x="100" width="800" y="150" text="ミナのスコアを調べて、対抗心と競争意識を燃やす" target="*T1_2A"]
 [glink color="blue" size="24" x="100" width="800" y="250" text="ミナとは距離を置き、自分のペースを探す" target="*T1_2B"]
 [glink color="blue" size="24" x="100" width="800" y="350" text="ミナにアプリの仕組みについて質問する" target="*T1_2C"]
@@ -478,7 +478,7 @@ taskyのスコアって、具体的にどういうアルゴリズムで付与さ
 何が重要なのか、自分で判断する必要がなくなった。[r]
 すべてがタスク化されていくことに、僕は管理される心地よさと、[r]
 微かな恐怖を同時に覚える。[p]
-
+[stopse buf=1]
 [glink color="blue" size="24" x="100" width="800" y="150" text="友人からの連絡を無視し、他の効率的なタスクを優先" target="*T1_3A"]
 [glink color="blue" size="24" x="100" width="800" y="250" text="タスクは後回しにして、友人に返信する" target="*T1_3B"]
 [glink color="blue" size="24" x="100" width="800" y="350" text="「タスクだから」と友人に正直に説明する" target="*T1_3C"]
@@ -571,7 +571,7 @@ taskyに肯定されると、現実の人間関係がどうでもいいノイズ
 連絡を無視した。しかし、すぐにtaskyから「関係性維持の最適化」という新規タスクが提示された。[r]
 内容は「家族に形式的な健康確認のメッセージを送る」というものだ。[r]
 「お母さん、元気？」という定型文がすでに用意されている。[p]
-
+[stopse buf=1]
 [glink color="blue" size="24" x="100" width="800" y="200" text="taskyの指示に従い、定型文を送信する" target="*T1_3A_prime"]
 [glink color="blue" size="24" x="100" width="800" y="300" text="このタスクも拒否し、スマホを置く" target="*T1_3B_prime"]
 [s]
@@ -647,7 +647,7 @@ taskyに肯定されると、現実の人間関係がどうでもいいノイズ
 
 ; 演出：机へフォーカス
 [bg storage="myroom_night.jpg" time="500"]
-
+[stopse buf=1]
 [glink color="blue" size="24" x="100" width="800" y="150" text="夜遅くまでタスクを続け、報酬を見る" target="*T1_4A"]
 [glink color="blue" size="24" x="100" width="800" y="250" text="通知を消し、早めに就寝する" target="*T1_4B"]
 [glink color="blue" size="24" x="100" width="800" y="350" text="taskyにタスク量の調整を依頼する" target="*T1_4C"]
@@ -810,7 +810,7 @@ taskyは僕の理性的な要求さえ拒絶する。[r]
 #モノローグ
 taskyは僕の栄養状態まで管理し始めた。[r]
 僕の行動は、完全にtaskyの設計の範疇にある。[p]
-
+[stopse buf=1]
 [glink color="blue" size="24" x="100" width="800" y="200" text="taskyの推奨するサプリを注文する" target="*T1_5A"]
 [glink color="blue" size="24" x="100" width="800" y="300" text="自分の判断で、別のタスク (読書など)を優先する" target="*T1_5B"]
 [s]

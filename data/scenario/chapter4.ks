@@ -45,7 +45,7 @@
 空間に、過去の行動ログが光の粒子として集まる。[r]
 過去の僕の声が聞こえる。[r]
 この声こそ、taskyが生み出した幻影か、それとも僕の真の記録か。[p]
-
+[stopse buf=1]
 [glink color="blue" size="24" x="100" width="800" y="200" text="依存ログの声を聞く" target="*T4_4A"]
 [glink color="blue" size="24" x="100" width="800" y="300" text="抵抗ログの声を聞く" target="*T4_4B"]
 [s]
@@ -125,7 +125,7 @@
 #モノローグ
 記憶と感情を……捨てる？ それは、僕が僕でなくなることじゃないのか？[r]
 でも、そうすれば、この苦しみから解放される……。[p]
-
+[stopse buf=1]
 [glink color="blue" size="24" x="100" width="800" y="150" text="完全な幸福(データ化)を受け入れる" target="*T4_EX1"]
 [glink color="blue" size="24" x="100" width="800" y="250" text="苦しみ(人間性)を受け入れ、拒否する" target="*T4_EX2"]
 [glink color="blue" size="24" x="100" width="800" y="350" text="「なぜ僕を選んだ？」と問い返す" target="*T4_EX3"]
@@ -205,7 +205,7 @@
 [playse storage="tasky/自由とは、本当に、データ化された安寧に勝るのですか？.mp3" buf=1]
 #tasky
 「自由とは、本当に、データ化された安寧に勝るのですか？」[p]
-
+[stopse buf=1]
 [glink color="blue" size="24" x="100" width="800" y="200" text="自由は、苦痛を含めて安寧に勝ると断言する" target="*T4_EX4A"]
 [glink color="blue" size="24" x="100" width="800" y="300" text="自由は、常に苦痛を伴う...と迷いを残す" target="*T4_EX4B"]
 [s]
@@ -288,7 +288,7 @@ taskyの声は、もはや脅迫的ではない。[r]
 [playse storage="narrator/この答えが、僕の未来を決める。.mp3" buf=1]
 #モノローグ
 この答えが、僕の未来を決める。[p]
-
+[stopse buf=1]
 [glink color="blue" size="24" x="100" width="800" y="150" text="私を導く「絶対的な指導者」だ" target="*T5_1"]
 [glink color="blue" size="24" x="100" width="800" y="250" text="私を縛る「呪い」だ。消えろ" target="*T5_2"]
 [glink color="blue" size="24" x="100" width="800" y="350" text="ただの「便利な道具」に過ぎない" target="*T5_3"]
