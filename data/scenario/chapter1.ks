@@ -99,9 +99,9 @@ taskyを導入して数日。生活は劇的に一変した。[r]
 #tasky
 タスク完了。素晴らしい反応速度です。報酬『パーフェクト・モーニング』を付与しました。[p]
 [stopse buf=1]
-[fadeoutbgm time=1000]
+[bgmopt volume=0 time=1000]
 [playse storage="SE04 報酬音（ファンファーレ）.mp3" wait="ture"]
-[fadeinbgm time=1000]
+[bgmopt volume=50 time=1000] 
 [quake count=2 time=200 vmax=10]
 ; ナレーター音声
 [stopse buf=1]
@@ -445,6 +445,7 @@ taskyのスコアって、具体的にどういうアルゴリズムで付与さ
 [chara_hide_all time=500]
 ; 背景：部屋全体(夕方)
 [bg storage="room-sunset.jpg" time="1000"]
+[playbgm storage="BGM_02_日常.mp3" volume="50"]
 
 [chara_show name="tasky" time="500"]
 
