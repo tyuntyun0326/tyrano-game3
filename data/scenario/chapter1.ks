@@ -99,7 +99,9 @@ taskyを導入して数日。生活は劇的に一変した。[r]
 #tasky
 タスク完了。素晴らしい反応速度です。報酬『パーフェクト・モーニング』を付与しました。[p]
 [stopse buf=1]
-[playse storage="SE04 報酬音（ファンファーレ）.mp3"]
+[fadeoutbgm time=1000]
+[playse storage="SE04 報酬音（ファンファーレ）.mp3" wait="ture"]
+[fadeinbgm time=1000]
 [quake count=2 time=200 vmax=10]
 ; ナレーター音声
 [stopse buf=1]

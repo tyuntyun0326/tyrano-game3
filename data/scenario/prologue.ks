@@ -182,8 +182,8 @@ SNSのタイムラインが、taskyの広告で埋め尽くされている。[r]
 
 *approve
 [playse storage="SE08 スマホタップ音.mp3"]
-[quake count=3 time=300 hmax=10]
 [playse storage="SE09承認電流音.mp3"]
+[quake count=3 time=300 hmax=10]
 [stopse buf=1]
 ; ★リスト一致確認済
 [playse storage="narrator/「承認」ボタンをタップした瞬間、全身が電流に打たれたように痺れ、そして同時に重荷が消え去ったような浮遊感を覚えた。.mp3" buf=1]
