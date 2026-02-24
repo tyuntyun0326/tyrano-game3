@@ -225,7 +225,7 @@ AIが計算したルートに間違いはない。[r]
 *T1_2
 [chara_hide_all time=500]
 [bg storage="office-sun.jpg" time="1000"]
-
+[stopbgm fadeout=1000]
 [chara_show name="ミナ" face="smile" time="1000"]
 
 [stopse buf=1]
@@ -540,7 +540,6 @@ taskyに肯定されると、現実の人間関係がどうでもいいノイズ
 これでよかったのか？ スコアが下がっている……と、常に頭の隅で計算している自分がいる。[p]
 [playse storage="narrator/この計算が、鉛のような疲労となってのしかかる。.mp3" buf=1]
 この計算が、鉛のような疲労となってのしかかる。[p]
-[chara_mod name="tasky" face="default"]
 [jump target="*T1_4"]
 
 *T1_3C
@@ -774,8 +773,8 @@ taskyは僕の理性的な要求さえ拒絶する。[r]
 #モノローグ
 更に次の報酬が欲しくなる。喉が渇いて海水を飲むようなものだ。[r]
 この快感のループから抜け出せない。[p]
+[playse storage="SE04 報酬音（コイン1）.mp3"]
 [jump target="*T1_5"]
-
 *T1_4B_prime
 [eval exp="f.f_fat = f.f_fat - 5"]
 ; 主人公ボイス

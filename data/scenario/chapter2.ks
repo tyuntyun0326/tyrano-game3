@@ -83,6 +83,7 @@ taskyの通知音も、どこか鈍い、耳障りな音に変わっている気
 [s]
 
 *T2_1A
+[chara_mod name="tasky" face="default"]
 [eval exp="f.f_dep = f.f_dep + 10"]
 ; ナレーター
 [stopse buf=1]
@@ -97,6 +98,7 @@ taskyの通知音も、どこか鈍い、耳障りな音に変わっている気
 [playse storage="tasky/『完全勝利』。...あなたの努力は記録されました。.mp3" buf=1]
 #tasky
 『完全勝利』。あなたの努力は記録されました。[p]
+[chara_hide name="tasky"]
 [jump target="*T2_1_prime"]
 
 *T2_1B
@@ -127,6 +129,7 @@ taskyの通知音も、どこか鈍い、耳障りな音に変わっている気
 [if exp="f.f_dep > f.f_fat"]
     ; [ルートA]
     [bg storage="dark-library.jpg" time="1000"]
+    [chara_mod name="tasky" face="default"]
     ; Taskyボイス
     [stopse buf=1]
     ; ★リスト一致確認済
@@ -154,6 +157,7 @@ taskyの通知音も、どこか鈍い、耳障りな音に変わっている気
 [endif]
 
 *T2_1A_prime
+[chara_mod name="tasky" face="default"]
 [eval exp="f.f_dep = f.f_dep + 10"]
 [eval exp="f.f_fat = f.f_fat + 5"]
 ; ナレーター
@@ -169,9 +173,11 @@ taskyの通知音も、どこか鈍い、耳障りな音に変わっている気
 [playse storage="tasky/『完全勝利』。...あなたの努力は記録されました。.mp3" buf=1]
 #tasky
 『完全勝利』。あなたの努力は記録されました。[p]
+[chara_hide name="tasky"]
 [jump target="*T2_2"]
 
 *T2_1B_prime
+[chara_mod name="tasky" face="warning"]
 [eval exp="f.f_dep = f.f_dep + 5"]
 [eval exp="f.f_fat = f.f_fat - 5"]
 ; ナレーター
@@ -211,6 +217,7 @@ taskyに頼らず、最短ルートで「結果」だけを出す。[r]
 [playse storage="tasky/適切な情報操作です。...評価の維持を確認。.mp3" buf=1]
 #tasky
 適切な情報操作です。評価の維持を確認。[p]
+[chara_hide name="tasky"]
 [jump target="*T2_2"]
 
 *T2_1D_prime
@@ -222,6 +229,7 @@ taskyに頼らず、最短ルートで「結果」だけを出す。[r]
 [playse storage="narrator/偽りの自分を演じるのはもう嫌だ。...スマホの電源を切りたい。.mp3" buf=1]
 #モノローグ
 偽りの自分を演じるのはもう嫌だ。スマホの電源を切りたい。[p]
+[playse storage="SE05 エラー_拒絶音mp3"]
 ; Taskyボイス
 [stopse buf=1]
 ; ★リスト一致確認済
@@ -545,6 +553,7 @@ taskyの機械音声に慰められる。[p]
 *T2_3C
 [eval exp="f.f_dep = f.f_dep - 10"]
 [chara_show name="tasky" face="warning" time="500"]
+[playse storage="SE05 エラー_拒絶音mp3"]
 ; Taskyボイス
 [stopse buf=1]
 ; ★リスト完全一致
