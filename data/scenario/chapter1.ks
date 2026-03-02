@@ -150,7 +150,6 @@ taskyの冷たい機械音声で、朝の微睡みは最悪の気分に変わっ
 [playse storage="narrator/しかし、体は鉛のように重く、もう少しだけ現実から逃げていたかった。.mp3" buf=1]
 #モノローグ
 しかし、体は鉛のように重く、もう少しだけ現実から逃げていたかった。[p]
-[chara_mod name="tasky" face="default"]
 [jump target="*T1_2"]
 
 *T1_1_prime
@@ -216,7 +215,6 @@ AIが計算したルートに間違いはない。[r]
 [playse storage="narrator/警告音がうるさい。...でも、久しぶりに自分でペンを握った感触は、少しだけ温かかった。.mp3" buf=1]
 #モノローグ
 警告音がうるさい。でも、久しぶりに自分でペンを握った感触は、少しだけ温かかった。[p]
-[chara_mod name="tasky" face="default"]
 [jump target="*T1_2"]
 
 ;-----------------------------------------
@@ -610,7 +608,6 @@ taskyに肯定されると、現実の人間関係がどうでもいいノイズ
 #tasky
 警告。適切な関係維持は社会的信用の基盤です。[r]
 あなたのポートフォリオに傷がつきます。[p]
-[chara_mod name="tasky" face="default"]
 [jump target="*T1_4"]
 
 ;-----------------------------------------
@@ -657,7 +654,9 @@ taskyに肯定されると、現実の人間関係がどうでもいいノイズ
 
 *T1_4A
 [eval exp="f.f_dep = f.f_dep + 15"]
-[playse storage="SE04 報酬音（ファンファーレ）.mp3"]
+[bgmopt volume=0 time=1000]
+[playse storage="SE04 報酬音（ファンファーレ）.mp3" wait="ture"]
+[bgmopt volume=50 time=1000] 
 [quake count=4 time=400 vmax=20]
 ; ナレーター音声
 [stopse buf=1]
@@ -705,7 +704,6 @@ taskyに肯定されると、現実の人間関係がどうでもいいノイズ
 #モノローグ
 taskyの通知が、まるで社会的な軽蔑の言葉のように響く。[r]
 休めても、明日からの不安が、回復したわずかな気力を食いつぶしていく。[p]
-[chara_mod name="tasky" face="default"]
 [jump target="*T1_5"]
 
 *T1_4C

@@ -98,7 +98,6 @@ taskyの通知音も、どこか鈍い、耳障りな音に変わっている気
 [playse storage="tasky/『完全勝利』。...あなたの努力は記録されました。.mp3" buf=1]
 #tasky
 『完全勝利』。あなたの努力は記録されました。[p]
-[chara_hide name="tasky"]
 [jump target="*T2_1_prime"]
 
 *T2_1B
@@ -617,6 +616,7 @@ taskyの機械音声に慰められる。[p]
 [jump target="*Kanae_Contact"]
 
 *T2_4B
+[chara_mod name="tasky" face="warning"]
 [eval exp="f.f_fat = f.f_fat + 10"]
 ; ナレーター
 [stopse buf=1]
@@ -642,6 +642,7 @@ taskyの機械音声に慰められる。[p]
 [jump target="*Kanae_Contact"]
 
 *T2_4C
+[chara_mod name="tasky" face="warning"]
 [eval exp="f.f_dep = f.f_dep - 10"]
 [eval exp="f.f_fat = f.f_fat + 10"]
 [playse storage="SE05 エラー_拒絶音.mp3"]
@@ -683,6 +684,7 @@ taskyは猛烈に警告を発しているが、僕はその裏側で、[r]
 [jump target="*T2_4_HIDE"]
 
 *T2_4_FIND_B
+[chara_hide name="tasky"]
 [eval exp="f.f_dep = f.f_dep - 5"]
 [eval exp="f.f_kanae = 1"]
 ; ナレーター
@@ -717,6 +719,7 @@ taskyに頼っては意味がない。暗号を自力で解読する。……解
 [playse storage="hero/taskyを騙す。GPS信号を偽装して…….mp3" buf=1]
 #主人公
 「taskyを騙す。GPS信号を偽装して……」[p]
+[chara_hide name="tasky"]
 ; Taskyボイス
 [stopse buf=1]
 ; ★リスト完全一致
@@ -734,6 +737,7 @@ taskyに頼っては意味がない。暗号を自力で解読する。……解
 #モノローグ
 抵抗する余裕はない。今はカナエに会うことだけを考える。[r]
 taskyにバレていても構わない。[p]
+[chara_hide name="tasky"]
 [jump target="*Kanae_Contact"]
 
 *Kanae_Contact
