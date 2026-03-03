@@ -222,7 +222,7 @@ AIが計算したルートに間違いはない。[r]
 ;-----------------------------------------
 *T1_2
 [chara_hide_all time=500]
-[bg storage="office-sun.jpg" time="1000"]
+[bg storage="office-sun.jpg" time="3000"]
 [stopbgm fadeout=1000]
 [chara_show name="ミナ" face="smile" time="1000"]
 
