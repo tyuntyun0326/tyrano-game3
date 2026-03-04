@@ -153,7 +153,6 @@
 *T4_EX2
 [eval exp="f.f_fat = f.f_fat + 10"]
 [eval exp="f.f_dep = f.f_dep - 10"]
-[playse storage="SE05 エラー_拒絶音.mp3"]
 
 ; 演出：拒絶の衝撃
 [quake count=2 time=300 hmax=5]
@@ -163,6 +162,8 @@
 [playse storage="narrator/嫌だ……！ 苦しくても、痛くても、これは僕の痛みだ！ 誰にも渡さない！.mp3" buf=1]
 #モノローグ
 嫌だ……！ 苦しくても、痛くても、これは僕の痛みだ！ 誰にも渡さない！[p]
+[playse storage="SE05 エラー_拒絶音.mp3"]
+
 ; ★Taskyボイス
 [stopse buf=1]
 ; ★リスト一致
@@ -324,6 +325,7 @@ taskyの声は、もはや脅迫的ではない。[r]
 #モノローグ
 お前さえいなければ、僕は自由になれるはずだ。[r]
 ...全ての元凶はここにある。[p]
+[chara_mod name="tasky" face="warning"]
 [playse storage="SE05 エラー_拒絶音.mp3"]
 
 ; Taskyボイス
@@ -332,6 +334,7 @@ taskyの声は、もはや脅迫的ではない。[r]
 [playse storage="tasky/拒絶を確認。システムを強制排除します.mp3" buf=1]
 #tasky
 「拒絶を確認。システムを強制排除します」[p]
+[chara_hide name="tasky"]
 [jump target="*CHECK_ED"]
 
 *T5_3

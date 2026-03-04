@@ -179,7 +179,6 @@ taskyの通知音も、どこか鈍い、耳障りな音に変わっている気
 [jump target="*T2_2"]
 
 *T2_1B_prime
-[chara_mod name="tasky" face="warning"]
 [eval exp="f.f_dep = f.f_dep + 5"]
 [eval exp="f.f_fat = f.f_fat - 5"]
 ; ナレーター
@@ -189,6 +188,7 @@ taskyの通知音も、どこか鈍い、耳障りな音に変わっている気
 #モノローグ
 taskyに頼らず、最短ルートで「結果」だけを出す。[r]
 スコアさえ上がれば、中身なんてどうでもいいんだ。[p]
+[chara_mod name="tasky" face="warning"]
 [playse storage="SE05 エラー_拒絶音.mp3"]
 
 ; Taskyボイス
@@ -215,6 +215,8 @@ taskyに頼らず、最短ルートで「結果」だけを出す。[r]
 [playse storage="narrator/誰も僕の本当の疲労を知らない。.mp3" buf=1]
 #モノローグ
 誰も僕の本当の疲労を知らない。[p]
+[chara_mod name="tasky" face="default"]
+
 ; Taskyボイス
 [stopse buf=1]
 ; ★リスト一致確認済
@@ -704,6 +706,7 @@ taskyは猛烈に警告を発しているが、僕はその裏側で、[r]
 #tasky
 ユーザーの要求に従い、暗号を解析します……対象：特定危険人物。[p]
 [jump target="*T2_4_HIDE"]
+[chara_hide name="tasky"]
 
 *T2_4_FIND_B
 [chara_hide name="tasky"]
@@ -719,6 +722,7 @@ taskyに頼っては意味がない。暗号を自力で解読する。……解
 [jump target="*T2_4_HIDE"]
 
 *T2_4_HIDE
+[chara_show name="tasky" time="500"]
 [playse storage="SE03 警報音.mp3"]
 ; Taskyボイス
 [stopse buf=1]

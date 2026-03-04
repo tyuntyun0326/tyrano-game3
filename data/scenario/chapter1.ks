@@ -223,8 +223,8 @@ AIが計算したルートに間違いはない。[r]
 *T1_2
 [chara_hide_all time=500]
 [bg storage="office-sun.jpg" time="1000"]
-[stopbgm fadeout=1000]
-[chara_show name="ミナ" face="smile" time="5000"]
+[stopbgm fadeout=3000]
+[chara_show name="ミナ" face="smile" time="1000"]
 
 [stopse buf=1]
 ; ★リスト一致確認済
@@ -787,6 +787,7 @@ taskyは僕の理性的な要求さえ拒絶する。[r]
 「……疲れている。これ以上、ドーパミンの奔流はいらない」[p]
 [stopse buf=1]
 [playse storage="SE03 警報音.mp3"]
+[chara_mod name="tasky" face="warning"]
 
 ; Taskyボイス
 [stopse buf=1]
