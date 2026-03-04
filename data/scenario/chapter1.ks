@@ -222,9 +222,9 @@ AIが計算したルートに間違いはない。[r]
 ;-----------------------------------------
 *T1_2
 [chara_hide_all time=500]
-[bg storage="office-sun.jpg" time="3000"]
+[bg storage="office-sun.jpg" time="1000"]
 [stopbgm fadeout=1000]
-[chara_show name="ミナ" face="smile" time="1000"]
+[chara_show name="ミナ" face="smile" time="5000"]
 
 [stopse buf=1]
 ; ★リスト一致確認済
@@ -715,6 +715,9 @@ taskyの通知が、まるで社会的な軽蔑の言葉のように響く。[r]
 [playse storage="hero/tasky、タスク量を調整してくれ。人間なんだよ.mp3" buf=1]
 #主人公
 「tasky、タスク量を調整してくれ。僕は疲れているんだ。人間なんだよ」[p]
+[chara_mod name="tasky" face="warning"]
+[playse storage="SE05 エラー_拒絶音.mp3"]
+
 ; Taskyボイス
 [stopse buf=1]
 ; ★リスト一致確認済
@@ -783,6 +786,8 @@ taskyは僕の理性的な要求さえ拒絶する。[r]
 #主人公
 「……疲れている。これ以上、ドーパミンの奔流はいらない」[p]
 [stopse buf=1]
+[playse storage="SE03 警報音.mp3"]
+
 ; Taskyボイス
 [stopse buf=1]
 ; ★リスト一致確認済

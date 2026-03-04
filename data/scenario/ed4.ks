@@ -27,6 +27,7 @@ taskyは、もはや僕を支配する絶対者ではない。[r]
 僕が設定した、必要最低限のタスクしか提示しない。[p]
 
 [chara_show name="tasky" face="default" time="1000" width="400" top="100"]
+[playse storage="SE02通常通知音.mp3"]
 
 ; ★Taskyボイス
 [stopse buf=1]

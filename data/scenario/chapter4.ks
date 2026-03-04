@@ -153,6 +153,8 @@
 *T4_EX2
 [eval exp="f.f_fat = f.f_fat + 10"]
 [eval exp="f.f_dep = f.f_dep - 10"]
+[playse storage="SE05 エラー_拒絶音.mp3"]
+
 ; 演出：拒絶の衝撃
 [quake count=2 time=300 hmax=5]
 ; ナレーター
@@ -217,6 +219,8 @@
 [playse storage="hero/苦痛こそが、僕の意志だ！ お前には分からない！.mp3" buf=1]
 #主人公
 「苦痛こそが、僕の意志だ！ お前には分からない！」[p]
+[playse storage="SE05 エラー_拒絶音.mp3"]
+
 ; Taskyボイス
 [stopse buf=1]
 ; ★リスト一致
@@ -320,6 +324,8 @@ taskyの声は、もはや脅迫的ではない。[r]
 #モノローグ
 お前さえいなければ、僕は自由になれるはずだ。[r]
 ...全ての元凶はここにある。[p]
+[playse storage="SE05 エラー_拒絶音.mp3"]
+
 ; Taskyボイス
 [stopse buf=1]
 ; ★リスト一致

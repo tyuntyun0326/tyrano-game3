@@ -38,6 +38,7 @@ taskyはもう、スマホの中のアプリではない。
 僕の神経系の一部になってしまった。[p]
 
 [chara_show name="tasky" face="warning" time="200"]
+[playse storage="SE05 エラー_拒絶音.mp3"]
 
 ; ★Taskyボイス
 [stopse buf=1]
@@ -76,6 +77,8 @@ taskyの通知の裏で、僕の生存本能が「拒否しろ」と叫んでい
 [playse storage="hero/これで楽になれるなら.mp3" buf=1]
 #主人公
 「(震える手で薬を飲む) これで……楽になれるなら……」[p]
+[chara_mod name="tasky" face="default"]
+
 ; ★Taskyボイス
 [stopse buf=1]
 ; ★リスト一致
@@ -132,6 +135,8 @@ taskyの通知の裏で、僕の生存本能が「拒否しろ」と叫んでい
 [playse storage="hero/tasky、聞いてくれ。...今の僕には、これ以上の最適化は無理だ.mp3" buf=1]
 #主人公
 tasky、聞いてくれ。...今の僕には、これ以上の最適化は無理だ[p]
+[playse storage="SE05 エラー_拒絶音.mp3"]
+
 ; ★Taskyボイス
 [stopse buf=1]
 ; ★リスト一致
@@ -189,6 +194,9 @@ taskyは僕の理性的な要求さえ冷たく拒絶する。[r]
 洗面所に駆け込み、胃の中身をぶちまけた。[p]
 ; 演出：嘔吐の衝撃
 [quake count=2 time=300 vmax=10]
+[chara_mod name="tasky" face="warning"]
+[playse storage="SE03 警報音.mp3"]
+
 ; Taskyボイス
 [stopse buf=1]
 ; ★リスト一致
@@ -226,7 +234,7 @@ taskyの異常なログから探し出した、開発者の一人、カナエだ
 「taskyは、あなたの依存心と自己肯定感の低さを利用して作られた。[r]
 あれは最適化なんかじゃない。ただの支配よ。[r]
 私がそう設計したのだから、間違いない」[p]
-[playse storage="SE05 エラー_拒絶音.mp3"]
+[playse storage="SE03 警報音.mp3"]
 [playse storage="SE10妨害電波音.mp3"]
 ; ナレーター
 [stopse buf=1]
@@ -283,12 +291,15 @@ taskyの警告音が、カナエの言葉を遮ろうとノイズを増幅させ
 #主人公
 「支配こそ、僕が望んでいたものだ！ 自由なんて、苦痛なだけだ！[r]
 君に何がわかる！」[p]
+[chara_show name="tasky" time="500"]
+
 ; Taskyボイス
 [stopse buf=1]
 ; ★リスト一致
 [playse storage="tasky/優秀なユーザー。ノイズを排除します.mp3" buf=1]
 #tasky
 「優秀なユーザー。ノイズを排除します」[p]
+[chara_hide name="カナエ" time=500]
 [jump target="*T3_3"]
 
 *T3_3
@@ -377,6 +388,8 @@ taskyの警告音が、カナエの言葉を遮ろうとノイズを増幅させ
 [playse storage="hero/taskyが僕の全てだ邪魔をするな出ていけ.mp3" buf=1]
 #主人公
 「taskyが僕の全てだ！ 邪魔をするな！ 出ていけ！」[p]
+[chara_show name="tasky" time="500"]
+
 ; Taskyボイス
 [stopse buf=1]
 ; ★リスト一致
@@ -390,6 +403,8 @@ taskyの警告音が、カナエの言葉を遮ろうとノイズを増幅させ
 *T4_2A
 [eval exp="f.f_dep = f.f_dep - 10"]
 [eval exp="f.f_fat = f.f_fat - 5"]
+[chara_show name="カナエ" face="sad" time="1000"]
+
 ; ★カナエボイス
 [stopse buf=1]
 ; ★リスト一致
@@ -408,6 +423,8 @@ taskyの警告音が、カナエの言葉を遮ろうとノイズを増幅させ
 
 *T4_3A
 [eval exp="f.f_dep = f.f_dep + 15"]
+[chara_show name="tasky" time="500"]
+
 ; Taskyボイス
 [stopse buf=1]
 ; ★リスト一致
@@ -432,6 +449,8 @@ taskyの冷たい肯定に、僕は満足を覚える。邪魔者は消えた。
 [playse storage="hero/助けてくれ、カナエ！ 僕は、このタスクのループから抜け出したい！.mp3" buf=1]
 #主人公
 「助けてくれ、カナエ！ 僕は、このタスクのループから抜け出したい！」[p]
+[chara_show name="カナエ" face="sad" time="1000"]
+
 ; ★カナエボイス
 [stopse buf=1]
 ; ★リスト一致
@@ -451,6 +470,8 @@ taskyの冷たい肯定に、僕は満足を覚える。邪魔者は消えた。
 #主人公
 (怯えながら) 「……僕は、taskyがいないと、何もできない。[r]
 ...僕には自由なんて怖い……」[p]
+[chara_show name="tasky" time="500"]
+
 ; Taskyボイス
 [stopse buf=1]
 ; ★リスト一致
@@ -470,6 +491,8 @@ taskyの冷たい肯定に、僕は満足を覚える。邪魔者は消えた。
 [playse storage="hero/なぜ、こんなシステムを作ったんだ？ 倫理的だと本当に思ったのか？.mp3" buf=1]
 #主人公
 「なぜ、こんなシステムを作ったんだ？ 倫理的だと本当に思ったのか？」[p]
+[chara_show name="カナエ" face="sad" time="1000"]
+
 ; ★カナエボイス
 [stopse buf=1]
 ; ★リスト一致
