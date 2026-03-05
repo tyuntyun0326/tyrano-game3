@@ -101,7 +101,7 @@ taskyを導入して数日。生活は劇的に一変した。[r]
 [stopse buf=1]
 [bgmopt volume=0 time=1000]
 [playse storage="SE04 報酬音（ファンファーレ）.mp3" wait="ture"]
-[bgmopt volume=50 time=1000] 
+[bgmopt volume=50 time=7000] 
 [quake count=2 time=200 vmax=10]
 ; ナレーター音声
 [stopse buf=1]
@@ -223,7 +223,7 @@ AIが計算したルートに間違いはない。[r]
 *T1_2
 [chara_hide_all time=500]
 [bg storage="office-sun.jpg" time="1000"]
-[stopbgm fadeout=3000]
+[stopbgm fadeout=5000]
 [chara_show name="ミナ" face="smile" time="1000"]
 
 [stopse buf=1]
@@ -656,7 +656,7 @@ taskyに肯定されると、現実の人間関係がどうでもいいノイズ
 [eval exp="f.f_dep = f.f_dep + 15"]
 [bgmopt volume=0 time=1000]
 [playse storage="SE04 報酬音（ファンファーレ）.mp3" wait="ture"]
-[bgmopt volume=50 time=1000] 
+[bgmopt volume=50 time=5000] 
 [quake count=4 time=400 vmax=20]
 ; ナレーター音声
 [stopse buf=1]

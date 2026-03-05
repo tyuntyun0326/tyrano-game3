@@ -722,7 +722,7 @@ taskyに頼っては意味がない。暗号を自力で解読する。……解
 [jump target="*T2_4_HIDE"]
 
 *T2_4_HIDE
-[chara_show name="tasky" time="500"]
+[chara_show name="tasky" face="warning" time="500"]
 [playse storage="SE03 警報音.mp3"]
 ; Taskyボイス
 [stopse buf=1]
