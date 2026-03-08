@@ -102,7 +102,6 @@ taskyを導入して数日。生活は劇的に一変した。[r]
 [stopbgm fadeout=5000]
 [playse storage="SE04 報酬音（ファンファーレ）.mp3"]
 
-[playbgm storage="BGM_02_日常.mp3" fadein=4500]
 
 [quake count=2 time=200 vmax=10]
 ; ナレーター音声
@@ -156,6 +155,8 @@ taskyの冷たい機械音声で、朝の微睡みは最悪の気分に変わっ
 
 *T1_1_prime
 ; T1-1'
+[playbgm storage="BGM_02_日常2.mp3" fadein=5000]
+
 [stopse buf=1]
 ; ★リスト一致確認済
 [playse storage="narrator/taskyに従ってストレッチを終えた。...手つかずのままだ。.mp3" buf=1]
@@ -445,7 +446,6 @@ taskyのスコアって、具体的にどういうアルゴリズムで付与さ
 [chara_hide_all time=500]
 ; 背景：部屋全体(夕方)
 [bg storage="room-sunset.jpg" time="1000"]
-[playbgm storage="BGM_02_日常.mp3" fadein=1500]
 
 [chara_show name="tasky" time="500"]
 
@@ -474,6 +474,8 @@ taskyのスコアって、具体的にどういうアルゴリズムで付与さ
 「友人と話す」ことさえ、ポイント稼ぎの手段になってしまった。[p]
 ; 演出：机へフォーカス
 [bg storage="myroom_sunset.jpg" time="500"]
+[playbgm storage="BGM_02_日常2.mp3" fadein=5000]
+
 [stopse buf=1]
 ; ★リスト一致確認済
 [playse storage="narrator/何が重要なのか、自分で判断する必要がなくなった。...すべてがタスク化されていくことに、僕は管理される心地よさと、微かな恐怖を同時に覚える。.mp3" buf=1]
@@ -659,7 +661,6 @@ taskyに肯定されると、現実の人間関係がどうでもいいノイズ
 [stopbgm fadeout=3000]
 [playse storage="SE04 報酬音（ファンファーレ）.mp3"]
 
-[playbgm storage="BGM_02_日常.mp3" fadein=3500]
 
 [quake count=4 time=400 vmax=20]
 ; ナレーター音声
@@ -739,6 +740,8 @@ taskyは僕の理性的な要求さえ拒絶する。[r]
 
 *T1_4_prime
 ; T1-4'
+[playbgm storage="BGM_02_日常.mp3" fadein=5000]
+
 [stopse buf=1]
 ; ★リスト一致確認済
 [playse storage="narrator/高揚感と達成感に満たされ、目が冴えてしまった。...その時、taskyが更なる「自己投資」を提案してきた。.mp3" buf=1]
