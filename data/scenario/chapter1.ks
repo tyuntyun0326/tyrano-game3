@@ -740,7 +740,6 @@ taskyは僕の理性的な要求さえ拒絶する。[r]
 
 *T1_4_prime
 ; T1-4'
-[playbgm storage="BGM_02_日常.mp3" fadein=5000]
 
 [stopse buf=1]
 ; ★リスト一致確認済
@@ -807,6 +806,7 @@ taskyは僕の理性的な要求さえ拒絶する。[r]
 *T1_5
 [chara_hide_all time=500]
 [bg storage="office-sun.jpg" time="1000"]
+[playbgm storage="BGM_02_日常.mp3" fadein=5000]
 [chara_show name="tasky" time=500]
 
 ; Taskyボイス
